@@ -1,5 +1,5 @@
 ---
-description: Making the top-level scope thread-local and copying it by pointer on thread fork gives each thread an isolated mutable namespace without a global interpreter lock or an explicit actor/message-passing runtime
+description: A thread-local top-level scope copied by pointer on fork gives each thread an isolated mutable namespace without a global interpreter lock or an explicit actor/message-passing runtime
 type: pattern
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
