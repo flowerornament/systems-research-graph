@@ -1,5 +1,5 @@
 ---
-description: RAVE achieves MOS 3.01 vs NSynth's 2.68 using a fully parallel decoder at 17.6M parameters vs NSynth's 64.7M, showing that parallelism and quality are not in tension when adversarial objectives replace likelihood-based loss
+description: RAVE (parallel, 17.6M params) achieves MOS 3.01 vs NSynth's 2.68 (autoregressive, 64.7M); adversarial training closes the quality gap that pure spectral loss cannot bridge
 type: claim
 evidence: strong
 source: [[rave-2021]]
