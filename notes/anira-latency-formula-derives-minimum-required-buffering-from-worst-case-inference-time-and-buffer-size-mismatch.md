@@ -47,9 +47,12 @@ Source: [[anira-2024]]
 
 Relevant Notes:
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — the threading architecture that this formula assumes
-- [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — I_max should be measured post-warmup
+- [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — I_max should be measured post-warmup to avoid inflating it with cold-start outliers
+- [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — grounds why I_max must be measured empirically: non-deterministic violations make analytical derivation impossible
+- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — engine selection is a lever on I_max: ONNX Runtime's speed advantage directly reduces L_total for stateless models
 - [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — mismatch case (H_adapt > 0) is an open research gap
 - [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — H_adapt increases when model input size exceeds host buffer size
+- [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] — formula explains why: autoregressive I_max yields L_total values no RT system can absorb
 - [[sample-accurate-triggering-in-block-based-audio-requires-splitting-render-blocks-into-sub-block-execution-lambdas]] — structurally parallel problem: rounding at processing unit boundaries
 
 Topics:
