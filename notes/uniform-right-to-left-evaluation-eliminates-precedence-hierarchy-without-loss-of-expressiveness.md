@@ -1,5 +1,5 @@
 ---
-description: APL's single rule (right argument is the value of the entire expression to its right) eliminates operator precedence hierarchy while preserving both readable left-to-right analysis and correct right-to-left execution
+description: APL's single rule (right argument is the entire expression to its right) eliminates operator precedence while preserving readable left-to-right analysis and correct right-to-left execution
 type: property
 evidence: strong
 source: [[iverson-1980-notation-as-tool-of-thought]]
