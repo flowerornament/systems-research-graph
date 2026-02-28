@@ -29,6 +29,10 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[reference-counting-becomes-viable-when-immutability-prevents-object-cycles]] -- in a non-lazy non-mutable language new objects can only reference old ones so cycles are structurally impossible; RC is pause-free and exact, making it suitable for language runtimes adjacent to RT audio
 - [[thread-local-top-level-scope-with-copy-on-fork-achieves-actor-isolation-without-message-passing]] -- persistent-dictionary thread-local scope with pointer-copy fork achieves Erlang-style actor isolation without a message-passing runtime; no GIL required when all state is either immutable or thread-local
 
+## Cross-Domain: OTP in Agent Architectures
+
+- [[otp-solves-the-hard-parts-of-agent-architecture-that-other-ecosystems-are-still-building]] -- OTP's actor model solves state residence, routing, and lifecycle for LLM agents the same way it solves them for audio engines; the patterns are identical
+
 ## Open Questions
 - Can murail's NRT side expose ps/kill semantics for graph nodes, analogous to Erlang's Observer, while keeping the RT side opaque for performance?
 - What would node-level state threading look like during compile-and-swap -- carrying oscillator phase, filter memory, etc. into replacement nodes?
