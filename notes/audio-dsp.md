@@ -36,6 +36,13 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - [[graph-compiler-loop-formation-groups-same-dimension-trees-to-enable-vectorization]] -- after shape inference, expression trees with identical matrix dimensions and compatible rates are grouped into SIMD-vectorizable loops; topological order is preserved across loop boundaries
 - [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]] -- synthesis definitions are built by calling ordinary language functions that return graph nodes; no distinct synthdef syntax; the full language including auto-mapping is available
 
+### FAUST Prior Art: DSP Compiler Techniques
+- [[faust-signal-type-inference-classifies-computation-rate-to-enable-appropriate-caching]] -- rate classification (constant/init/UI/audio) inferred automatically, no programmer annotation; FAUST prior art confirming murail's construction-time rate inference approach
+- [[faust-vectorized-code-generation-splits-sample-loop-into-multiple-simpler-loops-to-expose-simd]] -- section-based loop splitting exposes SIMD opportunities; 2.8x speedup demonstrated; prior art for murail's loop-formation pass
+- [[faust-recursive-composition-with-implicit-one-sample-delay-is-the-primitive-for-all-feedback]] -- FAUST feedback primitive: mandatory 1-sample delay makes all recursion well-founded; clarifies the semantics of delay-containing feedback loops
+- [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] -- SMP parallelism bounded by memory bus; audio DSP often better served by SIMD than multi-threading; benchmarked across 3 machines with 7 DSP programs
+- [[faust-symbolic-propagation-normalizes-structurally-different-programs-that-compute-identical-functions]] -- symbolic propagation extracts mathematical equations from block-diagrams and normalizes them; structurally different programs with equivalent semantics produce identical compiled code
+
 ### Workflow and Embeddability
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- audio continuity during whole-graph recompilation is the specific mechanism that makes whole-graph compilation viable for interactive use; solves the 45-second silence problem
 - [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- lossless composition history emerges from persistent data structures at no additional design cost; reframes composition as temporal exploration
