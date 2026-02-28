@@ -35,6 +35,7 @@ Relevant Notes:
 - [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — the ranking assumes post-warmup runtimes; pre-warmup behavior, especially LibTorch's elevated initial RpS, could distort comparisons
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — engine selection is a lever on I_max: ONNX Runtime's speed advantage directly reduces L_total for stateless models
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — stateless models (ONNX's domain) can exploit parallel inference across ThreadPool threads; stateful models (LibTorch) cannot share hidden state and lose this parallelism advantage
+- [[dsp-inductive-biases-reduce-model-size-by-encoding-prior-knowledge-about-periodic-audio]] — DDSP-style models (sub-1M parameters) fall below the size crossover where TFLite outperforms LibTorch, making ONNX Runtime or TFLite the default engine for this model family
 
 Topics:
 - [[ai-ml]]
