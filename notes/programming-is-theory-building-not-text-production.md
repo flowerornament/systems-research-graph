@@ -1,5 +1,5 @@
 ---
-description: Naur's central claim that a program is the externalization of a theory held by its programmers, not the text itself; the theory is the primary product
+description: Naur argues the primary product of programming is the programmer's mental theory, not the source text; the text is an expression of the theory, not the theory itself
 type: claim
 evidence: strong
 source: [[naur-1985-programming-as-theory-building]]
@@ -9,30 +9,18 @@ status: active
 
 # programming is theory building not text production
 
-Naur's 1985 central argument: programming is an activity by which programmers build a theory of how certain affairs of the world are handled by, or supported by, a computer program. The theory, not the text, is the primary product of programming.
+Naur's central thesis: a program is not the text that describes it. The essential artifact of programming activity is the theory held in the minds of the programmers -- a body of understanding about the problem domain, the reasons for each design choice, and the knowledge of what the program will and will not do. Source code is the precipitate of that theory, not the theory itself.
 
-Naur adopts Ryle's philosophical use of "theory" -- a person has a theory when they can do more than state facts: when they can explain phenomena, relate parts to whole, respond to unexpected situations, and recognize ill-fit attempts. A programmer with a theory of their program can answer questions about it that do not appear in any specification. A programmer without the theory cannot, even with full access to the source text.
+The paper uses "theory" in Ryle's sense: not a formal theory but the kind of knowledge that cannot be fully articulated. A programmer who holds the theory can modify the program to handle new cases, explain why the code is written as it is (not just what it does), and judge whether a proposed change fits the existing design. A programmer who has only the source text -- even perfectly commented source text -- has none of these capabilities.
 
-**Why this matters:** The text is a static artifact; the theory is a live cognitive structure that responds to novel situations. When a user asks "can we extend the system to handle X?", the answer requires understanding why the current architecture is the way it is -- what constraints were being respected, what alternatives were rejected and why. This is not in the code. It is in the theory.
+This is a fundamental claim about the nature of programming knowledge: it is *tacit*, not codifiable. You cannot transfer a program to another team by handing over the source and documentation; you transfer the theory by transferring the people or by having the new team rebuild the theory from scratch through sustained contact with the program.
 
-The distinction has direct consequences for maintenance: if the original theorists leave and the program is maintained by people who built their knowledge only from the text, the responses to new requirements will be degraded. They may fix bugs and add features, but they cannot maintain the underlying design coherence because they do not hold the theory.
+The implication is practical: programming teams are not interchangeable. The theory lives in specific people. When those people leave, the theory decays even if the text survives.
 
-This provides a theoretical foundation for [[vibe-coding-produces-unauditable-architectural-debt]]: vibe coding externalizes code production to an agent that never builds the theory, producing systems whose maintainers are structurally in the position of the "newcomers" Naur describes -- reading text, not holding theory.
+For murail: the design rationale captured in CLAUDE.md, ops/, and notes/ is an attempt to externalize the architectural theory so that future sessions (and future agents) can hold it. The limitation is Naur's point: no documentation fully substitutes for the theory. See [[no-documentation-can-substitute-for-the-programmer-held-theory]].
 
-The claim also reframes [[debuggability-is-more-valuable-than-correctness-by-construction]]: the reason live debugging matters is not just feedback speed -- it is because interactive engagement with a running system is one of the mechanisms by which programmers build and maintain their theory. Batch-mode programming severs this theory-building feedback.
+The claim directly challenges the "if it's documented it's maintainable" assumption. It also provides the theoretical grounding for [[vibe-coding-produces-unauditable-architectural-debt]]: vibe coding produces text without building the programmer's theory, so the resulting code is immediately in the "revival by newcomers" condition.
 
----
+Extends [[debuggability-is-more-valuable-than-correctness-by-construction]] by explaining *why* specs are always wrong: they are attempts to articulate theory that is inherently tacit. Relates to [[evolvability-requires-trading-provability-for-extensibility]] by adding a social dimension: evolvability requires that the *theory* be transferable, not just that the specification be extensible.
 
-Source: [[naur-1985-programming-as-theory-building]]
-
-Relevant Notes:
-- [[vibe-coding-produces-unauditable-architectural-debt]] -- vibe coding is the extreme case: no developer theory is built at all
-- [[debuggability-is-more-valuable-than-correctness-by-construction]] -- live systems support ongoing theory-building in ways static artifacts cannot
-- [[no-documentation-can-substitute-for-the-programmer-held-theory]] -- the corollary about documentation's limits
-- [[program-revival-by-newcomers-systematically-produces-degraded-designs]] -- what happens when theory-holders leave
-- [[evolvability-requires-trading-provability-for-extensibility]] -- Sussman reaches a related conclusion about the primacy of adaptable human understanding over formal specifications
-- [[interactive-programming-eliminates-the-compile-run-cycle]] -- interactive environments support theory-building by closing the feedback loop between code and running behavior
-
-Topics:
-- [[developer-experience]]
-- [[language-design]]
+See also [[interactive-programming-eliminates-the-compile-run-cycle]]: interactive systems preserve more state and more runtime context than batch systems, reducing the theory-text gap.
