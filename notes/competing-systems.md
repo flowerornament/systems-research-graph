@@ -40,11 +40,20 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[channel-agnostic-audio-types-require-three-polymorphic-subtypes-to-cover-all-known-and-future-formats]] -- MetaSounds CAT uses discrete/sound-field/composite families as a comprehensive taxonomy that also accommodates unknown future formats
 - [[compatible-audio-format-transcoding-happens-automatically-while-cross-family-conversion-requires-an-explicit-cast]] -- within-family downmix/upmix is automatic; cross-family conversion (discrete to ambisonics) requires an explicit cast node
 
+### SuperCollider History (McCartney primary source)
+- [[supercollider-version-1-merged-a-scripting-language-with-a-software-synthesizer-when-hardware-reached-real-time-speed]] -- SC1 emerged when Power Mac ran Synthomatic 32x faster than real time; McCartney immediately merged Pyrite (scripting) and Synthomatic (synthesis) into one real-time system
+- [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting still in the RT thread; SC3 introduced the client-server split
+- [[supercollider-client-server-architecture-moved-the-scripting-language-out-of-the-real-time-audio-thread]] -- the client-server split solved language-execution pauses in the RT audio thread; remote playback was a secondary benefit
+
 ### McCartney's New Audio Language (SuperCollider author, 2021-2025)
 - [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] -- flattening UGens to four arithmetic primitives lets the compiler fuse, vectorize, and dead-code-eliminate across what were previously opaque object boundaries in SC3
 - [[construction-time-graph-optimization-distributes-compiler-cost-across-node-creation]] -- applying constant folding, CSE, rate inference, and 120+ algebraic rewrites at node creation time delivers a pre-simplified graph to the final compiler pass
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- previous sound plays while new graph compiles; solves the 45-second silence problem that killed McCartney's 1990s whole-graph compilation attempt
 - [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- treating if/switch/for as graph primitives enables pause and demand-rate patterns impossible in Faust; event codegen and scheduling remain McCartney's unsolved hard problem
+
+### Audio Programming Education and Abstraction Costs
+- [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- Apple Core Audio interviews found JUCE-trained developers knew DSP inner loops but not threading models or resource management; JUCE as crutch
+- [[audio-programming-education-requires-reading-production-engine-source-code-across-multiple-systems]] -- McCartney's prescription: read CSound, VCV Rack, SuperCollider, Chuck, and Pure Data to understand the engine problem space from multiple angles
 
 ## Open Questions
 - Is there an IR granularity between UGen-level (opaque, v1) and arithmetic-primitive-level (McCartney's approach, requires massive compiler investment) that would allow incremental lowering?
