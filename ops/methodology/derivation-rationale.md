@@ -28,7 +28,7 @@ Explicit wiki-links are the backbone — every claim links to its topic maps, so
 
 ### Processing: Heavy
 
-370 files of existing research, 107 indexed references, a 4,300-line specification, and Lean proofs. This is not a casual note-taking use case — it is systematic research synthesis. The processing pipeline (/extract -> /connect -> /reweave) automates the labor-intensive work of decomposing dense sources into claims and weaving them into the knowledge graph.
+370 files of existing research, 107 indexed references, a 4,300-line specification, and Lean proofs. This is not a casual note-taking use case — it is systematic research synthesis. The processing pipeline (/arscontexta:extract -> /arscontexta:connect -> /arscontexta:reweave) automates the labor-intensive work of decomposing dense sources into claims and weaving them into the knowledge graph.
 
 ### Navigation: 3-Tier
 
