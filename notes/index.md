@@ -36,6 +36,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[ddsp-2020]] -- Engel et al. (Google Brain, ICLR 2020): differentiable DSP modules as neural network components; multi-scale spectral loss; disentangled latent synthesis
 - [[rave-2021]] -- Caillon & Esling (IRCAM, 2021): real-time VAE for 48kHz neural audio synthesis; two-stage training; multiband decomposition; post-training latent compaction
 - [[swift-to-mojo-chris-lattner]] -- Chris Lattner, Pragmatic Engineer podcast: LLVM origins, Swift development history, Mojo design philosophy, AI hardware stack fragmentation, sufficiently smart compiler critique, adoption dynamics
+- [[iverson-1980-notation-as-tool-of-thought]] -- Kenneth Iverson, 1979 Turing Award lecture: notation as a tool of thought, APL, executability combined with mathematical suggestivity, economy of notation, subordination of detail
 
 ## Orientation
 - ops/goals.md -- current active threads
