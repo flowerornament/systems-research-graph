@@ -47,6 +47,96 @@
       "archive": "ops/queue/archive/2026-02-28-anira-2024/"
     },
     {
+      "id": "anira-2024-140",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "inference engines violate real-time principles on every inference not just initial ones",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-141",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "static thread pool decouples neural inference from the audio callback to ensure real-time safety",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-142",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "anira latency formula derives minimum required buffering from worst-case inference time and buffer size mismatch",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-143",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "onnx runtime is fastest for stateless neural models while libtorch is fastest for stateful models",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-144",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "warm-up inferences before the audio callback stabilize inference engine runtimes",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-145",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "larger model input sizes improve per-sample inference performance making latency tolerance a throughput lever",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-146",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "onnx runtime does not support stateful lstm operations restricting it to stateless neural architectures",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-147",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "host buffer to model input mismatch and parallel inference remain unbenchmarked in real-time audio contexts",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
+      "id": "anira-2024-148",
+      "batch": "anira-2024",
+      "type": "claim",
+      "status": "done",
+      "target": "tensorflow lite outperforms libtorch for small cnn models but libtorch becomes faster as model size grows",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "archive": "ops/queue/archive/2026-02-28-anira-2024/"
+    },
+    {
       "id": "leijen-algebraic-effects-extract",
       "batch": "leijen-algebraic-effects",
       "type": "extract",
