@@ -41,9 +41,15 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[universal-auto-mapping-eliminates-explicit-iteration-from-signal-processing-programs]] -- APL-style rank polymorphism applied to every function, not just UGens, makes programs dramatically shorter; explicit `@` operators control iteration shape for Cartesian products
 - [[multimethods-allow-code-generation-backends-to-be-organized-by-concern]] -- dispatching on both the code generator type and the expression type lets all codegen for one backend live together; prevents concern-spreading across expression classes
 
+### McCartney's New Language (2021-2025): Runtime and Type System Design
+- [[classes-as-type-tags-allow-per-instance-field-variation]] -- classes impose no required instance variables; any instance of any class can carry arbitrary fields, making classes pure dispatch labels and enabling flexible metadata without subclassing
+- [[reference-counting-becomes-viable-when-immutability-prevents-object-cycles]] -- in a non-lazy, non-mutable language new objects can only reference old objects so reference cycles are structurally impossible; RC is sufficient and pause-free, critical for any language runtime near RT audio
+- [[thread-local-top-level-scope-with-copy-on-fork-achieves-actor-isolation-without-message-passing]] -- top-level scope stored in a persistent dictionary is thread-local; fork is a pointer copy; divergence uses path-copying; no global interpreter lock, no actor runtime infrastructure needed
+
 ### McCartney's New Language (2021-2025): Workflow Architecture
 - [[creative-workflow-friction-should-determine-audio-engine-architecture]] -- each of McCartney's innovations traces to a specific felt friction in creative practice; the design method: test every architectural decision against "does this create friction in the creative loop?"
 - [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- if/switch/for as graph primitives on equal footing with arithmetic enables pause and demand-rate patterns; McCartney explicitly marks event codegen and scheduling as his unsolved hard problems
+- [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]] -- no synthdef syntax or graph-construction DSL; synthesis graphs are built by calling ordinary language functions; the full language is available for algorithmic graph construction
 
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
