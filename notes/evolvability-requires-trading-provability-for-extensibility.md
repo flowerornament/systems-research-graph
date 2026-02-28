@@ -20,3 +20,5 @@ The argument proceeds in two steps:
 The design choice is explicit: pay correctness (or proof-of-correctness) for flexibility. Sussman argues this is the right trade for almost all real systems, because the world changes and specs are always wrong.
 
 This is in tension with [[type-systems-have-not-empirically-reduced-defect-rates]] (which argues empirically that type-based proof doesn't improve defect rates anyway) and extends [[debuggability-is-more-valuable-than-correctness-by-construction]] (which argues from the software lifecycle perspective that live debugging outweighs static guarantees). Sussman adds the formal argument: tight specs are brittle by construction.
+
+However, [[rust-safety-with-unsafe-code-requires-semantic-rather-than-syntactic-proof-methods]] suggests a third path: Rust's semantic proof method is itself extensible -- the proof technique scales as new libraries are added. This partially dissolves the tradeoff Sussman identifies: if the proof method is open-world, extensibility does not necessarily break verifiability.
