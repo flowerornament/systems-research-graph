@@ -32,6 +32,8 @@ Relevant Notes:
 - [[existing-hardware-cas-primitives-suffice-for-practical-lock-free-data-structures]] — anira's atomic sync path uses CAS-level primitives
 - [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — parallel inference capacity not yet measured
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — InferenceManager also computes required buffering
+- [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] — grounds the static pool's conservative sizing: thread proliferation competes for shared memory bus, making oversubscription a performance regression not just a resource issue
+- [[send-and-sync-are-thread-independence-of-ownership-and-sharing-predicates]] — a Rust implementation of this architecture requires inference nodes submitted to the pool to satisfy Send; this claim formally characterizes what that safety requirement means
 
 Topics:
 - [[ai-ml]]
