@@ -321,8 +321,10 @@
       "completed": "2026-02-28T00:00:00Z",
       "claims_created": 7,
       "enrichments": 0,
-      "connections_added": 22,
+      "connections_added": 25,
       "topic_maps_updated": 2,
+      "existing_claims_updated": 3,
+      "force_reprocessed": "2026-02-28",
       "archive": "ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/"
     },
     {
