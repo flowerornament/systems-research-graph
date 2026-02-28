@@ -360,6 +360,21 @@
       "topic_maps_updated": 3,
       "existing_claims_updated": 3,
       "archive": "ops/queue/archive/2026-02-28-rustbelt-2018/"
+    },
+    {
+      "id": "faust-2009-npcm-extract",
+      "batch": "faust-2009-npcm",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/faust-2009-npcm.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 11,
+      "enrichments": 3,
+      "connections_added": 30,
+      "topic_maps_updated": 4,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-02-28-faust-2009-npcm/"
     }
   ]
 }
