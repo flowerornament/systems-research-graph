@@ -1,5 +1,5 @@
 ---
-description: When every function transparently operates element-wise on sequences without explicit loops, programs become dramatically shorter and the programming model shifts from operating on channels to operating on structures
+description: When every function transparently operates element-wise without explicit loops, programs become dramatically shorter and the model shifts from operating on channels to operating on structures
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
