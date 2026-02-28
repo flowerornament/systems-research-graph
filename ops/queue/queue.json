@@ -23,15 +23,6 @@
       "next_claim_start": 140
     },
     {
-      "id": "leijen-algebraic-effects-extract",
-      "batch": "leijen-algebraic-effects",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/leijen-algebraic-effects.pdf",
-      "created": "2026-02-28",
-      "archive_folder": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/"
-    },
-    {
       "id": "naur-1985-programming-as-theory-building-extract",
       "batch": "naur-1985-programming-as-theory-building",
       "type": "extract",
