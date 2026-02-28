@@ -1,5 +1,5 @@
 ---
-description: When UGens are library functions over four primitives (constants, math, delays, control flow) rather than opaque compiled objects, the compiler sees the full graph and can fuse, vectorize, and eliminate dead nodes across what were previously opaque boundaries
+description: When UGens are library functions over four primitives (constants, math, delays, control flow) rather than opaque objects, the compiler sees the full graph and can fuse, vectorize, and eliminate dead nodes across formerly opaque boundaries
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
