@@ -37,7 +37,23 @@ Full document. Extract:
 - Each output type gets appropriate handling per derivation-manifest.md extraction categories
 
 ## Execution Notes
-(filled by /arscontexta:extract)
+
+Extracted 2026-02-28. Full PDF text read via pdftotext (9 pages). No duplicate claims found in notes/. No enrichments needed — all extracted insights are new to the vault. Source reference file created at notes/anira-2024.md.
 
 ## Outputs
-(filled by /arscontexta:extract)
+
+**Claims extracted: 9** (IDs 140-148)
+
+| ID | Claim | Type |
+|----|-------|------|
+| 140 | inference engines violate real-time principles on every inference not just initial ones | contradiction |
+| 141 | static thread pool decouples neural inference from the audio callback to ensure real-time safety | decision |
+| 142 | anira latency formula derives minimum required buffering from worst-case inference time and buffer size mismatch | property |
+| 143 | onnx runtime is fastest for stateless neural models while libtorch is fastest for stateful models | claim |
+| 144 | warm-up inferences before the audio callback stabilize inference engine runtimes | pattern |
+| 145 | larger model input sizes improve per-sample inference performance making latency tolerance a throughput lever | claim |
+| 146 | onnx runtime does not support stateful lstm operations restricting it to stateless neural architectures | property |
+| 147 | host buffer to model input mismatch and parallel inference remain unbenchmarked in real-time audio contexts | open-question |
+| 148 | tensorflow lite outperforms libtorch for small cnn models but libtorch becomes faster as model size grows | claim |
+
+Task files: ops/queue/archive/2026-02-28-anira-2024/anira-2024-{140..148}.md
