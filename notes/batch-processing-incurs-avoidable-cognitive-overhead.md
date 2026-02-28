@@ -1,5 +1,5 @@
 ---
-description: Programming models inherited from punch cards impose compile-run separation, blank-slate initialization, and no runtime introspection -- costs that have nothing to do with the actual problem being solved
+description: Punch-card-era programming models impose compile-run separation, blank-slate initialization, and no runtime introspection -- costs unrelated to the actual problem being solved
 type: claim
 evidence: moderate
 source: [[stop-writing-dead-programs-jack-rusher-2022]]
