@@ -18,7 +18,7 @@ Leijen demonstrates in the Koka language that a single well-founded abstraction 
 - **Non-determinism / ambiguity**: `flip()` with a handler that resumes twice (once with `False`, once with `True`), collecting all outcomes
 - **Parser combinators**: `fail`, `flip`, and `satisfy` composed into a complete parser combinator library with swappable evaluation strategies
 
-The key insight: each of these previously required specialized syntax (generators with `yield`, `async`/`await` keywords, exception handling blocks) and separate compilation rules. Algebraic effects eliminate the need for each special case -- the language designer implements one general mechanism and derives all others as library code.
+The key insight: each of these previously required specialized syntax (generators with `yield`, `async`/`await` keywords, exception handling blocks) and separate compilation rules. Algebraic effects eliminate the need for each special case -- the language designer implements one general mechanism and derives all others as library code. The mechanism is precisely that [[effect-handlers-are-resumable-exceptions-that-capture-delimited-continuations]]: each construct above is just a different handler strategy (no resume, single resume, multiple resume) over the same delimited continuation capture.
 
 Leijen's framing: these constructs "can lead to subtle interactions with other features and require complex compilation mechanisms." Algebraic effects eliminate the interaction surface by grounding them in a single semantics.
 
