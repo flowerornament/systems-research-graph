@@ -7,8 +7,9 @@ type: moc
 
 ## Active Threads
 - Getting started — learning the knowledge system
-- Bootstrapping — extracting claims from murail .design/references/
+- Bootstrapping — extracting claims from murail .design/references/ and herald .design/references/
 - Domain mapping — building the cross-disciplinary claim graph
+- herald domain — initial claim graph bootstrapped; first source processed
 
 ## Completed
 - 2026-02-28: Extracted 13 claims from "Stop Writing Dead Programs" (Jack Rusher, Strange Loop 2022) -- language-design, concurrent-systems, formal-methods, rust-ecosystem, ai-ml, competing-systems topic maps updated
