@@ -1,5 +1,5 @@
 ---
-description: Functions polymorphic in an effect variable need two compiled versions (CPS and direct-style) with a runtime dispatch wrapper because the presence or absence of a continuation argument cannot be resolved at compile time
+description: Functions polymorphic in an effect variable need two compiled versions (CPS and direct-style) plus a runtime dispatch wrapper because continuation presence cannot be resolved at compile time
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
