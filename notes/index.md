@@ -19,6 +19,9 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[competing-systems]] -- SuperCollider, Faust, Web Audio, JUCE, NIH-plug, Firewheel, HexoDSP
 - [[formal-methods]] -- Lean proofs, mathematical foundations, verification, algebraic spaces
 
+### herald (real-time application platform)
+- [[herald]] -- agent architecture, LLM integration, OTP fitness for agentic workloads, implementation techniques
+
 ## Cross-Domain
 - [[developer-experience]] -- feedback loops, introspection, notation, and how programming environments shape what developers can build
 
@@ -27,6 +30,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[we-dont-know-how-to-compute-sussman-2011]] -- Gerald Sussman, Strange Loop 2011: propagator model, truth maintenance, evolvability vs correctness, generic operations
 - [[channel-agnosticism-metasounds-aaron-mcleran-adc]] -- Aaron McLeran (Epic Games), ADC: MetaSounds channel-agnostic types, polymorphic audio format abstraction, JIT graph compilation, instanced graph model
 - [[2026-02-06-qmayIRViJms]] -- Darwin Gross interviews James McCartney (SuperCollider creator): SC version history, Pyrite origins, Core Audio architecture, APL influence, audio education, JUCE critique
+- [[keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025]] -- Chris McCord, ElixirConf US 2025: Elixir's fitness for the agentic era, agent architecture, Phoenix 1.8 AgentsMD, implementation techniques
 
 ## Orientation
 - ops/goals.md -- current active threads
