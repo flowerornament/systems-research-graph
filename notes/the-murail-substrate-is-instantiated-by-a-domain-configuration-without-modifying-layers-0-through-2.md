@@ -34,6 +34,6 @@ The validation criteria (Appendix B) make this concrete:
 ## Connections
 
 - The three-domain test is a structural argument for why the factoring is at the right level of generality -- same argument as [[faust-separates-dsp-specification-from-host-architecture-enabling-multi-target-retargeting]] but applied one level deeper (substrate factored from domain, not DSP factored from host)
-- Lean formal verification of the substrate (mentioned in [[formal-methods.md]] open questions) is enabled precisely by the domain-independence of Layers 0-2
+- Lean formal verification of the substrate (mentioned in [[formal-methods]] open questions) is enabled precisely by the domain-independence of Layers 0-2
 - The substrate concept is related to the "minimal formal object" design philosophy in [[dataflow-languages-lack-explicit-formal-semantics-making-program-behavior-engine-dependent]]: the substrate provides what those languages lack
 - [[dsp-and-ml-are-structurally-identical-under-shape-driven-dispatch-in-the-murail-calculus]] is an emergent consequence of the domain-independent substrate -- the same equations instantiate differently just by changing the dispatch target profile
