@@ -7,6 +7,10 @@ type: moc
 
 How the tools, models, and feedback loops of a programming environment shape what developers can think and build. For murail, this thread tracks the gap between batch-mode audio programming (SuperCollider, Faust) and the interactive ideal -- and where murail's compile-and-swap architecture sits on that spectrum.
 
+## Design philosophy
+
+- [[creative-workflow-friction-should-determine-audio-engine-architecture]] -- each of McCartney's innovations traces to a specific felt friction in creative practice; the design method: test every architectural decision against "does this create friction in the creative loop?"
+
 ## Feedback loops and programming models
 
 - [[batch-processing-incurs-avoidable-cognitive-overhead]] -- the compile-run cycle forces developers to emulate the machine in their heads; murail's compile-and-swap partially breaks this pattern
