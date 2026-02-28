@@ -33,6 +33,9 @@ Rust ecosystem research for murail. Covers crate selection and verification, nig
 - [[rust-safety-with-unsafe-code-requires-semantic-rather-than-syntactic-proof-methods]] -- progress-and-preservation is closed-world; Rust's extensible unsafe approach requires the open-world semantic proof method of logical relations
 - [[iris-separation-logic-enables-deriving-a-lifetime-logic-from-primitive-mechanisms]] -- Iris's higher-order ghost state and impredicative invariants suffice to derive the complete lifetime logic as a library
 
+## Source References
+- [[rustbelt-2018]] -- primary source for the RustBelt formal verification cluster: Iris-based semantic proof method, ownership/lifetime logic, Send/Sync characterization, and the adequacy theorem establishing memory and data-race safety without GC
+
 ## Open Questions
 - Are there existing Rust-native interactive exploration tools (evcxr, etc.) that could be adapted for murail graph exploration, or does this require custom tooling?
 - Given RustBelt's verification of Mutex and Arc, what additional unsafe crates in murail's stack (rtrb, arc-swap, bumpalo) have comparable formal or bounded-model-checker verification?
