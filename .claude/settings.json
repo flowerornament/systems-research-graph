@@ -2,7 +2,7 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": {},
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
@@ -13,9 +13,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": {
-          "tools": ["Write", "Edit"]
-        },
+        "matcher": "Write|Edit",
         "hooks": [
           {
             "type": "command",
@@ -24,21 +22,18 @@
         ]
       },
       {
-        "matcher": {
-          "tools": ["Write", "Edit"]
-        },
+        "matcher": "Write|Edit",
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/auto-commit.sh",
-            "timeout": 10000
+            "command": "bash .claude/hooks/auto-commit.sh"
           }
         ]
       }
     ],
     "Stop": [
       {
-        "matcher": {},
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
