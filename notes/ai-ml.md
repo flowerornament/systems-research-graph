@@ -62,6 +62,9 @@ AI and machine learning integration research for murail. Covers neural audio syn
 - What is the practical inference latency floor for RAVE's decoder on a modern CPU at block sizes used in audio workstations (256-512 samples)? The 985kHz throughput figure is batch throughput, not block latency.
 - Can RAVE-style latent compression be used as murail's node interface for high-level generative models? The 23Hz latent rate maps naturally to a "composition rate" tier in a multi-rate graph.
 - How do out-of-domain KL divergences (Table 3) affect synthesis quality when the RAVE encoder is used as a feature extractor for signals that murail generates rather than records?
+- What is the minimum synthesis parameter count before synthesis-by-optimization becomes intractable with LES within practical iteration budgets (300 iterations)?
+- Can DDSP-style architectural discipline (harmonic oscillators, filtered noise) be layered onto a general modular synthesizer to restore gradient stability without losing flexibility?
+- If murail exposed synthesis graph parameters as a searchable space, what would a synthesis-from-description workflow API look like in practice?
 
 ---
 
