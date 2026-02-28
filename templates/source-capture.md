@@ -33,4 +33,4 @@ status: raw
 
 # {source title}
 
-{Raw content, quotes, or notes from the source. This will be processed by /extract into atomic claims in notes/.}
+{Raw content, quotes, or notes from the source. This will be processed by /arscontexta:extract into atomic claims in notes/.}
