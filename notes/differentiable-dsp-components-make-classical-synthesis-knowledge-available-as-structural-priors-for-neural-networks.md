@@ -1,5 +1,5 @@
 ---
-description: Making DSP operations differentiable extends the neural architecture toolbox beyond convolution and attention to include oscillators, filters, and reverb--with domain knowledge encoded as inductive bias
+description: Differentiable DSP extends the neural toolbox beyond convolution and attention to include oscillators, filters, and reverb, with classical synthesis knowledge encoded as structural inductive bias
 type: claim
 evidence: strong
 source: [[ddsp-2020]]
