@@ -95,16 +95,18 @@
       "id": "anira-2024-145",
       "batch": "anira-2024",
       "type": "claim",
-      "status": "pending",
+      "status": "done",
       "target": "larger model input sizes improve per-sample inference performance making latency tolerance a throughput lever",
       "file": "anira-2024-145.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "verify",
+      "completed": "2026-02-28T00:00:00Z",
+      "current_phase": null,
       "completed_phases": [
         "create",
         "reflect",
-        "reweave"
+        "reweave",
+        "verify"
       ]
     },
     {
