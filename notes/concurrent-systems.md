@@ -28,6 +28,11 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- preserving old versions costs only a pointer when data is immutable with structural sharing; lossless history and undo fall out for free
 - [[reference-counting-becomes-viable-when-immutability-prevents-object-cycles]] -- in a non-lazy non-mutable language new objects can only reference old ones so cycles are structurally impossible; RC is pause-free and exact, making it suitable for language runtimes adjacent to RT audio
 - [[thread-local-top-level-scope-with-copy-on-fork-achieves-actor-isolation-without-message-passing]] -- persistent-dictionary thread-local scope with pointer-copy fork achieves Erlang-style actor isolation without a message-passing runtime; no GIL required when all state is either immutable or thread-local
+- [[value-semantics-allow-in-place-mutation-when-ownership-is-clear-making-them-strictly-more-powerful-than-purely-functional-copies]] -- ownership-proven in-place mutation is the concurrency-safe version of functional programming; Rust's model in the RT thread is value semantics enforced statically
+
+### Memory Layout and Performance
+- [[cache-hierarchical-hardware-makes-linked-lists-slower-than-arrays-for-most-practical-sizes]] -- contiguous memory layout keeps audio buffers hot in cache across the RT thread's tight render loop; pointer-chased structures scatter data across pages
+- [[purely-functional-languages-fail-on-modern-hardware-because-pointer-boxing-destroys-cache-locality]] -- per-sample cache misses from boxed functional language data models are architecturally incompatible with RT audio requirements
 
 ## Cross-Domain: OTP in Agent Architectures
 
