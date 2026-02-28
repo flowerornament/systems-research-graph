@@ -127,9 +127,9 @@ See manual/workflows.md for topic map lifecycle and health metrics.
 Every piece of content follows: **capture -> extract -> connect -> verify**. Each phase has a distinct purpose. Mixing them degrades both.
 
 1. **Capture** -- Everything enters through inbox/. Zero friction.
-2. **Extract** (/extract) -- Raw content becomes structured claims. Apply selectivity gate: does this add genuine insight?
-3. **Connect** (/connect) -- Forward connections to existing claims. Backward connections updating older claims. Topic map updates.
-4. **Verify** (/verify) -- Claim context quality (cold-read test), schema compliance, health check (no broken links, no orphans).
+2. **Extract** (/arscontexta:extract) -- Raw content becomes structured claims. Apply selectivity gate: does this add genuine insight?
+3. **Connect** (/arscontexta:connect) -- Forward connections to existing claims. Backward connections updating older claims. Topic map updates.
+4. **Verify** (/arscontexta:verify) -- Claim context quality (cold-read test), schema compliance, health check (no broken links, no orphans).
 
 See manual/workflows.md for phase details, quality gates, and orchestration patterns.
 
