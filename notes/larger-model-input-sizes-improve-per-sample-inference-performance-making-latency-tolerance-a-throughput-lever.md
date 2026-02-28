@@ -26,9 +26,11 @@ This throughput lever is one of several strategies for reducing per-sample neura
 Source: [[anira-2024]]
 
 Relevant Notes:
-- [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — H_adapt increases with model input/host size mismatch
-- [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — the mismatch scenario is the key unstudied case
-- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — engine choice is a second axis of performance variation alongside buffer size
+- [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — H_adapt increases with model input/host size mismatch; this claim feeds directly into the formula's H_adapt term
+- [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — the mismatch scenario is the key unstudied case; the throughput finding may change sign under realistic misaligned conditions
+- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — engine choice is a second axis of performance variation alongside buffer size; these two levers are independent and composable
+- [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] — contextualizes why the latency tolerance lever only exists for parallel architectures: autoregressive I_max consumes the entire budget before tolerance can be traded for throughput
+- [[multiband-decomposition-reduces-temporal-dimensionality-enabling-real-time-neural-audio-at-48khz]] — parallel strategy operating at the input representation level rather than the inference scheduling level; both reduce per-sample neural computation cost and compose
 
 Topics:
 - [[ai-ml]]
