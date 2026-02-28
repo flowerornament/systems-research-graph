@@ -23,6 +23,7 @@ How the tools, models, and feedback loops of a programming environment shape wha
 ## Representation and notation
 
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- cyclic audio graphs are especially poorly served by linear text; relevant to murail DSL design choices
+- [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- naming every wire makes the diagram itself a queryable memory; expression trees hide their interior nodes
 
 ## Open questions
 
