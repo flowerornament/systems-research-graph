@@ -13,6 +13,8 @@ How the tools, models, and feedback loops of a programming environment shape wha
 - [[interactive-programming-eliminates-the-compile-run-cycle]] -- unifying editor and running system preserves state, enables introspection, and shortens feedback to milliseconds
 - [[long-running-servers-require-continuity-oriented-programming-models]] -- audio engines run for hours or days; batch-mode assumptions about clean startup and shutdown don't apply
 - [[rust-lacks-interactive-programming-despite-suitable-foundations]] -- Rust's compilation model could support interactivity but shipped with batch tooling; directly constrains murail DX
+- [[programmer-time-dominates-computation-cost-in-the-post-scarcity-era]] -- memory and compute are effectively free; the binding constraint is programmer expressiveness, not machine efficiency
+- [[evolvability-requires-trading-provability-for-extensibility]] -- tight specs enable proofs but make systems brittle; generic extensibility buys evolvability at the cost of formal verifiability
 
 ## Debugging and introspection
 
