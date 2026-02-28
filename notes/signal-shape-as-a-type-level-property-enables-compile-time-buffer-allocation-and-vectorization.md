@@ -1,5 +1,5 @@
 ---
-description: When matrix shape (rows x columns) is part of the signal's type rather than runtime metadata, the compiler allocates buffers, plans SIMD vectorization, and catches shape mismatches before any audio runs
+description: When matrix shape (rows x columns) is part of the signal's type rather than runtime metadata, the compiler allocates buffers, plans SIMD vectorization, and catches mismatches before audio runs
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
