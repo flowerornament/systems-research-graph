@@ -23,6 +23,19 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[long-running-servers-require-continuity-oriented-programming-models]] -- servers with thousands-of-days uptime and GUIs violate the batch-mode input-output transformer model that mainstream languages optimize for
 - [[monotonic-information-cells-eliminate-synchronization-problems-in-parallel-propagator-networks]] -- Sussman/Radul: monotonic cell accumulation makes concurrent writes order-independent without locking; theoretical grounding for certain lock-free NRT-to-RT parameter update patterns
 
+### Lock-Free Systems (Fraser 2004)
+- [[existing-hardware-cas-primitives-suffice-for-practical-lock-free-data-structures]] -- CAS alone is sufficient for practical lock-free skip lists, BSTs, and red-black trees; refutes the assumption that DCAS or strong LL/SC is required
+- [[lock-freedom-guarantees-system-wide-progress-but-not-per-operation-progress]] -- lock-freedom ensures some operation always completes, not that any particular operation completes; the hierarchy: wait-freedom > lock-freedom > obstruction-freedom
+- [[two-phase-descriptor-protocol-enables-multi-location-atomic-updates-from-single-word-cas]] -- descriptor-based acquire/decide/release pattern simulates multi-location atomicity from single-word CAS; shared structural pattern across MCAS and FSTM; structural analog to compile-and-swap
+- [[epoch-based-reclamation-amortizes-garbage-collection-across-concurrent-operations]] -- global epoch counter allows safe memory reclamation with three limbo lists and no per-access overhead; lower cost than hazard pointers but not strictly lock-free
+- [[read-only-lock-operations-cause-cache-coherency-traffic-even-on-unmodified-data]] -- acquire/release generates cache line writes even for read-only critical sections; bottleneck at heavily-read structures like tree roots
+- [[mcas-and-stm-trade-performance-for-programmability-at-a-quantifiable-cost]] -- CAS > MCAS > STM in throughput; STM enables mechanical derivation from sequential algorithms at 2-4x overhead; multi-reader locks worst at shared entry points
+- [[linearisability-makes-concurrent-operations-reason-about-as-sequential-executions]] -- linearisable operations appear to execute instantaneously; enables local reasoning; the key correctness criterion for concurrent data structures
+- [[obstruction-freedom-allows-conflict-abort-instead-of-recursive-helping-reducing-implementation-complexity]] -- abort-and-retry replaces helping infrastructure; requires out-of-band contention manager whose effectiveness is unvalidated
+- [[pointer-marking-for-logical-deletion-prevents-concurrent-insertion-into-deleted-nodes]] -- mark bit in forward pointer as logical deletion intent; prevents lost insertions under concurrently-deleted nodes
+- [[skip-lists-decompose-multi-level-updates-enabling-higher-lock-free-parallelism-than-trees]] -- per-level independent insertability makes skip lists more amenable to lock-free implementation than trees; preferred NRT-side concurrent ordered map structure
+- [[memory-barrier-placement-in-lock-free-algorithms-is-manual-and-architecture-specific]] -- no automatic method for optimal barrier placement; manual analysis per architecture validated by offline linearisability checking against execution logs
+
 ### Immutability as Concurrency Architecture
 - [[pervasive-immutability-dissolves-concurrency-problems-rather-than-managing-them]] -- immutable-by-default with structural sharing eliminates GC write barriers, makes reference counting sufficient, and enables lock-free cross-thread sharing; McCartney's decade of SAPF experience as evidence
 - [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- preserving old versions costs only a pointer when data is immutable with structural sharing; lossless history and undo fall out for free
