@@ -74,7 +74,7 @@ ops/
 | "Research best practices for..." | /arscontexta:ask | Read bundled references |
 | "What does my system know about..." | Check ops/methodology/ directly | /arscontexta:ask for research backing |
 | "I want to add a new area/domain..." | /arscontexta:add-domain | Manual folder + template creation |
-| "What should I work on..." | /next | Reconcile queue + recommend |
+| "What should I work on..." | /arscontexta:next | Reconcile queue + recommend |
 | "Help / what can I do..." | /arscontexta:help | Show available commands |
 | "Walk me through..." | /arscontexta:tutorial | Interactive learning |
 | "Research / learn about..." | /learn | Deep research with provenance |
