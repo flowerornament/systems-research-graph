@@ -17,6 +17,9 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 
 ## Claims
 
+### Core Audio Architecture
+- [[core-audio-low-latency-performance-traces-to-an-architectural-insight-made-at-the-projects-inception]] -- McCartney's observation that Core Audio's low-latency advantage over prior macOS audio systems traces to a single architectural decision made at project inception; illustrates how inception-time design choices create lasting performance ceilings or floors
+
 ### Block-Based DSP and Sample-Accurate Timing
 - [[sample-accurate-triggering-in-block-based-audio-requires-splitting-render-blocks-into-sub-block-execution-lambdas]] -- servicing triggers that arrive mid-block requires splitting the render block into pre-trigger and post-trigger execution lambdas; SIMD alignment complications follow from non-modulo segment sizes
 
