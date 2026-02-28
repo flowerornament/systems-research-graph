@@ -20,6 +20,6 @@ The root cause: mono buffer is a type that knows nothing about its spatial or fo
 
 "The audio channel problem was severely underestimated when we started building MetaSounds." -- McLeran
 
-Contrast: [[channel format metadata encapsulation enables audio graph reuse across channel configurations]] addresses this directly by lifting format into the type.
+Contrast: [[channel-format-metadata-encapsulation-enables-audio-graph-reuse-across-channel-configurations]] addresses this directly by lifting format into the type.
 
 Related to [[visual-representation-exposes-structure-text-notation-obscures]]: audio signal graphs suffer from the same structural exposure problem McLeran identifies topologically -- graphs with many parallel channels are visually complex in ways that obscure the underlying processing logic, just as cyclic structure obscures graph topology in text notation.
