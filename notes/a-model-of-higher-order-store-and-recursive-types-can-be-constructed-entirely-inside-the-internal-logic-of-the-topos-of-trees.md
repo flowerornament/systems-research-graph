@@ -20,7 +20,7 @@ Key construction steps:
 1. **eval predicate** (Definition via Theorem 2.9): `eval(t,s,Q) ⟺ (t∈Value ∧ Q(t,s)) ∨ (∃t₁,s₁. step(t,s,t₁,s₁) ∧ ✄eval(t₁,s₁,Q))` — well-defined by the internal Banach fixed-point theorem
 2. **Kripke worlds** (Section 3.3): the circularity W = N →fin T, T = W →mon P(Value) is resolved via the guarded fixed point `Tb = µX.◮((N →fin X) →mon P(Value))`
 3. **Type interpretation** (Section 3.4): recursive types use `fix`, reference types use ✄ to handle the one-step semantic delay between store lookup and value access
-4. **Fundamental theorem** (Proposition 3.4): if ⊢ t : τ, then for all worlds w, t ∈ comp(`[[τ]]`∅)(w) — proved with two explicit ✄ uses and no index arithmetic
+4. **Fundamental theorem** (Proposition 3.4): if ⊢ t : τ, then for all worlds w, t ∈ comp(`⟦τ⟧`∅)(w) — proved with two explicit ✄ uses and no index arithmetic
 
 The proof is "almost like a naive set-theoretic model" except at two points where guarded recursion is essential: the definition of recursive types (well-foundedness requires the guard) and the reference type interpretation (the store indirection introduces a one-step delay).
 
