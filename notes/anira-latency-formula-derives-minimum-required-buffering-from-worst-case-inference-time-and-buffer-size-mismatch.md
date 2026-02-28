@@ -39,6 +39,8 @@ Where `W` is a proportional wait fraction (0.0 to 0.95). Setting W > 0 allows th
 
 The ceil() relationship here is structurally analogous to the sub-block splitting problem in [[sample-accurate-triggering-in-block-based-audio-requires-splitting-render-blocks-into-sub-block-execution-lambdas]]: both arise when a fixed processing unit (inference call or render block) must be subdivided by an event boundary, and rounding is unavoidable. Anira's solution is to make the rounding cost explicit and computable rather than hidden.
 
+The formula also provides quantitative grounding for why [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]]: an autoregressive model generating at 57Hz on CPU has I_max ≈ 840 samples at 48kHz, which yields L_total = ceil(840 / H_host) * H_host — multiple host buffer periods of added latency that no practical audio application can absorb. Architectural alternatives (parallel decoders, multiband reduction) work precisely because they reduce I_max to a range where the formula produces tolerable L_total values.
+
 ---
 
 Source: [[anira-2024]]
