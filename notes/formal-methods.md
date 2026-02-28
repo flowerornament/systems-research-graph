@@ -60,6 +60,7 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[dsp-and-ml-are-structurally-identical-under-shape-driven-dispatch-in-the-murail-calculus]] -- the equation `y = a·y@1 + b·x` is a one-pole filter at scalar shape and a recurrent neural layer at shape (16); only the dispatch target differs; the unification is a formal consequence of shape-driven dispatch
 
 ## Open Questions
+- Can Murail's causality checker be given a type-theoretic interpretation in guarded domain theory? The structural correspondence between the `@d` guard and the ◮ modality ([[the-guardedness-condition-on-recursive-definitions-is-the-proof-theoretic-analog-of-the-causality-condition-on-dependency-graphs]]) suggests the causality checker is doing the work of a guardedness checker in a guarded type theory. Formalizing this could give soundness of the causality condition a categorical proof.
 - Where exactly is the tier boundary between Lean-appropriate formal verification (stable core formalism) and runtime-verification-appropriate testing (application layer) in murail's architecture?
 - The substrate validation criteria (Appendix B) specify the three-domain test as the correctness criterion for the factoring. Which domain should be implemented first to exercise the most substrate mechanisms with the least domain-specific complexity? (The toy-domain test suggests a spreadsheet-like domain, not audio, as the first validation target.)
 
