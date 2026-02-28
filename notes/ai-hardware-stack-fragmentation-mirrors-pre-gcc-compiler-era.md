@@ -1,5 +1,5 @@
 ---
-description: Every AI hardware vendor builds a complete vertical software stack (CUDA, ROCm, XLA, MLX) with almost no shared code, replicating the pre-GCC state where every chipmaker had its own incompatible C compiler
+description: Every AI hardware vendor builds a full vertical stack (CUDA, ROCm, XLA, MLX) with almost no shared code, replicating the pre-GCC state where every chipmaker had its own incompatible C compiler
 type: claim
 evidence: strong
 source: [[swift-to-mojo-chris-lattner]]
