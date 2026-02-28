@@ -32,16 +32,6 @@
       "archive_folder": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/"
     },
     {
-      "id": "swift-to-mojo-chris-lattner-extract",
-      "batch": "swift-to-mojo-chris-lattner",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/swift-to-mojo-chris-lattner.md",
-      "created": "2026-02-28",
-      "next_claim_start": 100,
-      "archive_folder": "ops/queue/archive/2026-02-28-swift-to-mojo-chris-lattner/"
-    },
-    {
       "id": "naur-1985-programming-as-theory-building-extract",
       "batch": "naur-1985-programming-as-theory-building",
       "type": "extract",
@@ -203,6 +193,21 @@
       "topic_maps_updated": 2,
       "existing_claims_updated": 3,
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-fmVdfQNPzkE/"
+    },
+    {
+      "id": "swift-to-mojo-chris-lattner-extract",
+      "batch": "swift-to-mojo-chris-lattner",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/swift-to-mojo-chris-lattner.md",
+      "created": "2026-02-28",
+      "next_claim_start": 100,
+      "archive_folder": "ops/queue/archive/2026-02-28-swift-to-mojo-chris-lattner/",
+      "completed": "2026-02-28",
+      "claims_created": 11,
+      "enrichments": 0,
+      "connections_added": 15,
+      "topic_maps_updated": 3
     }
   ]
 }
