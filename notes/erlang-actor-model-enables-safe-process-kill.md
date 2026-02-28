@@ -16,3 +16,5 @@ Erlang provides `Observer` for runtime introspection of the actor graph and proc
 This is directly relevant to [[concurrent-systems]] design for murail: the RT/NRT thread separation already achieves a weaker form of this (the RT thread is isolated from NRT mutations via compile-and-swap). But the claim points to a deeper design principle -- audio graph nodes that share no mutable state across the RT boundary can be safely replaced or killed without synchronization, because there is nothing to orphan.
 
 Contrasted with [[clojure-csp-channels-sacrifice-introspectability]] which shows how Go-style CSP in Clojure loses the introspection property. See also [[long-running-servers-require-continuity-oriented-programming-models]] for the broader context of why this matters.
+
+This property extends beyond audio engines to LLM agent orchestration: [[otp-solves-the-hard-parts-of-agent-architecture-that-other-ecosystems-are-still-building]] shows that the same safe-process-kill and registry-based routing that make OTP excellent for audio RT/NRT separation also solve the state and lifecycle problems every agent framework must address.
