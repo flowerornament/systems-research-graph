@@ -1,5 +1,5 @@
 ---
-description: In McCartney's system, a synthesis definition is built by calling ordinary language functions that create graph nodes; there is no distinct synthdef syntax or declaration form -- the full language is available for graph construction
+description: In McCartney's system, a synthesis definition is built by calling ordinary functions that create graph nodes; there is no distinct synthdef syntax -- the full language is available for graph construction
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
