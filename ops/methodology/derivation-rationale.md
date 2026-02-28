@@ -44,7 +44,7 @@ The existing research already uses a structured evidence rating system (STRONG/M
 
 ### Automation: Full
 
-Claude Code's hook system enables end-to-end automation: session orientation on start, note validation on write, auto-commit on write, and session capture on stop. Skills handle the processing phases (/extract, /connect, /verify). This matches the heavy processing requirement — manual invocation of each step would be impractical at this scale.
+Claude Code's hook system enables end-to-end automation: session orientation on start, note validation on write, auto-commit on write, and session capture on stop. Skills handle the processing phases (/arscontexta:extract, /arscontexta:connect, /arscontexta:verify). This matches the heavy processing requirement — manual invocation of each step would be impractical at this scale.
 
 ## Active Feature Blocks
 
