@@ -73,7 +73,7 @@ fi
 OBS_COUNT=$(find ops/observations/ -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
 OBS_THRESHOLD=5
 if [ "$OBS_COUNT" -gt "$OBS_THRESHOLD" ]; then
-  echo "- WARNING: $OBS_COUNT pending observations (threshold: $OBS_THRESHOLD). Run /connect."
+  echo "- WARNING: $OBS_COUNT pending observations (threshold: $OBS_THRESHOLD). Run /arscontexta:connect."
 else
   echo "- Pending observations: $OBS_COUNT (threshold: $OBS_THRESHOLD)"
 fi
