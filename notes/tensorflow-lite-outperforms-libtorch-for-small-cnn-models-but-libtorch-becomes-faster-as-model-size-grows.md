@@ -21,7 +21,7 @@ ONNX Runtime is fastest across all CNN sizes in this comparison, maintaining its
 
 The mechanism is not explained in the paper, but the likely interpretation: TFLite has lower fixed overhead per inference call, making it relatively efficient for small models where computation time is short. LibTorch's runtime abstractions have higher constant overhead but better computational throughput at scale — paying off as model size and per-inference workload grow.
 
-For murail's neural UGen design, this introduces a third dimension to engine selection alongside architecture type and state requirements. A lightweight embedded-friendly model (~1k parameters) for a simple spectral shaper should prefer TFLite or ONNX Runtime over LibTorch. A full-size audio effect model (~30k parameters) should use ONNX Runtime and can use LibTorch but should avoid TFLite. The crossing point around 15k parameters should be empirically verified for the specific target hardware.
+For murail's neural UGen design, this introduces a third dimension to engine selection alongside architecture type and state requirements. A lightweight embedded-friendly model (~1k parameters) for a simple spectral shaper should prefer TFLite or ONNX Runtime over LibTorch — and since [[dsp-inductive-biases-reduce-model-size-by-encoding-prior-knowledge-about-periodic-audio]] shows that DDSP-style architectures produce sub-1M parameter models (Tiny variant: 0.24M), DDSP-backed neural UGens fall squarely in TFLite's advantageous range. A full-size audio effect model (~30k parameters) should use ONNX Runtime and can use LibTorch but should avoid TFLite. The crossing point around 15k parameters should be empirically verified for the specific target hardware.
 
 ---
 
