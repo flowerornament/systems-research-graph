@@ -25,6 +25,9 @@ Relevant Notes:
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — the formula accounts for mismatch, but the performance cost of H_adapt is unstudied
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — parallel inference is architecturally supported but not benchmarked
 - [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — the buffer size efficiency finding was measured under aligned conditions only
+- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — the engine ranking this claim extends; its baselines were measured under the exact controlled conditions these two gaps exclude
+- [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] — grounds why optimal thread count for parallel inference cannot be derived statically: SMP bandwidth constraints make the answer hardware-architecture-dependent
+- [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — establishes the architectural precondition for Gap 2: parallel ThreadPool inference only applies to stateless models; the gap is scoped to ONNX's domain
 
 Topics:
 - [[ai-ml]]
