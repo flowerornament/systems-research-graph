@@ -1,5 +1,5 @@
 ---
-description: The topos of trees is one instance of a broader class: any topos of sheaves Sh(A) where A is a complete Heyting algebra with a well-founded basis satisfies the axioms of synthetic guarded domain theory
+description: The topos of trees is one instance: any Sh(A) where A is a complete Heyting algebra with a well-founded basis satisfies the axioms of synthetic guarded domain theory
 type: claim
 evidence: strong
 source: [[birkedal-2012-guarded-domain-theory]]
