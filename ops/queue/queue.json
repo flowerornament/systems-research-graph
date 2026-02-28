@@ -345,6 +345,21 @@
       "topic_maps_updated": 1,
       "existing_claims_updated": 1,
       "archive": "ops/queue/archive/2026-02-28-fraser-2004-practical-lock-freedom/"
+    },
+    {
+      "id": "rustbelt-2018-extract",
+      "batch": "rustbelt-2018",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/rustbelt-2018.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 0,
+      "connections_added": 14,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-02-28-rustbelt-2018/"
     }
   ]
 }
