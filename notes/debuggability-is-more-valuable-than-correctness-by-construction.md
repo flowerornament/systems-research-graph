@@ -1,5 +1,5 @@
 ---
-description: Because software specs are always wrong and all software is continuous change, the ability to debug and modify running systems outweighs the value of proving static properties of code that will be thrown away
+description: Since software specs are always wrong and all software is continuous change, the ability to debug and modify running systems outweighs proving static properties of code that will be thrown away
 type: claim
 evidence: moderate
 source: [[stop-writing-dead-programs-jack-rusher-2022]]
