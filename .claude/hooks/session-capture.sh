@@ -35,7 +35,7 @@ TENSION_COUNT=$(find ops/tensions/ -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
 # Get recent git activity for this session (last hour)
 RECENT_COMMITS=""
 if git rev-parse --is-inside-work-tree &>/dev/null; then
-  RECENT_COMMITS=$(git log --since="1 hour ago" --oneline 2>/dev/null | head -20)
+  RECENT_COMMITS=$(git log --since="1 hour ago" --oneline -20 2>/dev/null)
 fi
 
 # Write session file
