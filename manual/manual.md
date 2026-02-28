@@ -12,7 +12,7 @@ Reference documentation for the arscontextica knowledge vault -- an atomic claim
 
 - [[getting-started]] -- First session: creating claims, making connections, finding your rhythm
 - [[workflows]] -- Processing pipeline, maintenance cycles, session patterns
-- [[meta-skills]] -- Deep guide to /arscontexta:ask, /arscontexta:architect, /rethink, /remember
+- [[meta-skills]] -- Deep guide to /arscontexta:ask, /arscontexta:architect, /arscontexta:rethink, /arscontexta:remember
 
 ## Reference
 
