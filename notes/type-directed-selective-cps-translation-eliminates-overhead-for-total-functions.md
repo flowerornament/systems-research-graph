@@ -1,5 +1,5 @@
 ---
-description: Type information identifies which functions can have user-defined effects, so CPS transformation applies only where needed, leaving pure and built-in-effect functions unmodified and avoiding full-program overhead
+description: Type information identifies which functions can have user-defined effects, so CPS applies only where needed, leaving pure and built-in-effect functions unmodified and avoiding full-program overhead
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
