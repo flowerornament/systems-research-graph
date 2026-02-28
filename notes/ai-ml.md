@@ -21,6 +21,7 @@ AI and machine learning integration research for murail. Covers neural audio syn
 - [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] -- autoregressive sampling requires one forward pass per audio sample; WaveNet peaks at 57Hz on CPU, making any RT integration dependent on pre-buffering or architectural redesign
 - [[multiband-decomposition-reduces-temporal-dimensionality-enabling-real-time-neural-audio-at-48khz]] -- PQMF 16-band decomposition reduces 48kHz sequences to 3kHz sub-bands, delivering 25x synthesis speedup enabling 985kHz CPU throughput; the DSP technique, not the ML model, is what makes 48kHz RT viable
 - [[parallel-non-autoregressive-audio-decoders-match-autoregressive-quality-when-combined-with-adversarial-training]] -- RAVE (17.6M, parallel, adversarial) outperforms NSynth (64.7M, autoregressive) on MOS, showing quality and parallelism are not architecturally in tension
+- [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] -- RadSan testing across LibTorch, TFLite, and ONNX Runtime shows persistent malloc/mutex/sleep violations on every inference call, not just startup; no current engine can run in an audio callback without architectural separation
 
 ### VAE Training Architecture
 - [[two-stage-vae-training-separates-representation-quality-from-synthesis-quality]] -- Stage 1: spectral-loss VAE for representation; Stage 2: frozen encoder + adversarial decoder fine-tuning for perceptual quality; the separation is architecturally necessary, not merely convenient
