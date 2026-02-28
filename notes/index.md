@@ -1,14 +1,16 @@
 ---
-description: Entry point to the murail research knowledge graph
+description: Entry point to the research knowledge graph
 type: moc
 created: 2026-02-27
 ---
 
 # index
 
-This vault maps the research domain around murail — an embeddable audio graph engine at the intersection of audio DSP, programming language design, concurrent systems, and formal methods.
+A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki-linked across domains. Topic maps provide navigation within and between domains.
 
-## Research Areas
+## Domains
+
+### murail (audio graph engine)
 - [[audio-dsp]] -- synthesis, signal processing, UGen design, buffer management
 - [[language-design]] -- rate systems, typed composition, formal semantics, expression problem
 - [[concurrent-systems]] -- lock-free communication, RT scheduling, memory safety, thread models
@@ -16,6 +18,9 @@ This vault maps the research domain around murail — an embeddable audio graph 
 - [[ai-ml]] -- neural UGens, differentiable audio, DDSP, generative composition
 - [[competing-systems]] -- SuperCollider, Faust, Web Audio, JUCE, NIH-plug, Firewheel, HexoDSP
 - [[formal-methods]] -- Lean proofs, mathematical foundations, verification, algebraic spaces
+
+## Cross-Domain
+(topic maps that span multiple domains appear here — e.g., BEAM/Elixir patterns shared between murail language design and herald)
 
 ## Orientation
 - ops/goals.md -- current active threads
