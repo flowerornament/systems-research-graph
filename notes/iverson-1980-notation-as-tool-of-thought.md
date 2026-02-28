@@ -1,5 +1,5 @@
 ---
-description: Kenneth Iverson's 1979 Turing Award lecture arguing that APL demonstrates how executability and universality can be combined with mathematical notation's suggestivity, subordination, economy, and amenability to proof
+description: Iverson's 1979 Turing Award lecture arguing APL shows how executability and universality combine with mathematical notation's suggestivity, subordination, economy, and amenability to proof
 type: source-reference
 created: 2026-02-28
 ---
