@@ -28,9 +28,13 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 
 ### Graph IR and Compiler Architecture
 - [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] -- replacing opaque UGen objects with four arithmetic primitives lets the compiler fuse, vectorize, and prune dead nodes across what were previously object boundaries
-- [[construction-time-graph-optimization-distributes-compiler-cost-across-node-creation]] -- 120+ algebraic rewrites applied at node-creation time deliver a pre-simplified graph; rate inference and CSE are free at construction
+- [[construction-time-graph-optimization-distributes-compiler-cost-across-node-creation]] -- 120+ algebraic rewrites applied at node-creation time deliver a pre-simplified graph; rate inference (constant < init < reset < event < audio) and CSE are free at construction
 - [[signal-shape-as-a-type-level-property-enables-compile-time-buffer-allocation-and-vectorization]] -- matrix shape as a signal type property (not metadata) enables static buffer allocation and SIMD planning; feedback loops require a separate recursive shape inference pass
 - [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- if/switch/for as graph primitives make the synthesis graph a conditional dataflow graph, not a simple DAG; the scheduler must handle subgraph activation and deactivation
+- [[delay-merging-collapses-structurally-identical-delays-enabling-implicit-multi-tap-sharing]] -- the first whole-graph compiler pass collapses delays with identical inputs and initialization into one; enables implicit multi-tap sharing when library functions independently delay the same signal
+- [[recursive-shape-inference-is-required-for-feedback-delay-reads-in-matrix-signal-graphs]] -- reading a delay in a feedback loop creates a circularity in shape computation; a separate fixpoint resolution pass is required before buffer allocation can proceed
+- [[graph-compiler-loop-formation-groups-same-dimension-trees-to-enable-vectorization]] -- after shape inference, expression trees with identical matrix dimensions and compatible rates are grouped into SIMD-vectorizable loops; topological order is preserved across loop boundaries
+- [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]] -- synthesis definitions are built by calling ordinary language functions that return graph nodes; no distinct synthdef syntax; the full language including auto-mapping is available
 
 ### Workflow
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- audio continuity during whole-graph recompilation is the specific mechanism that makes whole-graph compilation viable for interactive use; solves the 45-second silence problem
