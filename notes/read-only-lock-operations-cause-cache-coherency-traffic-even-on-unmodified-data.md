@@ -1,5 +1,5 @@
 ---
-description: Acquiring and releasing a multi-reader lock writes to the lock metadata, generating cache coherency traffic even when the protected data is never modified — creating a bottleneck at heavily-read structures
+description: Acquiring even a read-only lock writes to lock metadata, generating cache coherency traffic on unmodified data and creating a bottleneck at heavily-read structures like tree roots
 type: claim
 evidence: strong
 source: "[[fraser-2004-practical-lock-freedom]]"
