@@ -10,8 +10,11 @@
       "file": "anira-2024-140.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "current_phase": "reweave",
+      "completed_phases": [
+        "create",
+        "reflect"
+      ]
     },
     {
       "id": "anira-2024-141",
@@ -23,7 +26,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-142",
@@ -35,7 +40,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-143",
@@ -47,7 +54,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-144",
@@ -59,7 +68,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-145",
@@ -71,7 +82,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-146",
@@ -83,7 +96,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-147",
@@ -95,7 +110,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     },
     {
       "id": "anira-2024-148",
@@ -107,7 +124,9 @@
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "reflect",
-      "completed_phases": ["create"]
+      "completed_phases": [
+        "create"
+      ]
     }
   ],
   "processing": [],
