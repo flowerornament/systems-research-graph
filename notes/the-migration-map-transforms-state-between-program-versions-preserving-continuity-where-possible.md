@@ -1,5 +1,5 @@
 ---
-description: The migration map specifies per-equation how to populate the new state region from the old: copy (name persists, compatible shape), reinit (new or incompatible), or gauge-transform (declared invariant)
+description: The migration map specifies per-equation how to populate new state from old: copy (name persists, compatible shape), reinit (new or incompatible), or gauge-transform (declared invariant)
 type: property
 evidence: strong
 source: [[murail-substrate-v3]]
