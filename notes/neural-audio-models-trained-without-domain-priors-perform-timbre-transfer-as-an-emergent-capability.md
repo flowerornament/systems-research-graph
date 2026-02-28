@@ -1,5 +1,5 @@
 ---
-description: RAVE performs cross-domain timbre transfer by encoding out-of-distribution audio through a domain-specific encoder without any transfer-specific training, preserving pitch and loudness while replacing timbral character
+description: Out-of-distribution audio through a trained RAVE encoder produces latents the decoder renders as target-domain audio, preserving pitch/loudness but replacing timbre -- no explicit transfer training required
 type: claim
 evidence: moderate
 source: [[rave-2021]]
