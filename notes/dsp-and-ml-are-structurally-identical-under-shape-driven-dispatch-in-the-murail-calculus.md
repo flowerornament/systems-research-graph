@@ -26,7 +26,7 @@ The substrate treats them identically through the compile pipeline: dependency a
 
 ## Connections
 
-- Directly connects the [[ai-ml.md]] and [[formal-methods.md]] topic maps through a single formal result
+- Directly connects the [[ai-ml]] and [[formal-methods]] topic maps through a single formal result
 - [[differentiable-dsp-components-make-classical-synthesis-knowledge-available-as-structural-priors-for-neural-networks]] (DDSP) approaches this from the ML side; Murail's substrate approaches it from the formal model side -- they are complementary perspectives on the same structural convergence
 - [[signal-shape-as-a-type-level-property-enables-compile-time-buffer-allocation-and-vectorization]] (McCartney) identifies shape as a type-level property for static allocation; Murail's substrate formalizes this through shape inference and dispatch
 - The substrate factoring ([[the-murail-substrate-is-instantiated-by-a-domain-configuration-without-modifying-layers-0-through-2]]) is what makes this unification possible: a substrate with audio hardcoded could not unify with ML
