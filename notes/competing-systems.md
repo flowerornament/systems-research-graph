@@ -86,6 +86,12 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - McCartney's event codegen and scheduler are explicitly unfinished after years of work -- what is the blocker, and does it affect Murail's conditional subgraph plans?
 - SC has 800+ primitives as a portability burden; murail should define its extension boundary early. When is the right time to lock the plugin/FFI interface to prevent the same primitive bloat?
 
+## Source References
+- [[2026-02-06-fmVdfQNPzkE]] -- McCartney's SAPF Codefest talk (2021); primary source for SAPF language design claims: concatenative postfix readability, append-only execution log, lazy infinite lists, and embeddable C library factoring
+- [[hadron-supercollider-symposium-2025-keynote]] -- Lucille's Hadron keynote at SC Symposium 2025; primary source for Hadron compatibility and governance claims: Hiram's Law, deferred initialization, constant folding semantics, edition model, and compiler-explorer analog
+- [[mccartney-supercollider-symposium-2025-keynote]] -- McCartney's keynote at SC Symposium 2025; primary source for McCartney new language claims from that event and broader SC ecosystem history
+- [[mccartney-ideas-2026-02-15]] -- Morgan's synthesis of McCartney's post-SC language design ideas as of February 2026; primary source for claims about immutability architecture, reference counting viability, thread-local scope, and creative workflow friction as design driver
+
 ---
 
 Topics:
