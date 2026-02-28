@@ -11,7 +11,7 @@ status: active
 
 Leijen's Lemma 4.b states: if `Γ ⊢ Xop[op(v)] : τ | ε` and `op ∈ Σ(l)`, then `l ∈ ε`. In plain terms: if an expression is well-typed and it contains an operation call, the effect label for that operation must appear in the expression's effect type. Effect types cannot be discarded except by passing through a handler.
 
-The consequence: a well-typed program with an empty effect type (`⟨⟩`) cannot contain any unhandled operation call. The type checker verifies that every effect is handled somewhere in the enclosing context. This is the effect-system analog of exhaustive pattern matching -- you cannot forget to handle a case.
+The consequence: a well-typed program with an empty effect type (`⟨⟩`) cannot contain any unhandled operation call. The type checker verifies that every effect is handled somewhere in the enclosing context. This is the effect-system analog of exhaustive pattern matching -- you cannot forget to handle a case. Combined with the operational semantics from [[effect-handlers-are-resumable-exceptions-that-capture-delimited-continuations]], this means every continuation capture has a well-defined delimiter -- the type system guarantees the handler exists.
 
 The practical significance Leijen draws: "if a function does not have an `exc` effect, it will never throw an exception." This is stronger than Java's checked exceptions (which can be suppressed) and stronger than Rust's `Result` propagation (which requires explicit handling but doesn't prevent `unwrap()`). The soundness proof (Theorem 1) shows well-typed programs either produce a well-typed value or diverge -- they cannot reach a stuck state from an unhandled operation.
 
