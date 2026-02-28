@@ -60,6 +60,17 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting in RT thread; SC3 introduced the client-server split that defined SuperCollider's architecture
 - [[pyrite-introduced-closures-into-max-patching-enabling-separation-of-ui-and-logic]] -- Pyrite's Scheme-style closures let Max patches contain only UI while all logic lived in a Pyrite script; demonstrated the text-script / visual-patch complementarity SC formalized
 
+### Hadron (Lucille, 2025): Compatibility, Governance, and Ecosystem
+- [[hirams-law-makes-all-observable-interpreter-behavior-a-permanent-api-commitment]] -- any observable behavior becomes a permanent user dependency; even bugs and implementation accidents are locked in once enough users exist
+- [[deferred-argument-initialization-exposes-sc-frame-setup-order-as-observable-behavior]] -- SC's two-pass frame init makes argument default evaluation timing visible and user-dependent; any reimplementation must reproduce the quirk
+- [[constant-folding-can-silently-change-sc-program-semantics-via-initialization-timing]] -- replacing `2+2` with `4` shifts initialization from deferred to literal, changing observable behavior; basic optimization is not semantics-preserving in SC
+- [[observable-semantics-lock-in-implementation-details-and-block-optimization]] -- when internals leak through observable behavior, rewrites and optimizations are permanently constrained; the antidote is explicit compatibility classification
+- [[language-feature-adoption-requires-governance-structures-not-just-technical-readiness]] -- even feasible, desired language changes cannot ship without pre-negotiated decision authority and stakeholder process; technical readiness is not the binding constraint
+- [[language-editions-group-breaking-changes-to-avoid-combinatorial-flag-explosion]] -- named edition releases bundle breaking changes rather than individual flags; prevents exponential configuration space, following Rust's edition model
+- [[the-supercollider-ecosystem-rather-than-the-software-is-its-irreplaceable-value]] -- 25 years of community, creative works, and pedagogy are irreplaceable regardless of software quality; compatibility preserves access to this ecosystem
+- [[language-runtime-bootstrap-requires-broad-infrastructure-before-any-program-can-run]] -- GC, dispatch, class library, REPL, and terminal output must all work before any visible output exists; interpreter progress appears non-linear
+- [[compiler-explorer-extended-c-by-making-compilation-artifacts-inspectable-and-shareable]] -- inspectable, shareable compiler output transforms language teaching and bug reporting; Hadron's web WASM front end applies this to SC
+
 ### SAPF Language Design (2021 Codefest)
 - [[concatenative-postfix-readability-breaks-when-argument-role-is-ambiguous]] -- without knowing a word's arity, reader cannot distinguish primary operand from auxiliary argument; McCartney's fix: pipeline the main subject, parenthesize options
 - [[sapf-append-only-execution-log-provides-ten-year-session-provenance]] -- every executed expression logged for 10 years enables cross-session provenance at decade scale; complements within-session undo/redo
