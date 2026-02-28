@@ -84,6 +84,7 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 ## Open Questions
 - Is there an IR granularity between UGen-level (opaque, v1) and arithmetic-primitive-level (McCartney's approach, requires massive compiler investment) that would allow incremental lowering?
 - McCartney's event codegen and scheduler are explicitly unfinished after years of work -- what is the blocker, and does it affect Murail's conditional subgraph plans?
+- SC has 800+ primitives as a portability burden; murail should define its extension boundary early. When is the right time to lock the plugin/FFI interface to prevent the same primitive bloat?
 
 ---
 
