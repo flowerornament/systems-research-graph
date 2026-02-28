@@ -1,5 +1,5 @@
 ---
-description: Extending the later modality ◮ to dependent type theory requires defining ◮I as a fibred endofunctor on each slice category S/I; the left adjoint ◭ does not extend to a well-behaved dependent type constructor
+description: Extending ◮ to dependent types requires defining ◮I as a fibred endofunctor on each slice category S/I; the left adjoint ◭ does not extend to a well-behaved dependent type constructor
 type: property
 evidence: strong
 source: [[birkedal-2012-guarded-domain-theory]]
