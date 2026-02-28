@@ -26,6 +26,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[stop-writing-dead-programs-jack-rusher-2022]] -- Jack Rusher, Strange Loop 2022: interactive programming, batch mode critique, language design survey
 - [[we-dont-know-how-to-compute-sussman-2011]] -- Gerald Sussman, Strange Loop 2011: propagator model, truth maintenance, evolvability vs correctness, generic operations
 - [[channel-agnosticism-metasounds-aaron-mcleran-adc]] -- Aaron McLeran (Epic Games), ADC: MetaSounds channel-agnostic types, polymorphic audio format abstraction, JIT graph compilation, instanced graph model
+- [[2026-02-06-qmayIRViJms]] -- Darwin Gross interviews James McCartney (SuperCollider creator): SC version history, Pyrite origins, Core Audio architecture, APL influence, audio education, JUCE critique
 
 ## Orientation
 - ops/goals.md -- current active threads
