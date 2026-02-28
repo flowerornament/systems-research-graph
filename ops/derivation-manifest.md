@@ -74,11 +74,11 @@ vocabulary:
   base_note_template: claim-note.md
 
   # Level 7 — Commands
-  cmd_reduce: /extract
-  cmd_reflect: /connect
-  cmd_reweave: /reweave
-  cmd_verify: /verify
-  cmd_rethink: /rethink
+  cmd_reduce: /arscontexta:extract
+  cmd_reflect: /arscontexta:connect
+  cmd_reweave: /arscontexta:reweave
+  cmd_verify: /arscontexta:verify
+  cmd_rethink: /arscontexta:rethink
 
 extraction_categories:
   - category: claims
