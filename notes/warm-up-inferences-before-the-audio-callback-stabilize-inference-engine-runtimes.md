@@ -30,6 +30,7 @@ Relevant Notes:
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — architectural mechanism that contains violations away from the audio thread
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — I_max benchmarking should run post-warmup
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — the performance ranking that this claim qualifies: the ranking reflects stabilized (post-warmup) runtimes; LibTorch's pronounced warm-up effect is the largest distorting factor before stabilization
+- [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]] — TFLite's warm-up effect appearing only at CNN-29k (not smaller models) is the same model-size dependency that the size comparison documents; warm-up selectivity and steady-state performance ordering share the same underlying mechanism
 
 Topics:
 - [[ai-ml]]
