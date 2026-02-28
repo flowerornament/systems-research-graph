@@ -1,5 +1,5 @@
 ---
-description: When an operation clause calls resume exactly once in tail position, no continuation capture is needed -- the evaluation reduces to a direct function call, giving zero overhead for the most common effect pattern
+description: When an operation clause calls resume exactly once in tail position, no continuation capture is needed -- evaluation reduces to a direct call, giving zero overhead for the most common effect pattern
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
