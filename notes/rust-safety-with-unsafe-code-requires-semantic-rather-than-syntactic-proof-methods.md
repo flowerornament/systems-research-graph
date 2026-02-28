@@ -23,3 +23,5 @@ The semantic approach is strictly more powerful than the syntactic approach beca
 **Relevance to murail:** murail uses Rust's type system to enforce NRT/RT thread separation and safe concurrent access to audio graph state. This claim establishes that these type-level guarantees have a formal semantic grounding -- not just a syntactic convention but a proven property. The unsafe internals of Mutex and Arc (which murail relies on) are among the specific libraries verified by RustBelt.
 
 This claim extends [[evolvability-requires-trading-provability-for-extensibility]] by showing Rust found a third path: an extensible type system with an *extensible* proof method -- extensibility and verifiability are not necessarily in conflict when the proof method is semantic.
+
+The Iris logic on which RustBelt is built was itself developed using guarded domain theory: [[the-topos-of-trees-internalizes-step-indexing-eliminating-explicit-index-arithmetic-from-proofs]] eliminates the explicit step-index arithmetic that earlier RustBelt-style models required. [[birkedal-2012-guarded-domain-theory]] is a direct mathematical precursor to Iris.
