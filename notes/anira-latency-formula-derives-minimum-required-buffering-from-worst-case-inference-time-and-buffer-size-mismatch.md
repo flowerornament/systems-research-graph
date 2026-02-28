@@ -55,6 +55,8 @@ Relevant Notes:
 - [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — mismatch case (H_adapt > 0) is an open research gap
 - [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — H_adapt increases when model input size exceeds host buffer size
 - [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] — formula explains why: autoregressive I_max yields L_total values no RT system can absorb
+- [[multiband-decomposition-reduces-temporal-dimensionality-enabling-real-time-neural-audio-at-48khz]] — I_max reduction strategy: shrinking temporal dimension reduces inference time within the formula
+- [[block-size-is-the-primary-latency-throughput-tradeoff-in-murail-execution]] — H_host in the formula IS the murail block size N; the host engine latency choice and neural inference latency budget are coupled through this variable
 - [[sample-accurate-triggering-in-block-based-audio-requires-splitting-render-blocks-into-sub-block-execution-lambdas]] — structurally parallel problem: rounding at processing unit boundaries
 
 Topics:
