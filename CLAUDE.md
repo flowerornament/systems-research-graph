@@ -74,11 +74,11 @@ ops/
 | "Research best practices for..." | /arscontexta:ask | Read bundled references |
 | "What does my system know about..." | Check ops/methodology/ directly | /arscontexta:ask for research backing |
 | "I want to add a new area/domain..." | /arscontexta:add-domain | Manual folder + template creation |
-| "What should I work on..." | /arscontexta:next | Reconcile queue + recommend |
+| "What should I work on..." | /next | Reconcile queue + recommend |
 | "Help / what can I do..." | /arscontexta:help | Show available commands |
 | "Walk me through..." | /arscontexta:tutorial | Interactive learning |
-| "Research / learn about..." | /arscontexta:learn | Deep research with provenance |
-| "Challenge assumptions..." | /arscontexta:rethink | Triage observations/tensions |
+| "Research / learn about..." | /learn | Deep research with provenance |
+| "Challenge assumptions..." | /rethink | Triage observations/tensions |
 
 If the arscontexta plugin is not loaded, apply the methodology principles documented in this file.
 
@@ -228,4 +228,6 @@ ops/methodology/ is the source of truth for system behavior. When methodology no
 
 ## Helper Functions
 
-Never rename a claim manually -- use `./ops/scripts/rename-note.sh "old title" "new title"` to update all wiki links. See `ops/scripts/` for graph maintenance utilities (orphan detection, dangling links, backlinks, schema validation, queue status).
+Graph analysis queries live in `ops/queries/` (orphan detection, source diversity, cross-discipline, low-evidence, open-questions). Run them directly as bash scripts.
+
+Note: safe rename and other mechanical utilities (backlinks, link-density, validate-schema) are not yet implemented. Rename claims manually with care -- update all wiki links across the vault when changing a claim title.

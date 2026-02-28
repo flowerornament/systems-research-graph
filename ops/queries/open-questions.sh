@@ -12,7 +12,7 @@ echo "=== Open Questions ==="
 echo ""
 
 # Find all claims with type: open-question
-rg -l '^type:\s*open-question' notes/ 2>/dev/null | sort | while read -r file; do
+{ rg -l '^type:\s*open-question' notes/ 2>/dev/null || true; } | sort | while read -r file; do
   basename_no_ext=$(basename "$file" .md)
   description=$(rg '^description:' "$file" 2>/dev/null | head -1 | sed 's/^description:\s*//')
   topics=$(rg '^topics:' "$file" 2>/dev/null | head -1 | sed 's/^topics:\s*//')
@@ -23,7 +23,7 @@ rg -l '^type:\s*open-question' notes/ 2>/dev/null | sort | while read -r file; d
 done
 
 # Count
-OQ_COUNT=$(rg -c '^type:\s*open-question' notes/ 2>/dev/null | wc -l | tr -d ' ')
+OQ_COUNT=$({ rg -c '^type:\s*open-question' notes/ 2>/dev/null || true; } | wc -l | tr -d ' ')
 TOTAL_CLAIMS=$(find notes/ -name '*.md' -not -name 'index.md' \
   -not -name 'audio-dsp.md' -not -name 'language-design.md' \
   -not -name 'concurrent-systems.md' -not -name 'rust-ecosystem.md' \

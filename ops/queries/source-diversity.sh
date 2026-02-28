@@ -13,7 +13,7 @@ echo "Claims per source (sorted by count):"
 echo ""
 
 # Extract all source values from claim frontmatter
-rg '^source:\s*(.+)' notes/ -o --no-filename 2>/dev/null \
+{ rg '^source:\s*(.+)' notes/ -o --no-filename 2>/dev/null || true; } \
   | sed 's/^source:\s*//' \
   | sed 's/^"//;s/"$//' \
   | sort \
@@ -30,7 +30,7 @@ rg '^source:\s*(.+)' notes/ -o --no-filename 2>/dev/null \
 echo ""
 
 # Count claims with no source
-NO_SOURCE=$(rg -l '^source:\s*""' notes/ 2>/dev/null | wc -l | tr -d ' ')
+NO_SOURCE=$({ rg -l '^source:\s*""' notes/ 2>/dev/null || true; } | wc -l | tr -d ' ')
 NO_SOURCE_FIELD=$(find notes/ -name '*.md' -not -name 'index.md' \
   -not -name 'audio-dsp.md' -not -name 'language-design.md' \
   -not -name 'concurrent-systems.md' -not -name 'rust-ecosystem.md' \

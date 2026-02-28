@@ -24,7 +24,7 @@ for note in notes/*.md; do
   esac
 
   # Search all .md files for wiki-links to this note (excluding self-references)
-  incoming=$(rg -l "\[\[$basename_no_ext\]\]" notes/ ops/ 2>/dev/null | grep -v "$note" | wc -l | tr -d ' ')
+  incoming=$({ rg -l "\[\[$basename_no_ext\]\]" notes/ ops/ 2>/dev/null || true; } | grep -v "$note" | wc -l | tr -d ' ')
 
   if [ "$incoming" -eq 0 ]; then
     ORPHAN_COUNT=$((ORPHAN_COUNT + 1))

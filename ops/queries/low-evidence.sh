@@ -11,7 +11,7 @@ echo "=== Low Evidence Claims ==="
 echo ""
 
 echo "## evidence: weak"
-rg -l '^evidence:\s*(weak)' notes/ 2>/dev/null | while read -r file; do
+{ rg -l '^evidence:\s*(weak)' notes/ 2>/dev/null || true; } | while read -r file; do
   basename_no_ext=$(basename "$file" .md)
   source=$(rg '^source:' "$file" 2>/dev/null | head -1 | sed 's/^source:\s*//')
   echo "  - $basename_no_ext (source: ${source:-none})"
@@ -19,7 +19,7 @@ done
 
 echo ""
 echo "## evidence: internal-only"
-rg -l '^evidence:\s*(internal-only)' notes/ 2>/dev/null | while read -r file; do
+{ rg -l '^evidence:\s*(internal-only)' notes/ 2>/dev/null || true; } | while read -r file; do
   basename_no_ext=$(basename "$file" .md)
   source=$(rg '^source:' "$file" 2>/dev/null | head -1 | sed 's/^source:\s*//')
   echo "  - $basename_no_ext (source: ${source:-none})"
@@ -28,8 +28,8 @@ done
 echo ""
 
 # Summary count
-WEAK_COUNT=$(rg -c '^evidence:\s*weak' notes/ 2>/dev/null | wc -l | tr -d ' ')
-INTERNAL_COUNT=$(rg -c '^evidence:\s*internal-only' notes/ 2>/dev/null | wc -l | tr -d ' ')
+WEAK_COUNT=$({ rg -c '^evidence:\s*weak' notes/ 2>/dev/null || true; } | wc -l | tr -d ' ')
+INTERNAL_COUNT=$({ rg -c '^evidence:\s*internal-only' notes/ 2>/dev/null || true; } | wc -l | tr -d ' ')
 TOTAL_CLAIMS=$(find notes/ -name '*.md' -not -name 'index.md' \
   -not -name 'audio-dsp.md' -not -name 'language-design.md' \
   -not -name 'concurrent-systems.md' -not -name 'rust-ecosystem.md' \
