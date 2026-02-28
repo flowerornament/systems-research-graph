@@ -49,11 +49,11 @@ engine_version: "0.8.0"
 ## Command Name Mapping
 | Universal | Domain Command |
 |-----------|---------------|
-| /reduce | /extract |
-| /reflect | /connect |
-| /reweave | /reweave |
-| /verify | /verify |
-| /rethink | /rethink |
+| /reduce | /arscontexta:extract |
+| /reflect | /arscontexta:connect |
+| /reweave | /arscontexta:reweave |
+| /verify | /arscontexta:verify |
+| /rethink | /arscontexta:rethink |
 
 ## Platform
 - Tier: Claude Code
