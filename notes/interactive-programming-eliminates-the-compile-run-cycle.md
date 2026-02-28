@@ -1,5 +1,5 @@
 ---
-description: Interactive programming environments combine the editor and the running program, enabling compilation inside a live system with preserved state, runtime introspection, and failure recovery without restart
+description: Combining editor and running program enables compilation inside a live system with preserved state, runtime introspection, and failure recovery without restart
 type: claim
 evidence: strong
 source: [[stop-writing-dead-programs-jack-rusher-2022]]
