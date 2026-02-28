@@ -1,5 +1,5 @@
 ---
-description: Deep guide to /arscontexta:ask, /arscontexta:architect, /rethink, and /remember
+description: Deep guide to /arscontexta:ask, /arscontexta:architect, /arscontexta:rethink, and /arscontexta:remember
 type: manual
 generated_from: "arscontexta-0.8.0"
 ---
@@ -55,8 +55,8 @@ This gathers all relevant claims (supporting evidence, contradictions, related p
 ### Query Patterns to Avoid
 
 - Vague queries ("Tell me about audio") -- too broad, produces shallow summaries
-- Queries about things not in the vault ("What does paper X say?") -- use `/extract` first to get the content into claims
-- Queries that assume specific claim existence -- /ask searches by content, not by filename
+- Queries about things not in the vault ("What does paper X say?") -- use `/arscontexta:extract` first to get the content into claims
+- Queries that assume specific claim existence -- /arscontexta:ask searches by content, not by filename
 
 ## /arscontexta:architect -- Evolving Vault Structure
 
@@ -100,14 +100,14 @@ If you try to set a dimension that creates incoherence, architect will warn you 
 - Before adding a new domain with `/arscontexta:add-domain` -- review whether current dimensions suit the new domain
 - During review sessions (see [[workflows]]) as part of stepping back
 
-## /rethink -- Challenging Assumptions
+## /arscontexta:rethink -- Challenging Assumptions
 
-`/rethink` examines a claim, topic map, or structural pattern critically. It asks: is this still true? Is this still useful? Has something changed?
+`/arscontexta:rethink` examines a claim, topic map, or structural pattern critically. It asks: is this still true? Is this still useful? Has something changed?
 
 ### Rethinking a Claim
 
 ```
-/rethink "notes/Rust's ownership model maps naturally to audio buffer lifetimes.md"
+/arscontexta:rethink "notes/Rust's ownership model maps naturally to audio buffer lifetimes.md"
 ```
 
 The system:
@@ -121,7 +121,7 @@ Example outcome -- a claim about Rust ownership mapping to audio buffers might b
 ### Rethinking a Topic Map
 
 ```
-/rethink "notes/concurrent-systems-map.md"
+/arscontexta:rethink "notes/concurrent-systems-map.md"
 ```
 
 At the topic map level, rethink examines structural questions:
@@ -135,7 +135,7 @@ At the topic map level, rethink examines structural questions:
 You can rethink extraction or processing patterns:
 
 ```
-/rethink extraction-categories
+/arscontexta:rethink extraction-categories
 ```
 
 This reviews whether the six extraction categories (claims, decisions, properties, patterns, contradictions, open-questions) still match the kind of material being processed. Maybe a new category is needed (e.g., "benchmark" for empirical performance data).
@@ -144,72 +144,72 @@ This reviews whether the six extraction categories (claims, decisions, propertie
 
 Good times to rethink:
 - After extracting a source that contradicts existing claims
-- When `/verify` flags accuracy concerns
+- When `/arscontexta:verify` flags accuracy concerns
 - After a significant change to the formal model or specification
 - During review sessions when a claim feels dated
 - When `/arscontexta:ask` returns an answer that feels wrong -- the underlying claims may need revision
 
 ### Rethink vs Verify
 
-`/verify` checks accuracy against sources: "Is this claim faithful to what the source says?"
+`/arscontexta:verify` checks accuracy against sources: "Is this claim faithful to what the source says?"
 
-`/rethink` challenges the claim's role in the graph: "Is this claim still useful? Has the domain moved past it? Should it be revised or replaced?"
+`/arscontexta:rethink` challenges the claim's role in the graph: "Is this claim still useful? Has the domain moved past it? Should it be revised or replaced?"
 
-Use `/verify` for maintenance. Use `/rethink` for evolution.
+Use `/arscontexta:verify` for maintenance. Use `/arscontexta:rethink` for evolution.
 
-## /remember -- Building Institutional Memory
+## /arscontexta:remember -- Building Institutional Memory
 
-`/remember` stores observations that do not fit in individual claims but matter for ongoing research. These persist in ops/observations/ and surface when relevant.
+`/arscontexta:remember` stores observations that do not fit in individual claims but matter for ongoing research. These persist in ops/observations/ and surface when relevant.
 
 ### What to Remember
 
 **Cross-cutting concerns:**
 ```
-/remember "D14 (inter-thread communication) and D37 (plugin API boundary) are tightly coupled -- any change to one constrains the other"
+/arscontexta:remember "D14 (inter-thread communication) and D37 (plugin API boundary) are tightly coupled -- any change to one constrains the other"
 ```
 
 This is not a single claim -- it is a structural observation about the relationship between two architectural decisions.
 
 **Processing insights:**
 ```
-/remember "Papers from the FAUST team tend to understate the complexity of dynamic graph modification -- extract with skepticism, rate evidence accordingly"
+/arscontexta:remember "Papers from the FAUST team tend to understate the complexity of dynamic graph modification -- extract with skepticism, rate evidence accordingly"
 ```
 
 This changes how future extraction behaves without being a claim itself.
 
 **Domain conventions:**
 ```
-/remember "In this vault, 'real-time safe' means bounded worst-case execution time with no allocation and no blocking -- not just 'fast enough'"
+/arscontexta:remember "In this vault, 'real-time safe' means bounded worst-case execution time with no allocation and no blocking -- not just 'fast enough'"
 ```
 
 Terminology precision that should inform all future claim writing and connection.
 
 **Methodology observations:**
 ```
-/remember "Extracting from Lean proof files works better when treating each theorem as a property claim and each tactic block as evidence for that property"
+/arscontexta:remember "Extracting from Lean proof files works better when treating each theorem as a property claim and each tactic block as evidence for that property"
 ```
 
 This improves extraction quality for a specific source type.
 
 ### Remember vs Learn
 
-`/remember` stores observations for future recall. It is passive -- the information surfaces when contextually relevant.
+`/arscontexta:remember` stores observations for future recall. It is passive -- the information surfaces when contextually relevant.
 
-`/learn` changes active behavior. When you `/learn` a pattern, the system applies it going forward.
+`/arscontexta:learn` changes active behavior. When you `/arscontexta:learn` a pattern, the system applies it going forward.
 
 ```
-/remember "Lean proofs map well to property claims"     -- observation, surfaces when relevant
-/learn "Classify Lean theorems as type: property"        -- behavioral change, applied immediately
+/arscontexta:remember "Lean proofs map well to property claims"     -- observation, surfaces when relevant
+/arscontexta:learn "Classify Lean theorems as type: property"        -- behavioral change, applied immediately
 ```
 
-Use `/remember` when you want the system to be aware of something. Use `/learn` when you want the system to do something differently.
+Use `/arscontexta:remember` when you want the system to be aware of something. Use `/arscontexta:learn` when you want the system to do something differently.
 
 ### When Observations Surface
 
 Stored observations appear during:
-- `/extract` -- processing insights about source types
-- `/connect` -- cross-cutting concerns that suggest connections
-- `/rethink` -- domain conventions that inform evaluation
+- `/arscontexta:extract` -- processing insights about source types
+- `/arscontexta:connect` -- cross-cutting concerns that suggest connections
+- `/arscontexta:rethink` -- domain conventions that inform evaluation
 - Session start -- relevant observations from previous sessions
 
 The system matches observations to current context. An observation about FAUST papers surfaces during extraction of a FAUST paper, not during extraction of a Rust RFC.
@@ -219,8 +219,8 @@ The system matches observations to current context. An observation about FAUST p
 The meta-skills work together in review sessions:
 
 1. `/arscontexta:ask "What are the weakest claims about concurrency guarantees?"` -- Find claims with low evidence or missing connections
-2. `/rethink` on the weakest claims -- Challenge them, update or archive
-3. `/remember` any structural insights from the rethink process
+2. `/arscontexta:rethink` on the weakest claims -- Challenge them, update or archive
+3. `/arscontexta:remember` any structural insights from the rethink process
 4. `/arscontexta:architect` if the rethink revealed a dimension mismatch
 
 This cycle -- query, challenge, observe, adjust -- is how the vault evolves from a collection of extracted claims into a living research instrument.
