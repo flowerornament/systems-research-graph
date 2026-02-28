@@ -82,7 +82,7 @@ fi
 TENSION_COUNT=$(find ops/tensions/ -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
 TENSION_THRESHOLD=3
 if [ "$TENSION_COUNT" -gt "$TENSION_THRESHOLD" ]; then
-  echo "- WARNING: $TENSION_COUNT pending tensions (threshold: $TENSION_THRESHOLD). Run /rethink."
+  echo "- WARNING: $TENSION_COUNT pending tensions (threshold: $TENSION_THRESHOLD). Run /arscontexta:rethink."
 else
   echo "- Pending tensions: $TENSION_COUNT (threshold: $TENSION_THRESHOLD)"
 fi
