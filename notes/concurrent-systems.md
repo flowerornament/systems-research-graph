@@ -17,6 +17,9 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 
 ## Claims
 
+### Real-Time Thread Separation
+- [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] -- anira's shared static ThreadPool removes inference engine code from the audio callback entirely; the static (not per-instance) design solves oversubscription when multiple neural effects run concurrently
+
 ### Concurrency Models
 - [[erlang-actor-model-enables-safe-process-kill]] -- shared-nothing actors with supervisor trees allow killing any process without lock leaks; the RT-node replacement analog in murail
 - [[clojure-csp-channels-sacrifice-introspectability]] -- CSP channels compiled as macros lose channel depth and goroutine state from the runtime; inspectable NRT vs opaque RT as design principle
