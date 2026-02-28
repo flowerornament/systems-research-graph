@@ -64,7 +64,7 @@ for note in notes/*.md; do
   fi
 done
 if [ "$ORPHAN_COUNT" -gt "$ORPHAN_THRESHOLD" ]; then
-  echo "- WARNING: $ORPHAN_COUNT orphan claims (threshold: $ORPHAN_THRESHOLD). Run /reweave."
+  echo "- WARNING: $ORPHAN_COUNT orphan claims (threshold: $ORPHAN_THRESHOLD). Run /arscontexta:reweave."
 else
   echo "- Orphans: $ORPHAN_COUNT (threshold: $ORPHAN_THRESHOLD)"
 fi
