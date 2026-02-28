@@ -1,5 +1,5 @@
 ---
-description: Notational economy comes from grammatical rules that generate many expressions from few primitives, not from providing a primitive for every concept; each primitive must earn its place by serving multiple contexts
+description: Notational economy comes from grammar generating many expressions from few primitives, not from a primitive per concept; each primitive must earn its place by serving multiple contexts
 type: claim
 evidence: strong
 source: [[iverson-1980-notation-as-tool-of-thought]]
