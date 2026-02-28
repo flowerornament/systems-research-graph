@@ -87,6 +87,7 @@ Programming language design research for murail. Covers rate type systems, typed
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
 - Universal auto-mapping (every function, McCartney) vs. explicit set-lifting (`f {a,b,c}`, current Murail language design context) -- which scope is right for Murail's audience?
 - If the composition language (Stage 9) adopts persistent immutable data structures, how does McCartney's flexible class model (classes as type tags, not structure constraints) interact with Rust's strict struct layout requirements?
+- What compatibility classes should murail define for its graph compiler? Which behaviors are guaranteed, version-gated, and explicitly unspecified? (See [[observable-semantics-lock-in-implementation-details-and-block-optimization]])
 
 ---
 
