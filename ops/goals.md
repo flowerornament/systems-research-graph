@@ -11,7 +11,11 @@ type: moc
 - Domain mapping — building the cross-disciplinary claim graph
 
 ## Completed
-(none yet)
+- 2026-02-28: Extracted 13 claims from "Stop Writing Dead Programs" (Jack Rusher, Strange Loop 2022) -- language-design, concurrent-systems, formal-methods, rust-ecosystem, ai-ml, competing-systems topic maps updated
+
+## Pending Sources (murail .design/references/transcripts/)
+- we-dont-know-how-to-compute-sussman-2011.md (stub created, full extraction pending)
+- Other transcripts in archive: llvm-creator-interview-chris-lattner, swift-to-mojo-chris-lattner, channel-agnosticism-metasounds, 4 YouTube transcripts
 
 ---
 
