@@ -21,6 +21,8 @@ The result is that the practitioner's toolbox for structural priors expands from
 
 This extends [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] in an unexpected direction: if UGens are differentiable functions rather than opaque compiled objects, they are also automatically candidates for gradient-based optimization. Related to [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]]: constructing a synthesis graph in code is also constructing a computational graph that, if differentiable, supports backpropagation.
 
+**Limits of differentiability (from CTAG):** Even with a differentiable synthesizer implementation, gradients may be highly unstable in practice. Cherep et al. (2024) report that their JAX SYNTHAX synthesizer, while differentiable in principle, produced unstable gradients that defeated gradient-based optimization. This motivates [[differentiable-synthesizer-gradients-are-unstable-making-gradient-free-optimization-the-practical-choice]] -- DDSP's gradient stability derives from its constrained architecture (harmonic oscillators, filtered noise), not from differentiability alone. A general modular synthesizer needs architectural discipline to admit reliable gradients.
+
 ---
 
 Topics:
