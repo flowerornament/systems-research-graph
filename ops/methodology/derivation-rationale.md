@@ -57,7 +57,7 @@ All kernel blocks are active (wiki-links, processing-pipeline, schema, maintenan
 Disabled blocks:
 - **personality** — no strong signals in conversation; using neutral defaults
 - **self-space** — research default; goals route to ops/goals.md, identity in CLAUDE.md
-- **multi-domain** — starting with murail; expandable via /add-domain
+- **multi-domain** — starting with murail; expandable via /arscontexta:add-domain
 
 ## Coherence Validation
 
