@@ -173,8 +173,8 @@ A knowledge graph degrades without maintenance. Maintenance triggers are conditi
 | Orphan claims | Any detected | Surface for connection-finding |
 | Dangling links | Any detected | Surface for resolution |
 | Topic map size | >40 claims | Suggest split |
-| Pending observations | >=10 | Suggest /rethink |
-| Pending tensions | >=5 | Suggest /rethink |
+| Pending observations | >=10 | Suggest /arscontexta:rethink |
+| Pending tensions | >=5 | Suggest /arscontexta:rethink |
 | Inbox pressure | Items older than 3 days | Suggest processing |
 | Schema violations | Any detected | Surface for correction |
 
