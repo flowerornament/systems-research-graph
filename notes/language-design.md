@@ -133,6 +133,10 @@ Programming language design research for murail. Covers rate type systems, typed
 - If the composition language (Stage 9) adopts persistent immutable data structures, how does McCartney's flexible class model (classes as type tags, not structure constraints) interact with Rust's strict struct layout requirements?
 - What compatibility classes should murail define for its graph compiler? Which behaviors are guaranteed, version-gated, and explicitly unspecified? (See [[observable-semantics-lock-in-implementation-details-and-block-optimization]])
 
+## Source References
+- [[leijen-algebraic-effects]] -- primary source for the algebraic effects cluster: Koka language, row-typed effect system, selective CPS translation, and effect handler compilation strategies
+- [[llvm-creator-interview-chris-lattner]] -- Chris Lattner interview covering LLVM origins, Swift's development history (source incompatibility decisions, progressive disclosure collapse), and Mojo's design philosophy; primary source for Lattner-attributed claims
+
 ---
 
 Topics:
