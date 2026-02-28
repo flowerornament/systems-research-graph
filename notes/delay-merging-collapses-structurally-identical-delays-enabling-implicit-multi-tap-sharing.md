@@ -1,5 +1,5 @@
 ---
-description: When two delays have identical inputs and initialization expressions, the graph compiler collapses them into one, so multiple UGen-style library functions can share the same delay line without explicit coordination
+description: When two delays have identical inputs and initialization, the graph compiler collapses them into one, so multiple UGen-style library functions can share the same delay line without explicit coordination
 type: pattern
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
