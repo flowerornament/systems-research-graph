@@ -1,5 +1,5 @@
 ---
-description: Combining an additive harmonic synthesizer with a filtered noise synthesizer captures the deterministic pitched component and the stochastic breathiness/texture of most acoustic instruments in one unified model
+description: Combining an additive harmonic synthesizer with filtered noise captures the deterministic pitched component and the stochastic breathiness/texture of most acoustic instruments in one model
 type: claim
 evidence: strong
 source: [[ddsp-2020]]
