@@ -140,6 +140,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "murail-substrate-v3-extract",
+      "batch": "murail-substrate-v3",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/formal-model/murail-substrate-v3.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "next_claim_start": 200,
+      "claims_created": 15,
+      "enrichments": 3,
+      "connections_added": 28,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-murail-substrate-v3/"
+    },
+    {
       "id": "anira-2024-extract",
       "batch": "anira-2024",
       "type": "extract",
