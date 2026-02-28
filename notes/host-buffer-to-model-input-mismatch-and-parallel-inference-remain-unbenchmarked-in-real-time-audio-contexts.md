@@ -9,7 +9,7 @@ status: active
 
 # Host buffer to model input mismatch and parallel inference remain unbenchmarked in real-time audio contexts
 
-Ackva and Schulz's study establishes strong baselines for single-threaded inference with aligned buffer sizes, but two deployment scenarios that matter significantly for murail were deliberately excluded to keep the variable space tractable.
+Ackva and Schulz's study establishes strong baselines for single-threaded inference with aligned buffer sizes — the engine ranking documented in [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] is a product of those controlled conditions — but two deployment scenarios that matter significantly for murail were deliberately excluded to keep the variable space tractable.
 
 **Gap 1: Host buffer / model input size mismatch.** The benchmarks aligned model input size with host buffer size in all conditions. In production, the host audio driver determines buffer size at runtime (typically 64, 128, 256, or 512 samples), while the trained model has a fixed input shape set at training time. Mismatch is the common case, not the edge case. Anira handles this via the Letz algorithm, adding H_adapt latency to collect enough samples before each inference — see [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]]. But the *performance cost* of H_adapt buffering, and how it interacts with inference time distributions across engines, is unknown. A model trained for 512-sample input running on a host with 128-sample buffers adds H_adapt = 384 samples of buffering delay — plus whatever overhead the alignment logic introduces per callback.
 
