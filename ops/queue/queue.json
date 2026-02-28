@@ -1,6 +1,16 @@
 {
   "schema_version": 3,
-  "queue": [],
+  "queue": [
+    {
+      "id": "llvm-creator-interview-chris-lattner-extract",
+      "batch": "llvm-creator-interview-chris-lattner",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/llvm-creator-interview-chris-lattner.md",
+      "created": "2026-02-28",
+      "next_claim_start": 83
+    }
+  ],
   "processing": [],
   "completed": [
     {
