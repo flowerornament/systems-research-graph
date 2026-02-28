@@ -1,5 +1,5 @@
 ---
-description: Obstruction-freedom permits operations to abort conflicting peers and retry later rather than helping them complete, eliminating the helping infrastructure at the cost of requiring an out-of-band livelock avoidance mechanism
+description: Obstruction-freedom lets conflicting operations abort and retry rather than helping each other complete, eliminating helping infrastructure at the cost of requiring an out-of-band livelock avoidance mechanism
 type: claim
 evidence: moderate
 source: "[[fraser-2004-practical-lock-freedom]]"
