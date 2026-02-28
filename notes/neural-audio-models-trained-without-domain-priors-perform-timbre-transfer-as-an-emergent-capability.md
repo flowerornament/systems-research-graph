@@ -1,5 +1,5 @@
 ---
-description: Out-of-distribution audio through a trained RAVE encoder produces latents the decoder renders as target-domain audio, preserving pitch/loudness but replacing timbre -- no explicit transfer training required
+description: Out-of-domain audio through a trained RAVE encoder produces latents the decoder renders as target-domain audio; pitch/loudness preserved, timbre replaced, with no transfer-specific training
 type: claim
 evidence: moderate
 source: [[rave-2021]]
