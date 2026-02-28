@@ -27,11 +27,17 @@ How the tools, models, and feedback loops of a programming environment shape wha
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- cyclic audio graphs are especially poorly served by linear text; relevant to murail DSL design choices
 - [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- naming every wire makes the diagram itself a queryable memory; expression trees hide their interior nodes
 
+## Audio education and abstraction costs
+
+- [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- Apple Core Audio interviews found JUCE-trained developers could write DSP inner loops but not reason about threading or resource management; abstraction opacity as a literacy gap
+- [[audio-programming-education-requires-reading-production-engine-source-code-across-multiple-systems]] -- McCartney's prescription: read CSound, VCV Rack, SuperCollider, Chuck, and Pure Data to learn how each engine solves the same fundamental problems differently
+
 ## Open questions
 
 - How much runtime introspection can murail expose without violating RT-safety constraints?
 - What is the minimum viable interactive workflow for a compiled audio graph engine?
 - Should murail's DSL include structure-editor affordances for cyclic topology, or is text notation sufficient?
+- Where should murail draw its abstraction boundary? Opaque enough for ergonomic embedding, transparent enough that experienced developers can reason about threading and scheduling.
 
 ---
 
