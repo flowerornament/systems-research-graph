@@ -69,6 +69,9 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - What would node-level state threading look like during compile-and-swap -- carrying oscillator phase, filter memory, etc. into replacement nodes?
 - For Murail's composition language (Stage 9): Rust ownership vs. persistent immutable structures (McCartney/Clojure approach) as the data model? The two might combine: Rust engine, persistent structures for the language runtime.
 
+## Source References
+- [[fraser-2004-practical-lock-freedom]] -- primary source for the lock-free data structures cluster: CAS-only construction, epoch-based reclamation, MCAS/STM performance, and linearisability as correctness criterion
+
 ---
 
 Agent Notes:
