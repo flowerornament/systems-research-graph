@@ -381,6 +381,20 @@
       "connections_added": 14,
       "topic_maps_updated": 2,
       "archive": "ops/queue/archive/2026-02-28-iverson-1980-notation-as-tool-of-thought/"
+    },
+    {
+      "id": "2026-02-06-4eJrp9byBRk-extract",
+      "batch": "2026-02-06-4eJrp9byBRk",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-4eJrp9byBRk.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 9,
+      "enrichments": 2,
+      "connections_added": 18,
+      "topic_maps_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-2026-02-06-4eJrp9byBRk/"
     }
   ]
 }
