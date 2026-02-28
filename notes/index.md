@@ -13,6 +13,10 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 ### murail (audio graph engine)
 - [[audio-dsp]] -- synthesis, signal processing, UGen design, buffer management
 - [[language-design]] -- rate systems, typed composition, formal semantics, expression problem
+  - [[notation-and-thought]] -- how notation shapes mathematical and computational reasoning; Iverson 1980 and APL's cognitive model
+  - [[mccartney-language-design]] -- James McCartney's post-SuperCollider language design: SAPF, tau5, signal types, runtime, creative workflow
+  - [[algebraic-effects]] -- effect handlers as a unified abstraction for exceptions, state, async, and control flow; Leijen 2017 and Koka
+  - [[compiler-and-adoption]] -- compiler architecture, hardware targeting, language adoption dynamics, and ecosystem governance
 - [[concurrent-systems]] -- lock-free communication, RT scheduling, memory safety, thread models
 - [[rust-ecosystem]] -- crates, nightly features, type-driven design, unsafe boundaries
 - [[ai-ml]] -- neural UGens, differentiable audio, DDSP, generative composition
