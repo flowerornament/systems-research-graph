@@ -1,16 +1,6 @@
 {
   "schema_version": 3,
-  "queue": [
-    {
-      "id": "mccartney-ideas-2026-02-15-extract",
-      "batch": "mccartney-ideas-2026-02-15",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/synthesis/archive/mccartney-ideas-2026-02-15.md",
-      "created": "2026-02-28",
-      "next_claim_start": 33
-    }
-  ],
+  "queue": [],
   "processing": [],
   "completed": [
     {
@@ -48,6 +38,20 @@
       "claims_created": 10,
       "enrichments": 1,
       "archive": "ops/queue/archive/2026-02-28-channel-agnosticism-metasounds/"
+    },
+    {
+      "id": "mccartney-ideas-2026-02-15-extract",
+      "batch": "mccartney-ideas-2026-02-15",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/synthesis/archive/mccartney-ideas-2026-02-15.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 1,
+      "connections_added": 22,
+      "topic_maps_updated": 4,
+      "archive": "ops/queue/archive/2026-02-28-mccartney-ideas-2026-02-15/"
     }
   ]
 }
