@@ -1,5 +1,5 @@
 ---
-description: When modifying a value creates a new version with structural sharing, preserving old versions costs only a pointer and undo branches are never lost -- lossless history becomes an architectural side effect rather than a designed feature
+description: When modification creates a new version with structural sharing, preserving old versions costs only a pointer and undo branches are never lost -- lossless history becomes a side effect rather than a designed feature
 type: claim
 evidence: strong
 source: [[mccartney-ideas-2026-02-15]]
