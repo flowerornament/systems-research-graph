@@ -1,6 +1,17 @@
 {
   "schema_version": 3,
-  "queue": [],
+  "queue": [
+    {
+      "id": "2026-02-06-Ke8e7pGAxec-extract",
+      "batch": "2026-02-06-Ke8e7pGAxec",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-Ke8e7pGAxec.md",
+      "created": "2026-02-28",
+      "next_claim_start": 55,
+      "archive_folder": "/Users/morgan/code/murail/.design/references/transcripts/archive/"
+    }
+  ],
   "processing": [],
   "completed": [
     {
