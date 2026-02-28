@@ -1,0 +1,22 @@
+---
+description: Keeping the previous synthesis graph playing while a new graph compiles eliminates the silence gap that made whole-graph compilation impractical in 1990s SuperCollider, restoring interactive workflow at compilation-quality output
+type: claim
+evidence: strong
+source: [[mccartney-ideas-2026-02-15]]
+created: 2026-02-28
+status: active
+---
+
+# compile-and-swap preserves audio continuity during recompilation
+
+In the early 1990s, McCartney built a predecessor to SuperCollider that generated C code from synthesis scripts and compiled it for execution. The approach was "conceptually strong" -- compiled code outperformed the pre-compiled-UGen-wired-at-runtime model that became SC3. But the C compiler took ~45 seconds, during which the user waited in silence. He abandoned the approach, presented a paper at ICMC, and built the client/server model (SC3) instead -- accepting the optimization ceiling in exchange for instant graph assembly.
+
+Now, 25 years later, he returns to whole-graph compilation with a crucial difference: the old sound keeps playing while the new graph compiles. The user writes new code, hits play, and continues hearing the previous audio; when compilation finishes, the new graph swaps in. No silence gap. No 45-second wait that disrupts creative flow.
+
+This is structurally the same decision as Firewheel's compile-and-swap architecture (which Murail cites as a precedent) but McCartney provides the historical failure context that explains *why* compile-and-swap is the right solution: it is the only way to have both whole-graph optimization quality *and* interactive workflow.
+
+The 45-second failure was not a hardware limitation that modern CPUs solve. C compilation for audio graphs at modern scales still takes meaningful time. What changed: incremental construction-time optimization (see [[construction-time-graph-optimization-distributes-compiler-cost-across-node-creation]]) delivers a pre-simplified graph; and compile-and-swap means latency is hidden by continuity rather than eliminated. Both changes together make the approach viable.
+
+**Question for Murail (D65):** The spec defines two compilation service levels: LiveFast (P99 <= 2 audio blocks, ~2.9ms) and Deep (P99 <= 500ms). If Murail moves toward primitive-level compilation (see [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]]), what compile latency is realistic? Cranelift JITs in <1ms with poor optimization; LLVM takes 10-500ms with excellent optimization. McCartney's C-emit-compile-link-load adds process overhead. The compile-and-swap model means latency is tolerable as long as continuity is preserved -- but the right latency budget for each service level still matters.
+
+Directly extends [[interactive-programming-eliminates-the-compile-run-cycle]] -- compile-and-swap is a specific mechanism for approaching the interactive programming ideal in a compiled audio context. The claim there notes that "state continuity" is missing from compile-and-swap (swapping a new graph loses running audio state); McCartney's model mitigates this with audio continuity but still loses internal graph state (accumulated oscillator phase, filter memory) unless state threading is implemented.
