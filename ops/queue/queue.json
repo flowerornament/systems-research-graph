@@ -36,6 +36,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "leijen-algebraic-effects-extract",
+      "batch": "leijen-algebraic-effects",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/leijen-algebraic-effects.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 2,
+      "connections_added": 14,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-leijen-algebraic-effects/"
+    },
+    {
       "id": "rave-2021-extract",
       "batch": "rave-2021",
       "type": "extract",
