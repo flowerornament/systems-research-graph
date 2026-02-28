@@ -1,5 +1,5 @@
 ---
-description: Ease of introducing notation in context without prerequisites is a measure of quality, not a teaching preference; notation that requires upfront courses to become usable is unsuitable as a thought tool
+description: Ease of introducing notation in context without prerequisites is a quality measure, not a teaching preference; notation requiring upfront courses to become usable fails as a thought tool
 type: claim
 evidence: moderate
 source: [[iverson-1980-notation-as-tool-of-thought]]
