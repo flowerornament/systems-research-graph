@@ -39,6 +39,9 @@ Relevant Notes:
 - [[send-and-sync-are-thread-independence-of-ownership-and-sharing-predicates]] — a Rust implementation of this architecture requires inference nodes submitted to the pool to satisfy Send; this claim formally characterizes what that safety requirement means
 - [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — complementary strategy: reduces violation magnitude within the pool threads, affecting I_max estimation but not RT safety
 - [[core-audio-low-latency-performance-traces-to-an-architectural-insight-made-at-the-projects-inception]] — the static pool design exemplifies the foundational architectural choice pattern: thread model decisions at inception constrain long-term performance
+- [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] — the pre-allocated state region forbids heap allocation during TICK; inference engines violate this invariant, making the thread pool the necessary isolation boundary for neural UGens in murail
+- [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]] — murail's output continuity axiom is the formal constraint that anira's thread pool satisfies: inference must never block the callback
+- [[load-shedding-preserves-the-critical-set-exactly-while-degrading-non-critical-equations]] — complementary degradation strategy: load shedding handles deadline overruns within the fast thread, while the thread pool prevents the category of violation (external engine blocking) that shedding cannot address
 
 Topics:
 - [[ai-ml]]
