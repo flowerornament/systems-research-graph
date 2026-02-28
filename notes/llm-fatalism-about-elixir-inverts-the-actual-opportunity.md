@@ -1,5 +1,5 @@
 ---
-description: The concern that LLMs will default to JavaScript because of training data volume inverts: if language doesn't matter to the LLM, zero-friction entry to any ecosystem is a net gain for minority languages
+description: The fear that LLMs default to JavaScript due to training volume inverts: if language choice is invisible to the LLM, zero-friction entry to any ecosystem is a net gain for minority languages
 type: claim
 evidence: moderate
 source: "[[keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025]]"
