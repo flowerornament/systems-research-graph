@@ -36,9 +36,12 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - [[graph-compiler-loop-formation-groups-same-dimension-trees-to-enable-vectorization]] -- after shape inference, expression trees with identical matrix dimensions and compatible rates are grouped into SIMD-vectorizable loops; topological order is preserved across loop boundaries
 - [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]] -- synthesis definitions are built by calling ordinary language functions that return graph nodes; no distinct synthdef syntax; the full language including auto-mapping is available
 
-### Workflow
+### Workflow and Embeddability
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- audio continuity during whole-graph recompilation is the specific mechanism that makes whole-graph compilation viable for interactive use; solves the 45-second silence problem
 - [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- lossless composition history emerges from persistent data structures at no additional design cost; reframes composition as temporal exploration
+- [[sapf-append-only-execution-log-provides-ten-year-session-provenance]] -- SAPF logs every executed expression to an append-only file; 151k lines over 10 years; cross-session provenance distinct from within-session undo
+- [[sapf-was-factored-into-an-embeddable-c-library-by-replacing-the-parser-with-c-functions]] -- eliminating the parser and wrapping all SAPF functions as C functions converted a language into a linkable library without changing the execution model; existence proof for murail's embeddability goal
+- [[supercollider-3d5-applied-signal-graphs-to-pixel-synthesis-demonstrating-graph-generality-beyond-audio]] -- SC3D5's pixel-producing UGens demonstrate that a signal graph execution model is domain-agnostic; the same IR can drive audio, visual, or other signal-processing domains
 
 ## Open Questions
 - What compile latency is realistic for primitive-level (non-UGen) graph IR? Cranelift < 1ms but poor optimization; LLVM 10-500ms with excellent optimization; McCartney's C-emit pipeline adds process overhead.
