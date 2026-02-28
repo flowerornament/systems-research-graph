@@ -51,6 +51,7 @@ How the tools, models, and feedback loops of a programming environment shape wha
 - [[agentsmd-is-gap-filling-for-llms-not-documentation-for-humans]] -- the same dev-first philosophy that makes Elixir coherent (unified toolchain, co-located docs) also makes it LLM-friendly; gap-fill files extend this to targeted failure-mode correction
 - [[llm-fatalism-about-elixir-inverts-the-actual-opportunity]] -- zero-barrier LLM entry dissolves the frustration gap that previously filtered newcomers from ecosystems with steep learning curves
 - [[vibe-coding-produces-unauditable-architectural-debt]] -- the AI coding extreme case: agent produces text, developer inherits it as a newcomer to the theory; Naur's revival problem accelerated
+- [[llm-friendly-language-design-reduces-to-readability-not-llm-specific-features]] -- LLM suitability is a consequence of readability and open-source corpus, not special-purpose LLM syntax; Lattner's argument for why Mojo embraces Python syntax
 
 ## Open questions
 
