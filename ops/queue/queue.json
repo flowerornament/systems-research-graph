@@ -140,6 +140,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "birkedal-2012-guarded-domain-theory-extract",
+      "batch": "birkedal-2012-guarded-domain-theory",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/birkedal-2012-guarded-domain-theory/birkedal-2012-guarded-domain-theory.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 2,
+      "connections_added": 28,
+      "topic_maps_updated": 1,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-birkedal-2012-guarded-domain-theory/"
+    },
+    {
       "id": "murail-substrate-v3-extract",
       "batch": "murail-substrate-v3",
       "type": "extract",
