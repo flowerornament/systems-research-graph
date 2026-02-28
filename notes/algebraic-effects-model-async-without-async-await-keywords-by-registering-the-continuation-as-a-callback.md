@@ -1,5 +1,5 @@
 ---
-description: An asynchronous effect handler registers the captured resume continuation as the OS-level callback, implementing async-await semantics in library code without any special language syntax or compiler pass
+description: An async effect handler registers the captured resume continuation as the OS-level callback, implementing async-await semantics in library code without special language syntax or a compiler pass
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
