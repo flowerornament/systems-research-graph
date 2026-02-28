@@ -2,6 +2,16 @@
   "schema_version": 3,
   "queue": [
     {
+      "id": "anira-2024-extract",
+      "batch": "anira-2024",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/murail/.design/references/papers/anira-2024.pdf",
+      "file": "anira-2024.md",
+      "created": "2026-02-28T00:00:00Z",
+      "next_claim_start": 120
+    },
+    {
       "id": "llvm-creator-interview-chris-lattner-extract",
       "batch": "llvm-creator-interview-chris-lattner",
       "type": "extract",
