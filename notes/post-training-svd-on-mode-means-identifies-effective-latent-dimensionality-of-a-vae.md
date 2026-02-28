@@ -1,5 +1,5 @@
 ---
-description: Applying SVD to the matrix of posterior mode means (not samples) isolates latent dimensions correlated with input data from collapsed dimensions, enabling post-hoc estimation of true representation rank without retraining
+description: SVD on the posterior mode-mean matrix (not sampled Z) isolates input-correlated dimensions from prior-collapsed ones, revealing the true effective rank of the learned representation post-hoc
 type: pattern
 evidence: strong
 source: [[rave-2021]]
