@@ -1,5 +1,5 @@
 ---
-description: CTAG paper: synthesis-by-optimization via SYNTHAX + LAION-CLAP + LES evolutionary strategy; 78-parameter modular synth matches neural synthesis for identifiability and exceeds it for artistic perception
+description: CTAG: synthesis-by-optimization via SYNTHAX + LAION-CLAP + LES evolutionary strategy; 78-parameter modular synth matches neural synthesis for identifiability and exceeds it for artistic perception
 type: source
 created: 2026-02-28
 ---
