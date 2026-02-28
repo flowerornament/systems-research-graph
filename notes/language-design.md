@@ -23,6 +23,13 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[static-languages-prevent-runtime-introspection]] -- compilation to static artifacts severs the source-runtime connection; explains the gap in current murail debugging
 - [[smalltalk-image-model-prevents-source-runtime-drift]] -- image-based development makes source and runtime one artifact; compile-and-swap is a weaker but structurally similar approximation
 
+### FAUST: Formal Semantics as Language Design Tool
+- [[faust-programs-denote-mathematical-functions-enabling-semantics-driven-compilation]] -- a FAUST program is a mathematical function from signals to signals; formal denotational semantics enables optimization, normalization, and long-term program preservation
+- [[faust-block-diagram-algebra-unifies-functional-programming-with-visual-patch-notation]] -- five composition operators form a closed algebra over signal processors; formal semantics gives unambiguous meaning to visual notation
+- [[purely-functional-dsp-semantics-enables-compiler-optimizations-impossible-in-C]] -- functional semantics removes aliasing/side-effect barriers; specific mechanism by which functional languages outperform C in optimization opportunity
+- [[dataflow-languages-lack-explicit-formal-semantics-making-program-behavior-engine-dependent]] -- Max/PD semantics hidden in the engine; formal semantics is the prerequisite for portable, preservable, embeddable programs
+- [[faust-compiler-discovers-parallelism-automatically-but-expressing-it-efficiently-remains-hard]] -- functional languages make parallelism detection trivial; generating efficient parallel code is hard and hardware-dependent
+
 ### Language Design Tradeoffs
 - [[type-systems-have-not-empirically-reduced-defect-rates]] -- empirical studies find no reliable advantage of static types over fault-tolerant runtime designs for defect reduction
 - [[debuggability-is-more-valuable-than-correctness-by-construction]] -- because specs are always wrong and software is continuous change, live debugging outweighs static verification for most engineering work
