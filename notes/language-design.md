@@ -60,6 +60,12 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting in RT thread; SC3 introduced the client-server split that defined SuperCollider's architecture
 - [[pyrite-introduced-closures-into-max-patching-enabling-separation-of-ui-and-logic]] -- Pyrite's Scheme-style closures let Max patches contain only UI while all logic lived in a Pyrite script; demonstrated the text-script / visual-patch complementarity SC formalized
 
+### Compiler Architecture and Hardware
+- [[mlir-enables-heterogeneous-hardware-targeting-that-llvm-cannot-provide]] -- MLIR's multi-level IR design targets CPUs, GPUs, and ASICs that LLVM's single-level IR cannot address; Mojo is effectively MLIR syntax
+- [[compiler-generality-beats-human-specialization-at-scale-because-compilers-can-enumerate-configurations-humans-cannot]] -- Modular beat Intel MKL on Intel chips; the mechanism is exhaustive configuration search vs. human point-solution specialization
+- [[cache-hierarchical-hardware-makes-linked-lists-slower-than-arrays-for-most-practical-sizes]] -- modern CPU caches invert classical algorithm analysis; contiguous array layout is 100x faster than pointer-chased structures at practical sizes
+- [[purely-functional-languages-fail-on-modern-hardware-because-pointer-boxing-destroys-cache-locality]] -- OCaml/Lisp boxing and pointer indirection produce structural cache-miss overhead; Rust's contiguous-by-default model inverts this
+
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
