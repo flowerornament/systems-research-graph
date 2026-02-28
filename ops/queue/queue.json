@@ -108,16 +108,6 @@
       "created": "2026-02-28T00:00:00Z",
       "current_phase": "create",
       "completed_phases": []
-    },
-    {
-      "id": "iverson-1980-notation-as-tool-of-thought-extract",
-      "batch": "iverson-1980-notation-as-tool-of-thought",
-      "type": "extract",
-      "status": "in-progress",
-      "source": "/Users/morgan/code/murail/.design/references/papers/archive/iverson-1980-notation-as-tool-of-thought.pdf",
-      "created": "2026-02-28",
-      "next_claim_start": 150,
-      "archive_folder": "ops/queue/archive/2026-02-28-iverson-1980-notation-as-tool-of-thought/"
     }
   ],
   "processing": [],
@@ -375,6 +365,22 @@
       "topic_maps_updated": 4,
       "existing_claims_updated": 3,
       "archive": "ops/queue/archive/2026-02-28-faust-2009-npcm/"
+    },
+    {
+      "id": "iverson-1980-notation-as-tool-of-thought-extract",
+      "batch": "iverson-1980-notation-as-tool-of-thought",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/iverson-1980-notation-as-tool-of-thought.pdf",
+      "created": "2026-02-28",
+      "next_claim_start": 150,
+      "archive_folder": "ops/queue/archive/2026-02-28-iverson-1980-notation-as-tool-of-thought/",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 2,
+      "connections_added": 14,
+      "topic_maps_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-iverson-1980-notation-as-tool-of-thought/"
     }
   ]
 }
