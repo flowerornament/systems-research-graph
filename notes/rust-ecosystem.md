@@ -16,10 +16,13 @@ Rust ecosystem research for murail. Covers crate selection and verification, nig
 - Workspace architecture (9-crate tiered dependency DAG)
 
 ## Claims
-(populated by /extract)
+
+### Library Design Constraints
+- [[library-languages-must-not-bundle-a-mandatory-runtime]] -- using a Go library from C requires importing ~2MB Go runtime; Rust's zero-runtime model is the correct choice for murail as an embeddable library
+- [[rust-lacks-interactive-programming-despite-suitable-foundations]] -- Rust's multi-stage compilation could support REPL-style exploration but shipped with batch tooling; affects murail graph compiler DX
 
 ## Open Questions
-(populated as gaps are identified)
+- Are there existing Rust-native interactive exploration tools (evcxr, etc.) that could be adapted for murail graph exploration, or does this require custom tooling?
 
 ---
 
