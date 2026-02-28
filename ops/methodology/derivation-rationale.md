@@ -10,7 +10,7 @@ This document explains the reasoning behind each dimension position in the Ars C
 
 ## Platform Tier: Claude Code (Full Automation)
 
-The vault runs on Claude Code, which provides the richest automation surface: session hooks (SessionStart, PostToolUse, Stop), custom skills (/extract, /connect, etc.), and file system access. This enables a fully automated processing pipeline where extraction, validation, and maintenance happen through commands rather than manual editing.
+The vault runs on Claude Code, which provides the richest automation surface: session hooks (SessionStart, PostToolUse, Stop), custom skills (/arscontexta:extract, /arscontexta:connect, etc.), and file system access. This enables a fully automated processing pipeline where extraction, validation, and maintenance happen through commands rather than manual editing.
 
 ## Dimension Rationale
 
