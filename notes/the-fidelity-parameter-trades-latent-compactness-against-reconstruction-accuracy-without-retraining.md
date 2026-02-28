@@ -1,5 +1,5 @@
 ---
-description: A scalar fidelity parameter f controls post-hoc how much of the VAE's learned latent variance is retained, trading reconstruction fidelity for representation simplicity as a deployment-time decision rather than a training hyperparameter
+description: Scalar f ∈ [0,1] controls deployment-time compactness by projecting z onto the top-f singular value subspace; f=0.99 gives 24/128 active dims with negligible quality loss on the strings dataset
 type: property
 evidence: strong
 source: [[rave-2021]]
