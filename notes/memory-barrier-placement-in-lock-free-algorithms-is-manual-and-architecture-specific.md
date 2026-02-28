@@ -1,5 +1,5 @@
 ---
-description: No automatic method exists for optimal memory barrier placement in lock-free programs; manual placement requires per-architecture analysis and is validated by offline linearisability checking against hardware-measured execution logs
+description: No automatic method exists for optimal barrier placement in lock-free programs; manual per-architecture analysis is validated by offline linearisability checking against hardware execution logs
 type: open-question
 evidence: strong
 source: "[[fraser-2004-practical-lock-freedom]]"
