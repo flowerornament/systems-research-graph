@@ -188,6 +188,21 @@
       "topic_maps_updated": 1,
       "existing_claims_updated": 2,
       "archive": "ops/queue/archive/2026-02-28-cherep-2024-text-to-audio-synthesizer/"
+    },
+    {
+      "id": "2026-02-06-fmVdfQNPzkE-extract",
+      "batch": "2026-02-06-fmVdfQNPzkE",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-fmVdfQNPzkE.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 5,
+      "enrichments": 1,
+      "connections_added": 8,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-02-28-2026-02-06-fmVdfQNPzkE/"
     }
   ]
 }
