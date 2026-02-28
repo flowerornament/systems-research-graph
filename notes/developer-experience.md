@@ -38,7 +38,13 @@ How the tools, models, and feedback loops of a programming environment shape wha
 
 ## Theory building and knowledge transfer
 
-(Naur 1985 claims pending re-extraction from source PDF)
+- [[programming-is-theory-building-not-text-production]] -- Naur's central thesis: the primary artifact of programming is the programmer's mental theory, not the source text; documentation cannot substitute for it
+- [[a-programs-source-text-cannot-fully-specify-its-meaning]] -- source code, comments, and specs together cannot carry the tacit relational knowledge that constitutes the theory
+- [[the-programmers-theory-includes-why-alternatives-were-rejected-not-just-what-was-chosen]] -- the theory holds the negative design space; without it, revivals reinvent known-bad solutions
+- [[no-documentation-can-substitute-for-the-programmer-held-theory]] -- the limitation is categorical, not a documentation quality problem; adding more docs cannot close the gap
+- [[program-revival-by-newcomers-systematically-produces-degraded-designs]] -- modifications by programmers who don't hold the theory are locally correct but globally incoherent
+- [[software-quality-degrades-in-proportion-to-distance-from-original-theorists]] -- the temporal and organizational extension: quality erosion is a function of how far the codebase has traveled from its original theorists
+- [[programming-education-should-develop-theory-building-capacity-not-text-writing-technique]] -- education focused on syntax and algorithms develops the wrong skill; the core skill is holding and building theories of programs
 
 ## LLM-era developer experience
 
