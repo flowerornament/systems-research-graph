@@ -57,6 +57,19 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - [[explicit-reverb-factorization-enables-blind-dereverberation-as-a-modular-architectural-side-effect]] -- frequency-domain convolution (O(n log n)) for room-scale IRs; explicit reverb as a separable graph node unlocks acoustic transfer and dereverberation as architectural properties
 - [[time-and-frequency-domain-neural-synthesis-impose-a-phase-alignment-prior-that-conflicts-with-periodic-audio-structure]] -- explains why oscillator-based synthesis (instantaneous phase integration) is a better representation for periodic audio than frame-based or Fourier approaches
 
+### Murail Substrate: Execution Model (source -- [[murail-substrate-v3]])
+- [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] -- the state region Σ is a contiguous block whose size is fully determined at compile time; this is the structural foundation enabling the no-allocation, no-blocking resource invariant
+- [[block-size-is-the-primary-latency-throughput-tradeoff-in-murail-execution]] -- N ticks per TICK call; smaller N reduces latency, larger N improves throughput via vectorization; semantics are identical regardless of N
+- [[hold-slots-prevent-fast-thread-blocking-on-slow-rate-values-without-locks]] -- three lock-free protocols (atomic, sequence-counter, double-buffer) selected by data size allow the fast thread to read slow-rate values without ever waiting
+- [[cross-rate-smoothing-eliminates-staircase-discontinuities-from-hold-slot-reads]] -- smoothing filters applied automatically at every hold-slot read prevent zipper noise; the substrate provides the mechanism so no domain has to reinvent parameter interpolation
+- [[tick-boundary-precedence-is-a-substrate-requirement-not-an-implementation-suggestion]] -- hold-slot writes, data swaps, program swaps, TICK must execute in this exact order; any other ordering creates ambiguity in the swap+hold interaction
+- [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]] -- output continuity is an axiom; NaN/Inf substitution, error flags, and the flag-overflow-policy exclusion all derive from it
+- [[load-shedding-preserves-the-critical-set-exactly-while-degrading-non-critical-equations]] -- the backward closure of outputs is never shed; non-critical equations hold their last value under deadline pressure; determinism is lost but continuity is maintained
+
+### Murail Substrate: Liveness Model (source -- [[murail-substrate-v3]])
+- [[atomic-swap-enables-program-updates-at-tick-granularity-without-output-gaps]] -- double-buffered state regions and an atomic swap flag allow the new program to take effect at a tick boundary with no output gap; the formal mechanism underlying compile-and-swap
+- [[the-migration-map-transforms-state-between-program-versions-preserving-continuity-where-possible]] -- per-equation copy/reinit/gauge-transform populates the new state region from the old; gauge annotations enable seamless edits by asserting output-equivalent reparameterizations
+
 ## Open Questions
 - What compile latency is realistic for primitive-level (non-UGen) graph IR? Cranelift < 1ms but poor optimization; LLVM 10-500ms with excellent optimization; McCartney's C-emit pipeline adds process overhead.
 - Conditional subgraphs: design them in at scheduler level now, or defer and risk redesign later? McCartney's multi-year struggle with event codegen suggests this is harder than it looks.
