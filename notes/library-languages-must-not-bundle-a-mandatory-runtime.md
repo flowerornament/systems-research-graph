@@ -18,3 +18,5 @@ For [[rust-ecosystem]] in murail: this is a foundational design constraint. Mura
 Connects to [[language-design]] discussion of what it means for a language to be "embeddable" -- the distinction is not just ABI compatibility but runtime isolation. An embeddable library must not own global state, must not spawn background threads without host cooperation, and must not require a specific allocator.
 
 Relates to [[batch-processing-incurs-avoidable-cognitive-overhead]] in a different dimension: Go's runtime bundling is an architectural consequence of designing for batch-mode operation (compile once, run as a standalone process) rather than for integration.
+
+Historical existence proof: [[sapf-was-factored-into-an-embeddable-c-library-by-replacing-the-parser-with-c-functions]] demonstrates this pattern for a signal processing language. McCartney embedded SAPF in C by eliminating the parser (the runtime-requiring part) and exposing the execution engine as C functions. The execution engine IS the library; the parser is not required.
