@@ -25,9 +25,10 @@
       "file": "anira-2024-141.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     },
     {
@@ -39,9 +40,10 @@
       "file": "anira-2024-142.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     },
     {
@@ -53,9 +55,10 @@
       "file": "anira-2024-143.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     },
     {
@@ -67,9 +70,10 @@
       "file": "anira-2024-144.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     },
     {
@@ -109,9 +113,10 @@
       "file": "anira-2024-147.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     },
     {
@@ -123,9 +128,10 @@
       "file": "anira-2024-148.md",
       "archive_folder": "ops/queue/archive/2026-02-28-anira-2024/",
       "created": "2026-02-28T00:00:00Z",
-      "current_phase": "reflect",
+      "current_phase": "reweave",
       "completed_phases": [
-        "create"
+        "create",
+        "reflect"
       ]
     }
   ],
