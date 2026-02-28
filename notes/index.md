@@ -31,6 +31,8 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[channel-agnosticism-metasounds-aaron-mcleran-adc]] -- Aaron McLeran (Epic Games), ADC: MetaSounds channel-agnostic types, polymorphic audio format abstraction, JIT graph compilation, instanced graph model
 - [[2026-02-06-qmayIRViJms]] -- Darwin Gross interviews James McCartney (SuperCollider creator): SC version history, Pyrite origins, Core Audio architecture, APL influence, audio education, JUCE critique
 - [[keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025]] -- Chris McCord, ElixirConf US 2025: Elixir's fitness for the agentic era, agent architecture, Phoenix 1.8 AgentsMD, implementation techniques
+- [[ddsp-2020]] -- Engel et al. (Google Brain, ICLR 2020): differentiable DSP modules as neural network components; multi-scale spectral loss; disentangled latent synthesis
+- [[rave-2021]] -- Caillon & Esling (IRCAM, 2021): real-time VAE for 48kHz neural audio synthesis; two-stage training; multiband decomposition; post-training latent compaction
 
 ## Orientation
 - ops/goals.md -- current active threads
