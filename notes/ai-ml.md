@@ -43,6 +43,10 @@ AI and machine learning integration research for murail. Covers neural audio syn
 - [[propagator-networks-provide-provenance-for-computed-conclusions]] -- Sussman's propagator model tracks derivation chains; if murail tracks which UGen nodes contributed to an output, that provenance could attribute audio characteristics to generating nodes
 - [[truth-maintenance-systems-enable-locally-consistent-reasoning-in-an-inconsistent-knowledge-base]] -- TMSs manage multiple locally consistent worldviews; potential model for reasoning about conflicting neural audio model assumptions
 
+### Compiler Infrastructure for Hardware-Targeted Inference
+- [[mlir-enables-heterogeneous-hardware-targeting-that-llvm-cannot-provide]] -- MLIR's composable multi-level IR is the current state of the art for targeting CPUs, GPUs, and ASICs simultaneously; relevant if murail integrates neural UGens on accelerator backends
+- [[compiler-generality-beats-human-specialization-at-scale-because-compilers-can-enumerate-configurations-humans-cannot]] -- Modular beat Intel MKL on Intel chips through exhaustive configuration search; applies to real-time neural inference kernels across hardware targets
+
 ## Open Questions
 - What is the practical inference latency floor for RAVE's decoder on a modern CPU at block sizes used in audio workstations (256-512 samples)? The 985kHz throughput figure is batch throughput, not block latency.
 - Can RAVE-style latent compression be used as murail's node interface for high-level generative models? The 23Hz latent rate maps naturally to a "composition rate" tier in a multi-rate graph.
