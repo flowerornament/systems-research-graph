@@ -80,6 +80,22 @@
       "connections_added": 15,
       "topic_maps_updated": 4,
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-qmayIRViJms/"
+    },
+    {
+      "id": "keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025-extract",
+      "batch": "keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/herald/.design/references/transcripts/archive/keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 0,
+      "connections_added": 6,
+      "topic_maps_created": 1,
+      "topic_maps_updated": 4,
+      "existing_claims_updated": 1,
+      "archive": "ops/queue/archive/2026-02-28-keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025/"
     }
   ]
 }
