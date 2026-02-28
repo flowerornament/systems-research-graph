@@ -24,7 +24,7 @@ Reference documentation for the arscontextica knowledge vault -- an atomic claim
 
 **Claims, not notes.** Every file in notes/ expresses one atomic proposition -- a single argument, decision, property, pattern, contradiction, or open question. The title is a complete sentence. The body is your reasoning.
 
-**Extract, then connect.** Sources land in inbox/. `/extract` breaks them into atomic claims in notes/. `/connect` finds the cross-disciplinary links -- where a DSP latency constraint meets a type-system guarantee, where a concurrency invariant shapes an API design.
+**Extract, then connect.** Sources land in inbox/. `/arscontexta:extract` breaks them into atomic claims in notes/. `/arscontexta:connect` finds the cross-disciplinary links -- where a DSP latency constraint meets a type-system guarantee, where a concurrency invariant shapes an API design.
 
 **Topic maps, not folders.** Organization is flat. A topic map in notes/ (e.g., `audio-graph-topology-map.md`) gathers related claims by wiki link. One claim can appear in multiple topic maps. The hub index links to all topic maps.
 
