@@ -29,6 +29,7 @@ Relevant Notes:
 - [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — warm-up reduces violation frequency but doesn't eliminate violations
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — architectural mechanism that contains violations away from the audio thread
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — I_max benchmarking should run post-warmup
+- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — the performance ranking that this claim qualifies: the ranking reflects stabilized (post-warmup) runtimes; LibTorch's pronounced warm-up effect is the largest distorting factor before stabilization
 
 Topics:
 - [[ai-ml]]
