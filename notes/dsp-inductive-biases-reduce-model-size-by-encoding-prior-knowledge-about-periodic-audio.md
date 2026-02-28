@@ -33,6 +33,8 @@ The 0.24M "Tiny" model (single GRU, 256 units -- 300x smaller than a WaveNet Aut
 
 Contrasts with end-to-end waveform models, where the entire synthesis burden falls on learned parameters. Related to [[differentiable-dsp-components-make-classical-synthesis-knowledge-available-as-structural-priors-for-neural-networks]] -- smaller model size is the direct consequence of the inductive bias encoding domain knowledge.
 
+The sub-1M parameter range of DDSP-style models has a direct inference engine consequence: since [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]], TFLite (or ONNX Runtime) is the correct engine default for DDSP-backed neural UGens, while LibTorch is appropriate only for larger, non-DDSP effect models approaching 30k parameters.
+
 ---
 
 Topics:
