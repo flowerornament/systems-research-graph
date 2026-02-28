@@ -31,6 +31,8 @@ Relevant Notes:
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — I_max benchmarking should run post-warmup
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — the performance ranking that this claim qualifies: the ranking reflects stabilized (post-warmup) runtimes; LibTorch's pronounced warm-up effect is the largest distorting factor before stabilization
 - [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]] — TFLite's warm-up effect appearing only at CNN-29k (not smaller models) is the same model-size dependency that the size comparison documents; warm-up selectivity and steady-state performance ordering share the same underlying mechanism
+- [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — warm-up (InferenceConfig.warm_up) and input size (InferenceConfig.model_input_shape) are two independent configuration levers that both affect I_max estimation; warm-up stabilizes runtime variance, input size reduces per-sample cost
+- [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] — the substrate's pre-allocation eliminates cold-start allocation costs for DSP evaluation; inference engines cannot offer this guarantee, making warm-up the empirical workaround for what pre-allocation solves architecturally
 
 Topics:
 - [[ai-ml]]
