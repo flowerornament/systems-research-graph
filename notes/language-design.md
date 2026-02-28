@@ -36,9 +36,20 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- visual cortex processes relational structure in parallel; text notation forces serial parsing; cyclic audio graphs are especially poorly served by linear text
 - [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- Sussman: expression trees have anonymous interior nodes; wiring diagrams name every wire, making each intermediate value addressable -- relevant to murail's audio graph DSL design
 
+### McCartney's New Language (2021-2025): Signal Model and Type System
+- [[signal-shape-as-a-type-level-property-enables-compile-time-buffer-allocation-and-vectorization]] -- making matrix shape (rows x columns) part of the signal type rather than runtime metadata enables static buffer allocation, SIMD planning, and shape mismatch as compile error
+- [[universal-auto-mapping-eliminates-explicit-iteration-from-signal-processing-programs]] -- APL-style rank polymorphism applied to every function, not just UGens, makes programs dramatically shorter; explicit `@` operators control iteration shape for Cartesian products
+- [[multimethods-allow-code-generation-backends-to-be-organized-by-concern]] -- dispatching on both the code generator type and the expression type lets all codegen for one backend live together; prevents concern-spreading across expression classes
+
+### McCartney's New Language (2021-2025): Workflow Architecture
+- [[creative-workflow-friction-should-determine-audio-engine-architecture]] -- each of McCartney's innovations traces to a specific felt friction in creative practice; the design method: test every architectural decision against "does this create friction in the creative loop?"
+- [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- if/switch/for as graph primitives on equal footing with arithmetic enables pause and demand-rate patterns; McCartney explicitly marks event codegen and scheduling as his unsolved hard problems
+
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
+- Universal auto-mapping (every function, McCartney) vs. explicit set-lifting (`f {a,b,c}`, current Murail language design context) -- which scope is right for Murail's audience?
+- If the composition language (Stage 9) adopts persistent immutable data structures, how does McCartney's flexible class model (classes as type tags, not structure constraints) interact with Rust's strict struct layout requirements?
 
 ---
 
