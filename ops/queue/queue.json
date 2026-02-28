@@ -2,6 +2,17 @@
   "schema_version": 3,
   "queue": [
     {
+      "id": "fraser-2004-practical-lock-freedom-extract",
+      "batch": "fraser-2004-practical-lock-freedom",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/fraser-2004-practical-lock-freedom/fraser-2004-practical-lock-freedom.txt",
+      "file": "fraser-2004-practical-lock-freedom-extract.md",
+      "created": "2026-02-28",
+      "next_claim_start": 1,
+      "archive_folder": "/Users/morgan/code/arscontextica/ops/queue/archive/2026-02-28-fraser-2004-practical-lock-freedom/"
+    },
+    {
       "id": "anira-2024-extract",
       "batch": "anira-2024",
       "type": "extract",
