@@ -1,5 +1,5 @@
 ---
-description: RAVE's 2048x downsampling compresses 48kHz to a 23Hz latent; a WaveNet-inspired model needs only 9M params and 10 layers for a 3-second receptive field over this latent, enabling a two-tier generative architecture
+description: RAVE's 2048x downsampling creates a 23Hz latent stream; a WaveNet model needs only 9M params and 10 layers for a 3-second receptive field at this rate, enabling a two-tier generative architecture
 type: claim
 evidence: strong
 source: [[rave-2021]]
