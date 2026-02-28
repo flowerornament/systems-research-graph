@@ -23,15 +23,6 @@
       "next_claim_start": 140
     },
     {
-      "id": "llvm-creator-interview-chris-lattner-extract",
-      "batch": "llvm-creator-interview-chris-lattner",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/llvm-creator-interview-chris-lattner.md",
-      "created": "2026-02-28",
-      "next_claim_start": 83
-    },
-    {
       "id": "cherep-2024-text-to-audio-synthesizer-extract",
       "batch": "cherep-2024-text-to-audio-synthesizer",
       "type": "extract",
