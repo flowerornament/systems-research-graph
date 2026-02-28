@@ -1,5 +1,5 @@
 ---
-description: A mutable reference borrows ownership for the duration of a lifetime; when the lifetime ends, full ownership reverts to the original owner -- modeled in the lifetime logic as a full borrow with an inheritance
+description: Mutable references are ownership with an expiry date -- modeled as a full borrow plus an inheritance that restores original ownership when the lifetime ends
 type: property
 evidence: strong
 source: [[rustbelt-2018]]
