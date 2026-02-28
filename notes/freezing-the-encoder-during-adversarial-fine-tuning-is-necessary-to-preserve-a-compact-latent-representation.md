@@ -1,5 +1,5 @@
 ---
-description: Training the encoder with a feature matching loss during adversarial fine-tuning dramatically inflates estimated latent dimensionality; freezing the encoder is not optional if compactness is a design goal
+description: Applying adversarial loss through the encoder inflates latent dimensionality from 24 to 60+; encoder freezing during GAN fine-tuning is required, not optional, for compact latent representations
 type: property
 evidence: strong
 source: [[rave-2021]]
