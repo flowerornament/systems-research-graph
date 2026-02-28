@@ -18,3 +18,5 @@ Supporting evidence Rusher cites: Lisp-programmed space probes (Deep Space 1) we
 For [[formal-methods]] in murail: this supports a tiered approach -- verify mathematical invariants in the formal model (the Named Sparse Recurrence System), but don't attempt to prove the correctness of the full graph engine. The Lean 4 proofs are appropriate precisely because they target the stable core formalism, not the application code. Runtime verification (loom, miri, property-based tests) fits the debuggability-first philosophy better than full formal verification at the engine level.
 
 Follows from [[type-systems-have-not-empirically-reduced-defect-rates]] and [[interactive-programming-eliminates-the-compile-run-cycle]] (live systems can be debugged; dead batch artifacts cannot).
+
+Naur's [[programming-is-theory-building-not-text-production]] provides complementary grounding: the spec is always wrong not merely because requirements change but because specs are attempts to articulate theory that is inherently tacit. Rusher argues from lifecycle; Naur argues from epistemology; both converge on the conclusion that correctness-by-construction optimizes for the wrong property.
