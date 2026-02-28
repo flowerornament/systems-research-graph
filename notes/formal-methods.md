@@ -38,6 +38,19 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[truth-maintenance-systems-enable-locally-consistent-reasoning-in-an-inconsistent-knowledge-base]] -- TMSs maintain multiple locally consistent worldviews; relevant to tracking which physical model assumptions underlie a computed audio result
 - [[dependency-directed-backtracking-prunes-search-using-provenance-rather-than-recency]] -- provenance-driven backtracking is more efficient than chronological; relevant if murail's compiler performs constraint-based scheduling
 
+### Guarded Domain Theory (Birkedal et al. 2012) -- [[birkedal-2012-guarded-domain-theory]]
+
+- [[the-topos-of-trees-internalizes-step-indexing-eliminating-explicit-index-arithmetic-from-proofs]] -- working inside S's internal logic absorbs all step-index management into the later modality ✄; externally the model is a standard step-indexed model
+- [[the-later-modality-on-types-enables-guarded-recursive-domain-equations-in-the-topos-of-trees]] -- the ◮ functor breaks circularity in recursive type definitions; locally contractive functors have unique fixed points that are simultaneously initial algebras and final coalgebras
+- [[the-loeb-rule-makes-coinductive-reasoning-derivable-in-guarded-domain-theory]] -- (✄ϕ → ϕ) → ϕ holds internally in S; this single principle subsumes coinduction and powers the fundamental theorem proofs
+- [[locally-contractive-functors-guarantee-unique-fixed-points-for-mixed-variance-recursive-types]] -- syntactic guardedness (recursion variable under ◮) ensures local contractiveness; fixed point is the Freyd initial dialgebra
+- [[the-internal-banach-fixed-point-theorem-proves-unique-solutions-for-contractive-guarded-recursive-predicates]] -- inhabited types with internally contractive endomorphisms have unique fixed points; proved using Löb without external index arithmetic
+- [[guarded-domain-theory-subsumes-complete-bounded-ultrametric-spaces-as-a-reflective-subcategory]] -- BiCBUlt embeds as a co-reflective subcategory of S; prior BiCBUlt models can be rebuilt with full higher-order logic and automatic non-expansiveness
+- [[dependent-types-require-a-slice-category-generalization-of-the-later-modality]] -- ◮I must be a fibred endofunctor on S/I; the left adjoint ◭ fails to commute with reindexing and cannot serve as a dependent type constructor
+- [[guarded-domain-theory-generalizes-to-sheaves-over-any-well-founded-complete-heyting-algebra]] -- any Sh(A) for a well-founded complete Heyting algebra A is a model of synthetic guarded domain theory
+- [[a-model-of-higher-order-store-and-recursive-types-can-be-constructed-entirely-inside-the-internal-logic-of-the-topos-of-trees]] -- the Fµ,ref fundamental theorem is proved inside S's internal logic with only two explicit ✄ uses
+- [[the-guardedness-condition-on-recursive-definitions-is-the-proof-theoretic-analog-of-the-causality-condition-on-dependency-graphs]] -- ◮ guard (topos) and `@d` delay guard (Murail) are the same categorical principle at different scales; suggests a formal connection between Murail's compiler and guarded type theory
+
 ### Murail Substrate: Calculus Properties (source -- [[murail-substrate-v3]])
 - [[guarded-self-reference-is-the-sole-mechanism-for-temporal-evolution-in-the-murail-calculus]] -- the `self@d` form is the only way a Murail equation can depend on its own past; all recurrence, memory, and feedback derive from this single primitive
 - [[the-causality-condition-requires-every-dependency-cycle-to-contain-a-delay-edge]] -- every cycle in G(P) must include at least one @d edge; this structural invariant makes the instantaneous-dependency subgraph a DAG and determines evaluation order by topological sort
