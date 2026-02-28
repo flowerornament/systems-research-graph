@@ -1,5 +1,5 @@
 ---
-description: Making all data structures immutable with explicit mutable Refs eliminates GC write barriers, makes reference counting sufficient, enables lock-free cross-thread sharing, and makes undo a pointer operation -- all as architectural side effects of one decision
+description: Immutable data with explicit mutable Refs eliminates GC write barriers, makes reference counting sufficient, enables lock-free sharing, and makes undo a pointer swap -- all as side effects of one architectural decision
 type: claim
 evidence: strong
 source: [[mccartney-ideas-2026-02-15]]
