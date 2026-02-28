@@ -1,5 +1,5 @@
 ---
-description: Algebraic effects compose without implementing a combined monad because their algebraic restriction (free monad) makes composition automatic, unlike monad transformers which require handwritten combination code
+description: Algebraic effects compose without a combined monad because the free monad restriction makes composition automatic, unlike monad transformers which require handwritten combination code
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
