@@ -37,6 +37,17 @@
       "created": "2026-02-28",
       "next_claim_start": 100,
       "archive_folder": "ops/queue/archive/2026-02-28-swift-to-mojo-chris-lattner/"
+    },
+    {
+      "id": "naur-1985-programming-as-theory-building-extract",
+      "batch": "naur-1985-programming-as-theory-building",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf",
+      "file": "naur-1985-programming-as-theory-building-extract.md",
+      "created": "2026-02-28T00:00:00Z",
+      "next_claim_start": 120,
+      "archive_folder": "ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/"
     }
   ],
   "processing": [],
