@@ -1,5 +1,5 @@
 ---
-description: In block-based DSP, handling triggers that arrive mid-block requires splitting the block into pre-trigger and post-trigger segments via lambdas, enabling sub-block state transitions without abandoning block processing
+description: Block-based DSP with sub-block accuracy splits the render block into pre-trigger and post-trigger lambdas, enabling mid-block state transitions without abandoning block processing
 type: pattern
 evidence: strong
 source: [[channel-agnosticism-metasounds-aaron-mcleran-adc]]
