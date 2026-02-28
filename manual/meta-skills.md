@@ -229,5 +229,5 @@ This cycle -- query, challenge, observe, adjust -- is how the vault evolves from
 
 - [[skills]] -- Full command reference
 - [[workflows]] -- How meta-skills fit into session patterns
-- [[configuration]] -- Dimension reference for /architect
+- [[configuration]] -- Dimension reference for /arscontexta:architect
 - [[troubleshooting]] -- When meta-skills reveal structural problems
