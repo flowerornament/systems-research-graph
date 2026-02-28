@@ -51,6 +51,11 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- if/switch/for as graph primitives on equal footing with arithmetic enables pause and demand-rate patterns; McCartney explicitly marks event codegen and scheduling as his unsolved hard problems
 - [[synthesis-graph-construction-is-a-regular-program-not-a-domain-specific-declaration]] -- no synthdef syntax or graph-construction DSL; synthesis graphs are built by calling ordinary language functions; the full language is available for algorithmic graph construction
 
+### McCartney Pre-History (Pyrite and SuperCollider Origins)
+- [[supercollider-version-1-merged-a-scripting-language-with-a-software-synthesizer-when-hardware-reached-real-time-speed]] -- SC1 was Pyrite + Synthomatic merged when Power Mac hit real-time speed; the merge was immediate and opportunistic, not planned
+- [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting in RT thread; SC3 introduced the client-server split that defined SuperCollider's architecture
+- [[pyrite-introduced-closures-into-max-patching-enabling-separation-of-ui-and-logic]] -- Pyrite's Scheme-style closures let Max patches contain only UI while all logic lived in a Pyrite script; demonstrated the text-script / visual-patch complementarity SC formalized
+
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
