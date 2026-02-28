@@ -31,6 +31,7 @@ Relevant Notes:
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — engine choice is a second axis of performance variation alongside buffer size; these two levers are independent and composable
 - [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] — contextualizes why the latency tolerance lever only exists for parallel architectures: autoregressive I_max consumes the entire budget before tolerance can be traded for throughput
 - [[multiband-decomposition-reduces-temporal-dimensionality-enabling-real-time-neural-audio-at-48khz]] — parallel strategy operating at the input representation level rather than the inference scheduling level; both reduce per-sample neural computation cost and compose
+- [[block-size-is-the-primary-latency-throughput-tradeoff-in-murail-execution]] — structurally parallel tradeoff at the substrate level: block size N amortizes per-tick overhead via vectorization, model input size amortizes per-sample inference overhead via batching; both couple latency budget to throughput efficiency
 
 Topics:
 - [[ai-ml]]
