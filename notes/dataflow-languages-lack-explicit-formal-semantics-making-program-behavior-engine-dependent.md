@@ -29,3 +29,4 @@ This is relevant to murail in two ways: (1) murail's graph IR should have formal
 - Contrasts with [[faust-programs-denote-mathematical-functions-enabling-semantics-driven-compilation]] — FAUST's formal semantics solve exactly the problem dataflow languages have
 - Extends [[library-languages-must-not-bundle-a-mandatory-runtime]] — Max/PD illustrate the cost of mandatory runtime coupling
 - Connects to [[static-languages-prevent-runtime-introspection]] — hidden-in-engine semantics is the opposite failure mode: the program is dynamic but its meaning is opaque
+- The Murail substrate ([[the-murail-substrate-is-instantiated-by-a-domain-configuration-without-modifying-layers-0-through-2]]) is the architecture that solves both embedding and semantics simultaneously: a domain-independent substrate with formally-specified execution semantics (Layer 1) that can be embedded without requiring a full runtime
