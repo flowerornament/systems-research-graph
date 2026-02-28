@@ -1,5 +1,5 @@
 ---
-description: Rather than using raw convolution layers, predicting frequency-domain transfer functions and converting via IDFT produces linear-phase FIR filters that are interpretable, phase-distortion-free, and time-varying
+description: Predicting frequency-domain transfer functions and converting via IDFT rather than using raw convolution layers produces linear-phase FIR filters that are interpretable, phase-distortion-free, and time-varying
 type: pattern
 evidence: strong
 source: [[ddsp-2020]]
