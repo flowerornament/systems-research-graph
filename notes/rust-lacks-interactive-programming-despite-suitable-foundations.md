@@ -18,3 +18,5 @@ For [[language-design]] in murail: this is a known gap in the Rust ecosystem. To
 Zig is Rusher's preferred alternative for systems programming (more to his taste than Rust), but he makes the same criticism: Zig has multi-stage compilation that could support interactivity, and also ignores it in favor of traditional tooling.
 
 Contrasted with [[interactive-programming-eliminates-the-compile-run-cycle]] (the ideal) and [[library-languages-must-not-bundle-a-mandatory-runtime]] (Rust gets this right).
+
+The Hadron developer makes the positive case for Rust's contributor accessibility: [[compiler-explorer-extended-c-by-making-compilation-artifacts-inspectable-and-shareable]] explains a parallel strategy — transparency about what the compiler does with code reduces the cognitive burden of learning the language; Hadron applies this to SC via its WASM web front end.
