@@ -1,5 +1,5 @@
 ---
-description: The soundness proof for Fµ,ref (impredicative polymorphism, recursive types, ML-like references) is carried out entirely within S's internal logic using guarded recursion, with no external step-index arithmetic
+description: Soundness for Fµ,ref (impredicative polymorphism, recursive types, ML references) is proved entirely within S's internal logic via guarded recursion, with no external step-index arithmetic
 type: claim
 evidence: strong
 source: [[birkedal-2012-guarded-domain-theory]]
