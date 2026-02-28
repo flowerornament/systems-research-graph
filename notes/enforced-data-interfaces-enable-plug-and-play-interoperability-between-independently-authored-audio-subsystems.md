@@ -1,5 +1,5 @@
 ---
-description: MetaSounds' typed interface system lets gameplay subsystems declare required graph contracts that any compliant MetaSound can satisfy, enabling audio authors to work independently of each system's implementation
+description: Typed interface contracts let gameplay subsystems declare audio requirements that any conforming MetaSound can satisfy, decoupling audio authors from system implementation details
 type: pattern
 evidence: strong
 source: [[channel-agnosticism-metasounds-aaron-mcleran-adc]]
