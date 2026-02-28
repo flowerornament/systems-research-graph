@@ -1,5 +1,5 @@
 ---
-description: Training a VAE with spectral reconstruction loss first, then freezing the encoder and adversarially fine-tuning only the decoder, cleanly separates the objectives of learning good representations and generating high-quality audio
+description: Stage 1 trains encoder+decoder with spectral loss for representation quality; Stage 2 freezes the encoder and adversarially fine-tunes only the decoder for synthesis quality
 type: pattern
 evidence: strong
 source: [[rave-2021]]
