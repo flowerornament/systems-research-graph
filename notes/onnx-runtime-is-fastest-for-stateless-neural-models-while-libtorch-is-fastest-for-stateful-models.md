@@ -25,6 +25,7 @@ Relevant Notes:
 - [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — explains why ONNX is excluded from stateful comparisons
 - [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]] — model-size nuance to stateful results
 - [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — buffer size is a second axis of performance variation
+- [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — the engine performance ranking correlates with RT violation severity: ONNX Runtime fastest and lightest violations, LibTorch slowest and most invasive
 
 Topics:
 - [[ai-ml]]
