@@ -38,8 +38,17 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[truth-maintenance-systems-enable-locally-consistent-reasoning-in-an-inconsistent-knowledge-base]] -- TMSs maintain multiple locally consistent worldviews; relevant to tracking which physical model assumptions underlie a computed audio result
 - [[dependency-directed-backtracking-prunes-search-using-provenance-rather-than-recency]] -- provenance-driven backtracking is more efficient than chronological; relevant if murail's compiler performs constraint-based scheduling
 
+### Murail Substrate: Calculus Properties (source -- [[murail-substrate-v3]])
+- [[guarded-self-reference-is-the-sole-mechanism-for-temporal-evolution-in-the-murail-calculus]] -- the `self@d` form is the only way a Murail equation can depend on its own past; all recurrence, memory, and feedback derive from this single primitive
+- [[the-causality-condition-requires-every-dependency-cycle-to-contain-a-delay-edge]] -- every cycle in G(P) must include at least one @d edge; this structural invariant makes the instantaneous-dependency subgraph a DAG and determines evaluation order by topological sort
+- [[set-cardinality-and-tensor-shape-are-orthogonal-dimensions-in-the-murail-calculus]] -- shape describes the internal structure of each value; cardinality describes how many independent instances evolve in parallel; these dimensions are independent and compose separately
+- [[variable-delay-requires-a-compile-time-declared-maximum-enabling-static-ring-buffer-allocation]] -- D_max declared at compile time converts dynamic delay amounts into a statically-bounded ring buffer; the out-of-range case degrades to default element without blocking
+- [[the-murail-substrate-is-instantiated-by-a-domain-configuration-without-modifying-layers-0-through-2]] -- audio, robotics, and games each provide a domain configuration tuple; the three-domain test validates that the four-layer factoring is at the right level of generality
+- [[dsp-and-ml-are-structurally-identical-under-shape-driven-dispatch-in-the-murail-calculus]] -- the equation `y = a·y@1 + b·x` is a one-pole filter at scalar shape and a recurrent neural layer at shape (16); only the dispatch target differs; the unification is a formal consequence of shape-driven dispatch
+
 ## Open Questions
 - Where exactly is the tier boundary between Lean-appropriate formal verification (stable core formalism) and runtime-verification-appropriate testing (application layer) in murail's architecture?
+- The substrate validation criteria (Appendix B) specify the three-domain test as the correctness criterion for the factoring. Which domain should be implemented first to exercise the most substrate mechanisms with the least domain-specific complexity? (The toy-domain test suggests a spreadsheet-like domain, not audio, as the first validation target.)
 
 ---
 
