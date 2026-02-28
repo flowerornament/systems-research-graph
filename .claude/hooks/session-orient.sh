@@ -92,7 +92,7 @@ echo ""
 # --- Reminders ---
 if [ -f "ops/reminders.md" ]; then
   TODAY=$(date +%Y-%m-%d)
-  REMINDERS=$(grep -E "^\| *[0-9]{4}-" ops/reminders.md 2>/dev/null | while IFS='|' read -r _ due reminder status _; do
+  REMINDERS=$(grep -E "^\| *[0-9]{4}-" ops/reminders.md 2>/dev/null || true | while IFS='|' read -r _ due reminder status _; do
     due=$(echo "$due" | xargs)
     status=$(echo "$status" | xargs)
     if [ -n "$due" ] && [ "$due" \<= "$TODAY" ] && [ "$status" != "done" ]; then
