@@ -1,5 +1,5 @@
 ---
-description: The essential idea of Rust's type system: at any point in execution, aliasing and mutation cannot coexist on a given memory location, which eliminates use-after-free, data races, and iterator invalidation
+description: Rust's core type invariant -- aliasing and mutation cannot coexist on any location -- eliminates use-after-free, data races, and iterator invalidation at compile time
 type: property
 evidence: strong
 source: [[rustbelt-2018]]
