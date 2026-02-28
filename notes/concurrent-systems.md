@@ -68,5 +68,8 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 
 ---
 
+Agent Notes:
+- 2026-02-28: static-thread-pool is the bridge between this map and ai-ml. For RT safety questions about neural inference, enter via static-thread-pool; follow to inference-engines-violate for violation data, or to existing-hardware-cas-primitives for the atomic synchronization substrate. The oversubscription problem (why the pool is static) connects to memory-bandwidth-is-the-binding-constraint — same root cause, different framing.
+
 Topics:
 - [[index]]
