@@ -38,6 +38,7 @@ Relevant Notes:
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — ONNX exclusion forces LibTorch for stateful models, raising I_max and thereby L_total across all host buffer sizes
 - [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — ONNX's stateless architecture correlates with its lightest violation profile; the same design that restricts capability also reduces RT interference
 - [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] — stateful model hidden state lives inside the inference engine's opaque memory, outside the pre-allocated state region; reinforces the thread pool as isolation boundary
+- [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]] — the parallel inference gap (Gap 2) is scoped by this constraint: only stateless models can exploit ThreadPool parallelism, so the unbenchmarked parallel throughput curve applies exclusively to ONNX's domain
 
 Topics:
 - [[ai-ml]]
