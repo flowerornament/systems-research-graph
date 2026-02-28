@@ -1,5 +1,5 @@
 ---
-description: A functor is locally contractive if its action on hom-objects factors through ◮; this syntactically verifiable condition ensures the recursive type equation has a unique solution that is simultaneously an initial algebra and final coalgebra
+description: A functor is locally contractive if its action on hom-objects factors through ◮; this syntactically checkable condition guarantees a unique solution that is simultaneously an initial algebra and final coalgebra
 type: property
 evidence: strong
 source: [[birkedal-2012-guarded-domain-theory]]
