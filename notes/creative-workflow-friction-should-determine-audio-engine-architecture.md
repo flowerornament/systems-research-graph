@@ -1,5 +1,5 @@
 ---
-description: McCartney's architectural decisions are each traceable to a specific friction point in creative practice -- the architectural insight is that removing felt friction is more productive than optimizing for computer science elegance
+description: Each of McCartney's architectural decisions traces to a specific creative friction point -- removing felt friction is more productive than optimizing for computer science elegance
 type: claim
 evidence: strong
 source: [[mccartney-ideas-2026-02-15]]
