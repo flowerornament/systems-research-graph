@@ -1,17 +1,6 @@
 {
   "schema_version": 3,
-  "queue": [
-    {
-      "id": "2026-02-06-Ke8e7pGAxec-extract",
-      "batch": "2026-02-06-Ke8e7pGAxec",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-Ke8e7pGAxec.md",
-      "created": "2026-02-28",
-      "next_claim_start": 55,
-      "archive_folder": "/Users/morgan/code/murail/.design/references/transcripts/archive/"
-    }
-  ],
+  "queue": [],
   "processing": [],
   "completed": [
     {
@@ -63,6 +52,20 @@
       "connections_added": 22,
       "topic_maps_updated": 4,
       "archive": "ops/queue/archive/2026-02-28-mccartney-ideas-2026-02-15/"
+    },
+    {
+      "id": "2026-02-06-Ke8e7pGAxec-extract",
+      "batch": "2026-02-06-Ke8e7pGAxec",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-Ke8e7pGAxec.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 7,
+      "enrichments": 2,
+      "connections_added": 14,
+      "topic_maps_updated": 3,
+      "archive": "ops/queue/archive/2026-02-28-2026-02-06-Ke8e7pGAxec/"
     }
   ]
 }
