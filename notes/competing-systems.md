@@ -64,6 +64,14 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- previous sound plays while new graph compiles; solves the 45-second silence problem that killed McCartney's 1990s whole-graph compilation attempt
 - [[first-class-control-flow-nodes-in-synthesis-graphs-enable-conditional-and-demand-rate-execution]] -- treating if/switch/for as graph primitives enables pause and demand-rate patterns impossible in Faust; event codegen and scheduling remain McCartney's unsolved hard problem
 
+### Hadron (Lucille, 2025): SC Interpreter Compatibility and Ecosystem
+- [[hirams-law-makes-all-observable-interpreter-behavior-a-permanent-api-commitment]] -- any observable SC behavior becomes a permanent user dependency; Hadron must reproduce quirks including deferred initialization ordering
+- [[deferred-argument-initialization-exposes-sc-frame-setup-order-as-observable-behavior]] -- SC's two-pass frame initialization is visible in program outputs; a reimplementation that eliminates the quirk breaks user code
+- [[constant-folding-can-silently-change-sc-program-semantics-via-initialization-timing]] -- basic optimization is not semantics-preserving in SC; applies to murail wherever evaluation timing is observable by users
+- [[observable-semantics-lock-in-implementation-details-and-block-optimization]] -- internals that leak through observable behavior cannot be replaced without a compatibility strategy; antidote is explicit compatibility classification
+- [[the-supercollider-ecosystem-rather-than-the-software-is-its-irreplaceable-value]] -- 25 years of community and creative work is the real value of SC; compatible reimplementations preserve ecosystem access
+- [[compiler-explorer-extended-c-by-making-compilation-artifacts-inspectable-and-shareable]] -- Hadron's WASM web front end applies the Godbolt model: shareable, inspectable compilation artifacts for SC/Hadron
+
 ### Audio Programming Education and Abstraction Costs
 - [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- Apple Core Audio interviews found JUCE-trained developers knew DSP inner loops but not threading models or resource management; JUCE as crutch
 - [[audio-programming-education-requires-reading-production-engine-source-code-across-multiple-systems]] -- McCartney's prescription: read CSound, VCV Rack, SuperCollider, Chuck, and Pure Data to understand the engine problem space from multiple angles
