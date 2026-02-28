@@ -27,6 +27,16 @@
       "source": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/leijen-algebraic-effects.pdf",
       "created": "2026-02-28",
       "archive_folder": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-algebraic-effects/"
+    },
+    {
+      "id": "swift-to-mojo-chris-lattner-extract",
+      "batch": "swift-to-mojo-chris-lattner",
+      "type": "extract",
+      "status": "pending",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/swift-to-mojo-chris-lattner.md",
+      "created": "2026-02-28",
+      "next_claim_start": 100,
+      "archive_folder": "ops/queue/archive/2026-02-28-swift-to-mojo-chris-lattner/"
     }
   ],
   "processing": [],
