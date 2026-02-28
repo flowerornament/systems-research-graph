@@ -35,6 +35,8 @@ Relevant Notes:
 - [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — defines why parallel inference is exclusive to ONNX's domain: stateful models cannot share hidden state across threads, making the ThreadPool parallelism axis unavailable to them
 - [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] — grounds the static pool's conservative sizing: thread proliferation competes for shared memory bus, making oversubscription a performance regression not just a resource issue
 - [[send-and-sync-are-thread-independence-of-ownership-and-sharing-predicates]] — a Rust implementation of this architecture requires inference nodes submitted to the pool to satisfy Send; this claim formally characterizes what that safety requirement means
+- [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — complementary strategy: reduces violation magnitude within the pool threads, affecting I_max estimation but not RT safety
+- [[core-audio-low-latency-performance-traces-to-an-architectural-insight-made-at-the-projects-inception]] — the static pool design exemplifies the foundational architectural choice pattern: thread model decisions at inception constrain long-term performance
 
 Topics:
 - [[ai-ml]]
