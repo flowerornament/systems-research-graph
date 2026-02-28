@@ -27,6 +27,7 @@ Relevant Notes:
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — anira's architectural response to this problem
 - [[supercollider-client-server-architecture-moved-the-scripting-language-out-of-the-real-time-audio-thread]] — same root constraint (non-RT code in RT context), earlier solution
 - [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — addresses runtime variance rather than violations per se
+- [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — violation severity gradient mirrors performance ranking across engines
 
 Topics:
 - [[ai-ml]]
