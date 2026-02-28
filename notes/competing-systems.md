@@ -21,6 +21,11 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 ## Claims
 (populated by /extract from .design/references/competing-systems.md and sc-internals.md)
 
+### Interactive Programming Comparison
+- [[batch-processing-incurs-avoidable-cognitive-overhead]] -- SuperCollider, Faust, and JUCE are all compile-run systems; evaluating murail against the interactive programming ideal reveals the gap all audio systems share
+- [[static-languages-prevent-runtime-introspection]] -- Faust's AOT compilation and SuperCollider's SynthDef compilation both produce static artifacts; neither supports runtime query of running graph state
+- [[visual-representation-exposes-structure-text-notation-obscures]] -- SuperCollider has a graphical node editor alongside its text notation; murail's DSL will face the same cyclic-graph-in-linear-text tension
+
 ## Open Questions
 (populated as gaps are identified)
 
