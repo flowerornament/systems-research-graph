@@ -17,7 +17,7 @@ The PQMF decomposition is an orthogonal basis (cosine modulations of a low-pass 
 
 For murail: if neural UGens targeting 48kHz are in scope, multiband decomposition at the UGen boundary is likely required for real-time feasibility. This is a DSP technique, not an ML technique -- it belongs in the signal conditioning layer, not the model architecture itself.
 
-Extends [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] by showing the orthogonal bandwidth reduction strategy.
+Extends [[autoregressive-synthesis-prevents-real-time-audio-generation-at-usable-sample-rates]] by showing the orthogonal bandwidth reduction strategy. Complements [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] as a parallel technique: multiband reduces the dimensionality of what enters the model; larger input sizes amortize fixed overhead over more samples. Both compose and neither requires the other.
 
 ---
 
