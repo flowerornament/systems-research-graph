@@ -31,6 +31,10 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[programmer-time-dominates-computation-cost-in-the-post-scarcity-era]] -- memory and compute are now effectively free; the binding constraint is programmer expressiveness, making scarcity-oriented design obsolete
 - [[rust-lacks-interactive-programming-despite-suitable-foundations]] -- Rust's multi-stage compilation could support interactivity; instead it shipped with batch-mode tooling
 - [[library-languages-must-not-bundle-a-mandatory-runtime]] -- embeddable languages must not require importing their full runtime; directly constrains murail's Rust choice
+- [[progressive-disclosure-of-complexity-fails-when-feature-accumulation-is-not-actively-prevented]] -- Lattner: Swift's progressive disclosure ideal collapsed under piecemeal feature additions; Mojo's response is strict scope limits and metaprogramming to subsume special cases
+- [[value-semantics-allow-in-place-mutation-when-ownership-is-clear-making-them-strictly-more-powerful-than-purely-functional-copies]] -- logical separation from functional programming plus in-place efficiency from ownership proofs; strictly superior to immutable-copy functional models
+- [[incremental-migration-between-languages-requires-binary-level-interoperability-not-just-semantic-compatibility]] -- Swift/ObjC, C/C++, Python/Mojo coexistence: whole-ecosystem transitions fail; class-by-class migration succeeds
+- [[source-incompatibility-as-explicit-commitment-converts-forced-migration-to-opt-in-experiment]] -- explicitly declaring instability removes executive trap-risk and makes early adoption voluntary; the "relief valve" principle
 
 ### Representation
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- visual cortex processes relational structure in parallel; text notation forces serial parsing; cyclic audio graphs are especially poorly served by linear text
