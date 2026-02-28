@@ -135,7 +135,7 @@ See manual/workflows.md for phase details, quality gates, and orchestration patt
 
 ## Pipeline Compliance
 
-**NEVER write directly to notes/.** All content routes through the pipeline: inbox/ -> /extract -> notes/. If you find yourself creating a file in notes/ without having run /extract, STOP. Route through inbox/ first. The pipeline exists because direct writes skip quality gates.
+**NEVER write directly to notes/.** All content routes through the pipeline: inbox/ -> /arscontexta:extract -> notes/. If you find yourself creating a file in notes/ without having run /arscontexta:extract, STOP. Route through inbox/ first. The pipeline exists because direct writes skip quality gates.
 
 Full automation is active from day one. All processing skills, all quality gates, all maintenance mechanisms are available immediately.
 
