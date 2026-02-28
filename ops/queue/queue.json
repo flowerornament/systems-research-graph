@@ -175,6 +175,20 @@
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-fmVdfQNPzkE/"
     },
     {
+      "id": "naur-1985-programming-as-theory-building-extract",
+      "batch": "naur-1985-programming-as-theory-building",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf",
+      "created": "2026-02-28T00:00:00Z",
+      "completed": "2026-02-28T00:00:00Z",
+      "claims_created": 7,
+      "enrichments": 0,
+      "connections_added": 22,
+      "topic_maps_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/"
+    },
+    {
       "id": "swift-to-mojo-chris-lattner-extract",
       "batch": "swift-to-mojo-chris-lattner",
       "type": "extract",
