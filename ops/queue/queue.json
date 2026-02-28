@@ -1,16 +1,6 @@
 {
   "schema_version": 3,
-  "queue": [
-    {
-      "id": "channel-agnosticism-metasounds-extract",
-      "batch": "channel-agnosticism-metasounds",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/channel-agnosticism-metasounds.md",
-      "created": "2026-02-28",
-      "next_claim_start": 22
-    }
-  ],
+  "queue": [],
   "processing": [],
   "completed": [
     {
@@ -35,6 +25,19 @@
       "claims_created": 8,
       "enrichments": 2,
       "archive": "ops/queue/archive/2026-02-28-we-dont-know-how-to-compute-sussman-2011/"
+    },
+    {
+      "id": "channel-agnosticism-metasounds-extract",
+      "batch": "channel-agnosticism-metasounds",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/channel-agnosticism-metasounds.md",
+      "created": "2026-02-28",
+      "next_claim_start": 22,
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 1,
+      "archive": "ops/queue/archive/2026-02-28-channel-agnosticism-metasounds/"
     }
   ]
 }
