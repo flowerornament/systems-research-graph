@@ -29,7 +29,7 @@ echo ""
 # --- Load goals ---
 if [ -f "ops/goals.md" ]; then
   echo "## Active Goals"
-  sed -n '/^## Active Threads/,/^## /p' ops/goals.md | head -n -1
+  sed -n '/^## Active Threads/,/^## /{ /^## Active Threads/d; /^## /d; p; }' ops/goals.md
   echo ""
 fi
 
