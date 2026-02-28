@@ -68,6 +68,11 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- Apple Core Audio interviews found JUCE-trained developers knew DSP inner loops but not threading models or resource management; JUCE as crutch
 - [[audio-programming-education-requires-reading-production-engine-source-code-across-multiple-systems]] -- McCartney's prescription: read CSound, VCV Rack, SuperCollider, Chuck, and Pure Data to understand the engine problem space from multiple angles
 
+### Compiler Generality and Hardware Targeting (Lattner)
+- [[compiler-generality-beats-human-specialization-at-scale-because-compilers-can-enumerate-configurations-humans-cannot]] -- validates [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] from the compiler research direction: flatter representations enable the exhaustive optimization McCartney's approach requires
+- [[mlir-enables-heterogeneous-hardware-targeting-that-llvm-cannot-provide]] -- the current state of the art for audio DSP targeting future accelerator hardware; relevant for murail's neural UGen path
+- [[purely-functional-languages-fail-on-modern-hardware-because-pointer-boxing-destroys-cache-locality]] -- explains why Faust's functional model, while semantically clean, requires careful backend code generation to avoid performance penalties from functional-style intermediate representations
+
 ## Open Questions
 - Is there an IR granularity between UGen-level (opaque, v1) and arithmetic-primitive-level (McCartney's approach, requires massive compiler investment) that would allow incremental lowering?
 - McCartney's event codegen and scheduler are explicitly unfinished after years of work -- what is the blocker, and does it affect Murail's conditional subgraph plans?
