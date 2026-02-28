@@ -20,7 +20,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[formal-methods]] -- Lean proofs, mathematical foundations, verification, algebraic spaces
 
 ## Cross-Domain
-(topic maps that span multiple domains appear here — e.g., BEAM/Elixir patterns shared between murail language design and herald)
+- [[developer-experience]] -- feedback loops, introspection, notation, and how programming environments shape what developers can build
 
 ## Source References (processed transcripts and papers)
 - [[stop-writing-dead-programs-jack-rusher-2022]] -- Jack Rusher, Strange Loop 2022: interactive programming, batch mode critique, language design survey
