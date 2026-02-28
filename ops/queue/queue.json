@@ -66,6 +66,20 @@
       "connections_added": 14,
       "topic_maps_updated": 3,
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-Ke8e7pGAxec/"
+    },
+    {
+      "id": "2026-02-06-qmayIRViJms-extract",
+      "batch": "2026-02-06-qmayIRViJms",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/2026-02-06-qmayIRViJms.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 7,
+      "enrichments": 3,
+      "connections_added": 15,
+      "topic_maps_updated": 4,
+      "archive": "ops/queue/archive/2026-02-28-2026-02-06-qmayIRViJms/"
     }
   ]
 }
