@@ -1,5 +1,5 @@
 ---
-description: Nesting handlers in different orders gives semantically different programs -- outer state is global across branches, inner state is local to each branch -- but both orderings are valid and the type system tracks both
+description: Nesting handlers in different orders gives semantically different programs -- outer state is global across branches, inner is local to each -- and both orderings are valid with types tracking both
 type: claim
 evidence: strong
 source: [[leijen-algebraic-effects]]
