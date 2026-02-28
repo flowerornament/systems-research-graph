@@ -30,6 +30,7 @@ Source: [[anira-2024]]
 Relevant Notes:
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — this claim adds model-size nuance to the stateless results
 - [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — for stateful models where ONNX is excluded, this size-dependent ordering applies
+- [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — TFLite's warm-up effect appearing only at CNN-29k (not smaller models) manifests the same size-dependent mechanism this claim identifies: TFLite's cold-start costs are only significant when per-inference workload is large
 
 Topics:
 - [[ai-ml]]
