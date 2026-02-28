@@ -2,7 +2,7 @@
 id: naur-1985-programming-as-theory-building-extract
 batch: naur-1985-programming-as-theory-building
 type: extract
-status: pending
+status: done
 source: /Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf
 original_path: /Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf
 archive_folder: /Users/morgan/code/arscontextica/ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/
