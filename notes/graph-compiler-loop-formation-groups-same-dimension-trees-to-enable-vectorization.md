@@ -1,5 +1,5 @@
 ---
-description: After cutting a signal graph into expression trees, the compiler groups trees with identical matrix dimensions into rate-partitioned loops preserving topological order, so SIMD vectorization operates on compatible operations
+description: After cutting a signal graph into expression trees, the compiler groups equal-dimension trees into rate-partitioned loops in topological order, so SIMD vectorization operates on compatible operations
 type: pattern
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
