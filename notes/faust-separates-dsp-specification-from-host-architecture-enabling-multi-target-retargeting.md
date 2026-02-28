@@ -1,5 +1,5 @@
 ---
-description: FAUST's architecture file system decouples the DSP algorithm from its host environment, allowing one .dsp source to compile to JACK, CoreAudio, LADSPA, VST, Max/MSP, PD, and SuperCollider from the same source
+description: FAUST's architecture files decouple the DSP algorithm from its host, allowing one .dsp source to compile to JACK, CoreAudio, LADSPA, VST, Max/MSP, PD, and SuperCollider
 type: pattern
 evidence: strong
 source: [[faust-2009-npcm]]
