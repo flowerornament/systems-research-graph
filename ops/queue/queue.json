@@ -471,5 +471,29 @@
       "existing_claims_updated": 1,
       "archive": "ops/queue/archive/2026-02-28-ddsp-2020/"
     }
+  ],
+  "tasks": [
+    {
+      "id": "maint-001",
+      "type": "maintenance",
+      "priority": "session",
+      "status": "pending",
+      "condition_key": "dangling_links",
+      "target": "2 dangling wiki links [[\u0393]] and [[\u03c4]] used as math notation in guarded domain theory claims \u2014 violate dangling link policy",
+      "action": "Edit notes/dependent-types-require-a-slice-category-generalization-of-the-later-modality.md and notes/a-model-of-higher-order-store-and-recursive-types-can-be-constructed-entirely-inside-the-internal-logic-of-the-topos-of-trees.md to escape math notation (use backticks or unicode directly instead of [[]] syntax)",
+      "auto_generated": true,
+      "created": "2026-02-28T12:57:51Z"
+    },
+    {
+      "id": "maint-002",
+      "type": "maintenance",
+      "priority": "multi-session",
+      "status": "pending",
+      "condition_key": "unprocessed_sessions",
+      "target": "85 session files without mined: true frontmatter in ops/sessions/",
+      "action": "/arscontexta:remember --mine-sessions",
+      "auto_generated": true,
+      "created": "2026-02-28T12:57:51Z"
+    }
   ]
 }
