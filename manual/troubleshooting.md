@@ -10,17 +10,17 @@ Common problems, their causes, and how to resolve them.
 
 ## Orphan Claims
 
-**Symptom:** `/stats` shows orphan count climbing. Claims exist in notes/ but are not linked from any topic map. They are invisible to navigation -- you can only find them by filename or full-text search.
+**Symptom:** `/arscontexta:stats` shows orphan count climbing. Claims exist in notes/ but are not linked from any topic map. They are invisible to navigation -- you can only find them by filename or full-text search.
 
 **Why it happens:**
-- `/extract` created claims but did not assign topic map links (or assigned links to maps that do not exist yet)
+- `/arscontexta:extract` created claims but did not assign topic map links (or assigned links to maps that do not exist yet)
 - Topic maps were restructured without updating claim references
 - Manual claim creation without adding topic map membership
 
 **Diagnosis:**
 
 ```
-/validate
+/arscontexta:validate
 ```
 
 The validation report lists orphan claims explicitly. Review the list -- some may be legitimate new claims that need homes, others may be extraction artifacts.
@@ -28,7 +28,7 @@ The validation report lists orphan claims explicitly. Review the list -- some ma
 **Resolution:**
 
 ```
-/reweave
+/arscontexta:reweave
 ```
 
 Reweave examines each orphan, determines which topic map(s) it belongs to, and adds the links. It may also create new topic maps if orphans cluster around a topic not yet represented.
@@ -36,15 +36,15 @@ Reweave examines each orphan, determines which topic map(s) it belongs to, and a
 For individual orphans:
 
 ```
-/connect "notes/orphaned-claim-title.md"
+/arscontexta:connect "notes/orphaned-claim-title.md"
 ```
 
 Connect will find related claims and topic maps, integrating the orphan into the graph.
 
 **Prevention:**
-- After `/extract`, check that every new claim has at least one topic map link
-- `/learn "Always assign topic map links during extraction"` if extraction consistently misses them
-- Run `/validate` after bulk extraction before doing other work
+- After `/arscontexta:extract`, check that every new claim has at least one topic map link
+- `/arscontexta:learn "Always assign topic map links during extraction"` if extraction consistently misses them
+- Run `/arscontexta:validate` after bulk extraction before doing other work
 
 ## Dangling Links
 
@@ -52,14 +52,14 @@ Connect will find related claims and topic maps, integrating the orphan into the
 
 **Why it happens:**
 - A claim was renamed or archived without updating references
-- `/extract` created a link to a claim that was supposed to be created but was not (e.g., extraction was interrupted)
+- `/arscontexta:extract` created a link to a claim that was supposed to be created but was not (e.g., extraction was interrupted)
 - Manual typo in a wiki link
-- Topic map was renamed or merged via `/refactor` without full link update
+- Topic map was renamed or merged via `/arscontexta:refactor` without full link update
 
 **Diagnosis:**
 
 ```
-/validate
+/arscontexta:validate
 ```
 
 Reports all dangling links with the source file and target that does not exist.
@@ -77,8 +77,8 @@ For systematic dangling links (e.g., after a refactor), check if the targets wer
 If the claim exists under a different name, update the link. If the claim was archived, decide whether to remove the link or create a replacement claim.
 
 **Prevention:**
-- Use `/refactor` for renaming rather than manual file operations -- it updates all references
-- Run `/validate` after any structural changes
+- Use `/arscontexta:refactor` for renaming rather than manual file operations -- it updates all references
+- Run `/arscontexta:validate` after any structural changes
 - After archiving claims, check for incoming links from other claims
 
 ## Stale Content
@@ -87,13 +87,13 @@ If the claim exists under a different name, update the link. If the claim was ar
 
 **Why it happens:**
 - The formal model evolved but claims were not updated to match
-- New sources were extracted that supersede older claims but no one ran `/verify` on the old ones
+- New sources were extracted that supersede older claims but no one ran `/arscontexta:verify` on the old ones
 - Claims were written early in the research process when understanding was partial
 
 **Diagnosis:**
 
 ```
-/stats
+/arscontexta:stats
 ```
 
 Check for claims older than 30 days without verification. These are staleness candidates.
@@ -109,7 +109,7 @@ If the answer feels wrong or outdated, the underlying claims are stale.
 **Resolution:**
 
 ```
-/verify "notes/stale-claim-title.md"
+/arscontexta:verify "notes/stale-claim-title.md"
 ```
 
 Verify checks the claim against its source and current vault state. It may update the evidence rating or flag content issues.
@@ -117,19 +117,19 @@ Verify checks the claim against its source and current vault state. It may updat
 For claims that need substantive revision:
 
 ```
-/rethink "notes/stale-claim-title.md"
+/arscontexta:rethink "notes/stale-claim-title.md"
 ```
 
-Rethink may update the claim in place, archive it and create a replacement, or flag it as a contradiction with newer claims. See [[meta-skills]] for /rethink patterns.
+Rethink may update the claim in place, archive it and create a replacement, or flag it as a contradiction with newer claims. See [[meta-skills]] for /arscontexta:rethink patterns.
 
 **Prevention:**
-- Run `/verify` on a rolling basis -- 5-10 claims per deep session
-- After major changes to the formal model, run `/verify` on decision and property claims in the affected area
-- `/ralph` includes staleness checks in its priority assessment
+- Run `/arscontexta:verify` on a rolling basis -- 5-10 claims per deep session
+- After major changes to the formal model, run `/arscontexta:verify` on decision and property claims in the affected area
+- `/arscontexta:ralph` includes staleness checks in its priority assessment
 
 ## Inbox Overflow
 
-**Symptom:** inbox/ accumulates raw sources faster than they are extracted. `/stats` shows inbox depth > 20. The vault has a growing body of unprocessed material that creates cognitive overhead and the illusion of progress.
+**Symptom:** inbox/ accumulates raw sources faster than they are extracted. `/arscontexta:stats` shows inbox depth > 20. The vault has a growing body of unprocessed material that creates cognitive overhead and the illusion of progress.
 
 This is the Collector's Fallacy -- the derivation flags it as HIGH risk for research-heavy vaults.
 
@@ -141,32 +141,32 @@ This is the Collector's Fallacy -- the derivation flags it as HIGH risk for rese
 **Diagnosis:**
 
 ```
-/stats
+/arscontexta:stats
 ```
 
 Check inbox depth and the ratio of raw to extracted sources. If raw > extracted, the pipeline is backing up.
 
 ```
-/tasks
+/arscontexta:tasks
 ```
 
 Shows how many extraction tasks are queued.
 
 **Resolution:**
 
-Stop capturing. Shift all processing effort to `/extract` until inbox depth is manageable (under 10 raw sources).
+Stop capturing. Shift all processing effort to `/arscontexta:extract` until inbox depth is manageable (under 10 raw sources).
 
 For bulk processing:
 
 ```
-/pipeline inbox/source-1.md
-/pipeline inbox/source-2.md
+/arscontexta:pipeline inbox/source-1.md
+/arscontexta:pipeline inbox/source-2.md
 ```
 
 Or let the orchestrator handle sequencing:
 
 ```
-/ralph
+/arscontexta:ralph
 ```
 
 Ralph will prioritize extraction when inbox depth is high.
@@ -178,61 +178,61 @@ Move them to archive/ without extraction. Not every captured source needs to bec
 **Prevention:**
 - Adopt a one-in-one-out rule: extract a source before capturing a new one
 - During deep sessions, spend the first hour on extraction before doing anything else
-- `/remember "Extract before capturing -- inbox overflow is the primary failure mode"`
+- `/arscontexta:remember "Extract before capturing -- inbox overflow is the primary failure mode"`
 
 ## Low Connection Density
 
-**Symptom:** `/stats` shows average connections per claim below 2. Claims exist but feel isolated. The graph is sparse -- more a collection of disconnected points than a knowledge network.
+**Symptom:** `/arscontexta:stats` shows average connections per claim below 2. Claims exist but feel isolated. The graph is sparse -- more a collection of disconnected points than a knowledge network.
 
 **Why it happens:**
-- Claims were extracted but `/connect` was not run on them
+- Claims were extracted but `/arscontexta:connect` was not run on them
 - Claims are too narrow or too domain-specific to bridge disciplines
 - Topic maps are not being used as connection hubs
 
 **Diagnosis:**
 
 ```
-/graph --global
+/arscontexta:graph --global
 ```
 
 Look at the topology. Are there clusters of well-connected claims with isolated outliers? Or is everything uniformly sparse?
 
 **Resolution:**
 
-Run `/connect` on the least-connected claims:
+Run `/arscontexta:connect` on the least-connected claims:
 
 ```
-/connect "notes/isolated-claim.md"
+/arscontexta:connect "notes/isolated-claim.md"
 ```
 
 Focus on claims that sit at discipline boundaries -- these are most likely to have undiscovered connections.
 
-If connection density remains low after running `/connect`, the claims may be too granular or too narrow. Consider:
+If connection density remains low after running `/arscontexta:connect`, the claims may be too granular or too narrow. Consider:
 
 ```
-/rethink extraction-categories
+/arscontexta:rethink extraction-categories
 ```
 
 Are the extraction categories producing claims that are too atomic to connect meaningfully?
 
 **Prevention:**
-- Always run `/connect` after `/extract` -- never leave claims unconnected
+- Always run `/arscontexta:connect` after `/arscontexta:extract` -- never leave claims unconnected
 - Prioritize cross-disciplinary sources that naturally bridge domains
-- During review sessions, run `/connect` on older claims that may have new connection targets
+- During review sessions, run `/arscontexta:connect` on older claims that may have new connection targets
 
 ## Schema Validation Failures
 
-**Symptom:** `/validate` reports frontmatter errors -- missing required fields, invalid enum values, malformed YAML.
+**Symptom:** `/arscontexta:validate` reports frontmatter errors -- missing required fields, invalid enum values, malformed YAML.
 
 **Why it happens:**
 - Manual claim creation without following the template
 - Template was modified without updating existing claims
-- `/extract` produced claims with incomplete frontmatter
+- `/arscontexta:extract` produced claims with incomplete frontmatter
 
 **Diagnosis:**
 
 ```
-/validate notes/
+/arscontexta:validate notes/
 ```
 
 Reports every schema violation with file path and specific error.
@@ -250,7 +250,7 @@ Health check identifies systematic schema issues and can suggest bulk correction
 **Prevention:**
 - Use templates for manual claim creation
 - The validate-note.sh hook runs on every file write -- it should catch problems at creation time
-- After changing templates via `/arscontexta:reseed`, run `/validate` on existing claims
+- After changing templates via `/arscontexta:reseed`, run `/arscontexta:validate` on existing claims
 
 ## Topic Map Sprawl
 
@@ -259,12 +259,12 @@ Health check identifies systematic schema issues and can suggest bulk correction
 **Why it happens:**
 - New topic maps created for every sub-topic rather than grouping coherently
 - Domain understanding evolved but maps were not restructured
-- `/reweave` created maps for small orphan clusters that should have joined existing maps
+- `/arscontexta:reweave` created maps for small orphan clusters that should have joined existing maps
 
 **Diagnosis:**
 
 ```
-/graph --global
+/arscontexta:graph --global
 ```
 
 Look at topic map sizes and overlap. Maps with fewer than 5 claims may be too narrow. Maps that share many claims may need merging.
@@ -272,13 +272,13 @@ Look at topic map sizes and overlap. Maps with fewer than 5 claims may be too na
 **Resolution:**
 
 ```
-/refactor --merge "notes/narrow-map-1.md" "notes/narrow-map-2.md"
+/arscontexta:refactor --merge "notes/narrow-map-1.md" "notes/narrow-map-2.md"
 ```
 
 Merge overlapping maps. Or:
 
 ```
-/rethink "notes/sprawling-map.md"
+/arscontexta:rethink "notes/sprawling-map.md"
 ```
 
 Rethink a map's scope and restructure.
@@ -290,7 +290,7 @@ Rethink a map's scope and restructure.
 
 ## Processing Pipeline Stalls
 
-**Symptom:** `/ralph` does not seem to make progress. The same tasks appear repeatedly. The pipeline feels stuck.
+**Symptom:** `/arscontexta:ralph` does not seem to make progress. The same tasks appear repeatedly. The pipeline feels stuck.
 
 **Why it happens:**
 - A claim fails verification repeatedly (maybe the source is ambiguous)
@@ -300,7 +300,7 @@ Rethink a map's scope and restructure.
 **Diagnosis:**
 
 ```
-/tasks
+/arscontexta:tasks
 ```
 
 Check if the same tasks keep appearing. Look for tasks that have been in the queue across multiple sessions.
@@ -313,23 +313,23 @@ Full system check may reveal infrastructure issues (hook failures, template prob
 
 **Resolution:**
 
-Clear the stall manually. If a claim keeps failing verification, `/rethink` it -- maybe it should be archived or rewritten. If `/ralph` is not triggering, run processing commands directly:
+Clear the stall manually. If a claim keeps failing verification, `/arscontexta:rethink` it -- maybe it should be archived or rewritten. If `/arscontexta:ralph` is not triggering, run processing commands directly:
 
 ```
-/extract inbox/specific-source.md
-/connect "notes/specific-claim.md"
+/arscontexta:extract inbox/specific-source.md
+/arscontexta:connect "notes/specific-claim.md"
 ```
 
 Bypass the orchestrator and process directly until the stall clears.
 
 **Prevention:**
-- Do not rely exclusively on `/ralph` -- mix automated and manual processing
+- Do not rely exclusively on `/arscontexta:ralph` -- mix automated and manual processing
 - Address verification failures promptly rather than letting them recycle
-- `/remember` any processing patterns that cause stalls for future avoidance
+- `/arscontexta:remember` any processing patterns that cause stalls for future avoidance
 
 ## Related Pages
 
 - [[skills]] -- Command reference
 - [[workflows]] -- Processing patterns that prevent issues
 - [[configuration]] -- Dimension adjustments that may resolve structural problems
-- [[meta-skills]] -- /rethink and /arscontexta:ask for diagnosis
+- [[meta-skills]] -- /arscontexta:rethink and /arscontexta:ask for diagnosis

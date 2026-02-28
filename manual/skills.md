@@ -12,12 +12,12 @@ Every command available in the arscontextica vault, grouped by function. Command
 
 These commands move material through the extraction pipeline. See [[workflows]] for how they chain together.
 
-### /extract
+### /arscontexta:extract
 
 Extract atomic claims from a source in inbox/. Reads the source, identifies discrete propositions, and creates individual claim files in notes/ with proper frontmatter.
 
 ```
-/extract inbox/faust-signal-semantics.md
+/arscontexta:extract inbox/faust-signal-semantics.md
 ```
 
 Each extracted claim gets:
@@ -31,12 +31,12 @@ The source file's status field updates from `raw` to `extracting` during process
 
 **When to use:** Inbox has raw sources. This is always the first processing step.
 
-### /connect
+### /arscontexta:connect
 
 Discover and create connections between a claim and the rest of the graph. Searches for semantic relationships across all claims -- shared concepts, contradictions, cross-disciplinary bridges.
 
 ```
-/connect "notes/Lock-free ring buffers prevent priority inversion.md"
+/arscontexta:connect "notes/Lock-free ring buffers prevent priority inversion.md"
 ```
 
 Produces:
@@ -46,38 +46,38 @@ Produces:
 
 **When to use:** After extraction, or when a claim feels isolated. Especially valuable for cross-disciplinary claims -- a type system property connecting to an audio scheduling constraint.
 
-### /reweave
+### /arscontexta:reweave
 
 Integrate orphan claims into the topic map structure. Finds claims that lack topic map links or have weak connections, and weaves them into the appropriate maps.
 
 ```
-/reweave
+/arscontexta:reweave
 ```
 
 Also consolidates topic maps when they grow too large or overlap significantly. May suggest splitting a broad map into focused sub-maps.
 
-**When to use:** When `/stats` shows a rising orphan count. Part of regular maintenance -- see [[workflows]].
+**When to use:** When `/arscontexta:stats` shows a rising orphan count. Part of regular maintenance -- see [[workflows]].
 
-### /verify
+### /arscontexta:verify
 
 Check claim accuracy and evidence quality. Reviews a claim's content against its source, validates evidence ratings, flags unsupported assertions.
 
 ```
-/verify "notes/Bounded SPSC queues are sufficient for parameter updates.md"
+/arscontexta:verify "notes/Bounded SPSC queues are sufficient for parameter updates.md"
 ```
 
 May update evidence ratings, flag contradictions with other claims, or note where a claim has drifted from its source.
 
 **When to use:** When you suspect a claim is stale, after updating source material, or as part of a maintenance cycle.
 
-### /validate
+### /arscontexta:validate
 
-Structural integrity check. Validates frontmatter schema, required fields, wiki link targets, topic map completeness. Unlike `/verify` (which checks content accuracy), `/validate` checks the vault's structural health.
+Structural integrity check. Validates frontmatter schema, required fields, wiki link targets, topic map completeness. Unlike `/arscontexta:verify` (which checks content accuracy), `/arscontexta:validate` checks the vault's structural health.
 
 ```
-/validate
-/validate notes/
-/validate "notes/specific-claim.md"
+/arscontexta:validate
+/arscontexta:validate notes/
+/arscontexta:validate "notes/specific-claim.md"
 ```
 
 Reports:
@@ -93,62 +93,62 @@ Reports:
 
 Commands that coordinate multi-step work and manage task flow.
 
-### /seed
+### /arscontexta:seed
 
 Initialize the vault structure. Creates folder hierarchy, templates, ops files, and the hub index. Typically run once during vault setup.
 
 ```
-/seed
+/arscontexta:seed
 ```
 
 Generates: notes/, inbox/, archive/, templates/, ops/, manual/ directories, plus starter templates and configuration.
 
 **When to use:** Vault initialization only. For re-initialization, see `/arscontexta:reseed`.
 
-### /ralph
+### /arscontexta:ralph
 
 The processing orchestrator. Analyzes vault state and runs the appropriate pipeline stage -- extract, connect, reweave, verify -- based on current conditions.
 
 ```
-/ralph
+/arscontexta:ralph
 ```
 
 Ralph checks inbox depth, orphan count, connection density, and staleness to decide what needs attention. It runs the highest-priority processing step automatically.
 
 **When to use:** When you want the system to decide what to work on. Good for maintaining flow without manually sequencing commands.
 
-### /pipeline
+### /arscontexta:pipeline
 
 Run the full processing pipeline on a source or set of claims. Chains extract, connect, and verify in sequence.
 
 ```
-/pipeline inbox/rust-ownership-audio-buffers.md
+/arscontexta:pipeline inbox/rust-ownership-audio-buffers.md
 ```
 
-Equivalent to running `/extract`, then `/connect` on each resulting claim, then `/verify` on each.
+Equivalent to running `/arscontexta:extract`, then `/arscontexta:connect` on each resulting claim, then `/arscontexta:verify` on each.
 
 **When to use:** When you want end-to-end processing of a source without manual sequencing.
 
-### /tasks
+### /arscontexta:tasks
 
 Show the current task queue. Lists pending extraction, connection, and maintenance work ranked by priority.
 
 ```
-/tasks
+/arscontexta:tasks
 ```
 
-**When to use:** Session start, or when you want to see what needs attention without running `/ralph`.
+**When to use:** Session start, or when you want to see what needs attention without running `/arscontexta:ralph`.
 
 ## Navigation
 
 Commands for understanding vault state and finding what to work on.
 
-### /stats
+### /arscontexta:stats
 
 Vault health dashboard. Shows counts, ratios, and health indicators.
 
 ```
-/stats
+/arscontexta:stats
 ```
 
 Reports:
@@ -161,25 +161,25 @@ Reports:
 
 **When to use:** Session start. Gives you the lay of the land.
 
-### /graph
+### /arscontexta:graph
 
 Visualize claim relationships. Generates a local graph view centered on a claim, or a global view of topic map structure.
 
 ```
-/graph "notes/Audio callbacks must never block or allocate.md"
-/graph --global
+/arscontexta:graph "notes/Audio callbacks must never block or allocate.md"
+/arscontexta:graph --global
 ```
 
 Shows direct connections, shared topic maps, and connection types (supports, contradicts, bridges).
 
 **When to use:** When you want to see how a claim fits into the broader graph, or to find structural gaps.
 
-### /next
+### /arscontexta:next
 
 Suggest the next piece of work. Analyzes vault state and recommends a specific action -- extract this source, connect this orphan, verify this stale claim.
 
 ```
-/next
+/arscontexta:next
 ```
 
 **When to use:** When you finish a task and want guidance on what to do next.
@@ -188,22 +188,22 @@ Suggest the next piece of work. Analyzes vault state and recommends a specific a
 
 Commands for expanding the system's capabilities and memory.
 
-### /learn
+### /arscontexta:learn
 
 Teach the system a new processing pattern or domain convention. Persists to ops/methodology/ so it applies in future sessions.
 
 ```
-/learn "When extracting from Lean proof files, classify invariants as type: property with evidence: strong"
+/arscontexta:learn "When extracting from Lean proof files, classify invariants as type: property with evidence: strong"
 ```
 
 **When to use:** When you notice the system making repeated mistakes or missing a domain convention.
 
-### /remember
+### /arscontexta:remember
 
-Store an insight or observation for future reference. Unlike `/learn` (which changes behavior), `/remember` records something worth recalling.
+Store an insight or observation for future reference. Unlike `/arscontexta:learn` (which changes behavior), `/arscontexta:remember` records something worth recalling.
 
 ```
-/remember "D14 and D37 are tightly coupled -- any change to inter-thread communication affects the plugin API boundary"
+/arscontexta:remember "D14 and D37 are tightly coupled -- any change to inter-thread communication affects the plugin API boundary"
 ```
 
 Persists to ops/observations/. Surfaces in future sessions when relevant claims are being processed. See [[meta-skills]] for advanced usage.
@@ -214,13 +214,13 @@ Persists to ops/observations/. Surfaces in future sessions when relevant claims 
 
 Commands for rethinking and restructuring the vault.
 
-### /rethink
+### /arscontexta:rethink
 
 Challenge and potentially revise a claim, topic map, or structural assumption. Examines a piece of the vault critically -- is this claim still accurate? Does this topic map still reflect the domain? Has new evidence changed the picture?
 
 ```
-/rethink "notes/Rust's ownership model maps naturally to audio buffer lifetimes.md"
-/rethink "notes/concurrent-systems-map.md"
+/arscontexta:rethink "notes/Rust's ownership model maps naturally to audio buffer lifetimes.md"
+/arscontexta:rethink "notes/concurrent-systems-map.md"
 ```
 
 May result in:
@@ -233,13 +233,13 @@ See [[meta-skills]] for deep usage patterns.
 
 **When to use:** When you suspect a claim is outdated, when the formal model has evolved, or during periodic review.
 
-### /refactor
+### /arscontexta:refactor
 
 Restructure vault organization without changing claim content. Rename files, merge or split topic maps, reorganize the hub index.
 
 ```
-/refactor --merge "notes/audio-dsp-map.md" "notes/signal-processing-map.md"
-/refactor --split "notes/systems-design-map.md"
+/arscontexta:refactor --merge "notes/audio-dsp-map.md" "notes/signal-processing-map.md"
+/arscontexta:refactor --split "notes/systems-design-map.md"
 ```
 
 **When to use:** When topic maps have grown unwieldy, when domain understanding has shifted, or when the navigation structure no longer matches how you think about the research.
@@ -258,7 +258,7 @@ Show available commands and brief descriptions. Quick reference when you forget 
 
 ### /arscontexta:health
 
-System health check. Validates ops/ structure, template integrity, hook configuration, and vault consistency. More comprehensive than `/validate` -- checks the system itself, not just the claims.
+System health check. Validates ops/ structure, template integrity, hook configuration, and vault consistency. More comprehensive than `/arscontexta:validate` -- checks the system itself, not just the claims.
 
 ```
 /arscontexta:health

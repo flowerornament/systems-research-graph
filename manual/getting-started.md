@@ -66,7 +66,7 @@ Connections are wiki links between claims. They come in two flavors:
 - [[Rust's ownership model maps naturally to audio buffer lifetimes]] -- PL design parallel
 ```
 
-**Implicit connections** -- discovered by `/connect`. When you run `/connect` on a claim, the system searches for claims that share concepts, contradict findings, or bridge disciplines. A DSP claim about buffer sizing might connect to a formal methods claim about bounded model checking -- because both deal with finite resource bounds.
+**Implicit connections** -- discovered by `/arscontexta:connect`. When you run `/arscontexta:connect` on a claim, the system searches for claims that share concepts, contradict findings, or bridge disciplines. A DSP claim about buffer sizing might connect to a formal methods claim about bounded model checking -- because both deal with finite resource bounds.
 
 Cross-disciplinary connections are where the vault earns its keep. The formal model for murail sits at the intersection of audio DSP, PL design, concurrency, and formal methods. A claim from one discipline often constrains or illuminates decisions in another.
 
@@ -89,21 +89,21 @@ status: raw
 {Raw content, quotes, key passages you want to extract claims from.}
 ```
 
-Then run `/extract` on the source. The system reads the source, identifies atomic claims, and creates individual claim files in notes/. Each gets proper frontmatter, evidence ratings, and topic map links.
+Then run `/arscontexta:extract` on the source. The system reads the source, identifies atomic claims, and creates individual claim files in notes/. Each gets proper frontmatter, evidence ratings, and topic map links.
 
 ## Session Rhythm
 
 A productive session follows this pattern:
 
-1. **Orient.** Review `/stats` to see vault health -- total claims, orphan count, inbox depth. Check `/next` for suggested work.
+1. **Orient.** Review `/arscontexta:stats` to see vault health -- total claims, orphan count, inbox depth. Check `/arscontexta:next` for suggested work.
 
-2. **Process.** If inbox has raw sources, run `/extract` to break them into claims. This is the highest-leverage activity when the inbox is full.
+2. **Process.** If inbox has raw sources, run `/arscontexta:extract` to break them into claims. This is the highest-leverage activity when the inbox is full.
 
-3. **Connect.** Run `/connect` on recent claims to discover cross-disciplinary links. This is where the vault produces insight -- a concurrency claim connecting to a type system decision you hadn't considered.
+3. **Connect.** Run `/arscontexta:connect` on recent claims to discover cross-disciplinary links. This is where the vault produces insight -- a concurrency claim connecting to a type system decision you hadn't considered.
 
-4. **Verify.** Run `/verify` periodically to check claim accuracy and evidence ratings. `/validate` checks structural integrity -- frontmatter schema, required fields, dangling links.
+4. **Verify.** Run `/arscontexta:verify` periodically to check claim accuracy and evidence ratings. `/arscontexta:validate` checks structural integrity -- frontmatter schema, required fields, dangling links.
 
-5. **Maintain.** If `/stats` shows growing orphan count or stale claims, run `/reweave` to integrate orphans into the topic map structure.
+5. **Maintain.** If `/arscontexta:stats` shows growing orphan count or stale claims, run `/arscontexta:reweave` to integrate orphans into the topic map structure.
 
 Do not try to do everything in one session. Extract before connecting. Connect before reweaving. The pipeline has a natural order -- see [[workflows]] for the full processing pipeline.
 
