@@ -36,6 +36,11 @@ How the tools, models, and feedback loops of a programming environment shape wha
 - [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- Apple Core Audio interviews found JUCE-trained developers could write DSP inner loops but not reason about threading or resource management; abstraction opacity as a literacy gap
 - [[audio-programming-education-requires-reading-production-engine-source-code-across-multiple-systems]] -- McCartney's prescription: read CSound, VCV Rack, SuperCollider, Chuck, and Pure Data to learn how each engine solves the same fundamental problems differently
 
+## LLM-era developer experience
+
+- [[agentsmd-is-gap-filling-for-llms-not-documentation-for-humans]] -- the same dev-first philosophy that makes Elixir coherent (unified toolchain, co-located docs) also makes it LLM-friendly; gap-fill files extend this to targeted failure-mode correction
+- [[llm-fatalism-about-elixir-inverts-the-actual-opportunity]] -- zero-barrier LLM entry dissolves the frustration gap that previously filtered newcomers from ecosystems with steep learning curves
+
 ## Open questions
 
 - How much runtime introspection can murail expose without violating RT-safety constraints?
