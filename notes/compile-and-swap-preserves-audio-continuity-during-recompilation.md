@@ -28,3 +28,12 @@ Compile-and-swap also serves a source-runtime coherence function analogous to wh
 The broader principle -- that [[creative-workflow-friction-should-determine-audio-engine-architecture]] -- explains *why* compile-and-swap exists: it traces to McCartney's specific felt friction of the 45-second silence gap disrupting creative flow. Immutability ([[pervasive-immutability-dissolves-concurrency-problems-rather-than-managing-them]]) is what makes the "old graph keeps playing" property safe: immutable graph data can be read by the RT thread while the NRT thread constructs the replacement without synchronization hazards.
 
 **Structural parallel to MCAS/FSTM:** The compile-and-swap mechanism is structurally identical to the [[two-phase-descriptor-protocol-enables-multi-location-atomic-updates-from-single-word-cas]] from Fraser's lock-free systems work: the "compiling graph" acts as a descriptor installed in a pending state; the swap is the atomic decision point CAS; the old graph continues playing during the "acquire phase" equivalent. The graph pointer swap is the linearisation point for the new audio graph becoming visible to the RT thread.
+
+---
+
+Topics:
+- [[audio-dsp]]
+- [[competing-systems]]
+- [[concurrent-systems]]
+- [[developer-experience]]
+- [[language-design]]
