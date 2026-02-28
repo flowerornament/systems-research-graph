@@ -19,6 +19,8 @@ A real-time audio effect plugin with 10 ms latency tolerance at 48 kHz has ~480 
 
 The benchmark study deliberately aligned model input size with host buffer size to isolate this variable cleanly. The performance behavior under mismatch — where H_adapt > 0 — remains an open measurement gap documented in [[host-buffer-to-model-input-mismatch-and-parallel-inference-remain-unbenchmarked-in-real-time-audio-contexts]].
 
+This throughput lever is one of several strategies for reducing per-sample neural computation cost. [[multiband-decomposition-reduces-temporal-dimensionality-enabling-real-time-neural-audio-at-48khz]] addresses the same problem orthogonally: instead of amortizing fixed inference overhead across more samples, it reduces the dimensionality of each sample so fewer operations are required per sequence. Where multiband decomposition operates at the input representation level, input size optimization operates at the inference scheduling level — both compose and neither requires the other.
+
 ---
 
 Source: [[anira-2024]]
