@@ -15,6 +15,12 @@ Programming language design research for murail. Covers rate type systems, typed
 - The expression problem (adding new operations vs new data types in audio)
 - Connections to Elixir/BEAM, tau5, and broader PL research
 
+## Sub-Topics
+- [[notation-and-thought]] -- how notation shapes mathematical and computational reasoning; Iverson's 1980 Turing Award lecture and its implications for audio DSL design
+- [[mccartney-language-design]] -- James McCartney's post-SuperCollider work in SAPF and tau5: signal types, runtime architecture, creative workflow, and SC prehistory
+- [[algebraic-effects]] -- effect handlers as a unified abstraction for exceptions, state, async, and control flow; Leijen 2017 and Koka compilation strategies
+- [[compiler-and-adoption]] -- compiler architecture and hardware targeting (MLIR, cache effects), language adoption dynamics, and ecosystem governance (Hadron, SuperCollider compatibility)
+
 ## Claims
 
 ### Interactive Programming and Batch Mode
