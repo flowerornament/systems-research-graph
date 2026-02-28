@@ -30,6 +30,10 @@ Relevant Notes:
 - [[supercollider-client-server-architecture-moved-the-scripting-language-out-of-the-real-time-audio-thread]] — same root constraint (non-RT code in RT context), earlier solution
 - [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — addresses runtime variance rather than violations per se
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — violation severity gradient mirrors performance ranking across engines
+- [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] — murail's response to malloc/free violations: pre-allocate everything at compile time
+- [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]] — the formal axiom these violations make necessary
+- [[hold-slots-prevent-fast-thread-blocking-on-slow-rate-values-without-locks]] — murail's response to mutex violations: lock-free cross-rate communication
+- [[read-only-lock-operations-cause-cache-coherency-traffic-even-on-unmodified-data]] — theoretical grounding for why pthread_mutex_lock is costly even for read-only access
 
 Topics:
 - [[ai-ml]]
