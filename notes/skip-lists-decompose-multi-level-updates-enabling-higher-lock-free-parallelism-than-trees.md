@@ -1,5 +1,5 @@
 ---
-description: Skip list nodes are independently insertable at each level, making multi-level updates decomposable into single-level linked-list operations — a property that makes skip lists more amenable to lock-free implementation than trees
+description: Skip list nodes are independently insertable per level, decomposing multi-level updates into single-level CAS operations and making skip lists more amenable to lock-free implementation than trees
 type: claim
 evidence: strong
 source: "[[fraser-2004-practical-lock-freedom]]"
