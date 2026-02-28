@@ -60,6 +60,11 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting in RT thread; SC3 introduced the client-server split that defined SuperCollider's architecture
 - [[pyrite-introduced-closures-into-max-patching-enabling-separation-of-ui-and-logic]] -- Pyrite's Scheme-style closures let Max patches contain only UI while all logic lived in a Pyrite script; demonstrated the text-script / visual-patch complementarity SC formalized
 
+### SAPF Language Design (2021 Codefest)
+- [[concatenative-postfix-readability-breaks-when-argument-role-is-ambiguous]] -- without knowing a word's arity, reader cannot distinguish primary operand from auxiliary argument; McCartney's fix: pipeline the main subject, parenthesize options
+- [[sapf-append-only-execution-log-provides-ten-year-session-provenance]] -- every executed expression logged for 10 years enables cross-session provenance at decade scale; complements within-session undo/redo
+- [[lazy-infinite-lists-enable-sample-level-access-and-sonic-composting-in-signal-graph-languages]] -- audio as lazy sequences lets programs access individual samples, inspect them before rendering, and apply iterative processes enabling sonic composting patterns
+
 ### Compiler Architecture and Hardware
 - [[mlir-enables-heterogeneous-hardware-targeting-that-llvm-cannot-provide]] -- MLIR's multi-level IR design targets CPUs, GPUs, and ASICs that LLVM's single-level IR cannot address; Mojo is effectively MLIR syntax
 - [[compiler-generality-beats-human-specialization-at-scale-because-compilers-can-enumerate-configurations-humans-cannot]] -- Modular beat Intel MKL on Intel chips; the mechanism is exhaustive configuration search vs. human point-solution specialization
