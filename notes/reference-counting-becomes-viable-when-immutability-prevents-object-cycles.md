@@ -1,5 +1,5 @@
 ---
-description: In a non-lazy language with no mutation, new objects can only reference existing ones, making reference cycles structurally impossible and allowing reference counting to replace garbage collection entirely
+description: In a non-lazy language without mutation, new objects can only reference existing ones, making reference cycles structurally impossible and reference counting sufficient to replace garbage collection
 type: pattern
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
