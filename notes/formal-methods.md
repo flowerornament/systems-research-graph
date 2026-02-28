@@ -28,6 +28,10 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[rust-provides-provably-memory-and-data-race-safe-programs-without-garbage-collection]] -- adequacy theorem establishes no stuck states; memory safety and data-race freedom are proved properties, not conventions
 - [[iris-separation-logic-enables-deriving-a-lifetime-logic-from-primitive-mechanisms]] -- Iris's two primitive mechanisms (higher-order ghost state + impredicative invariants) are sufficient to derive the complete lifetime logic
 
+### Effect Type Soundness
+- [[well-typed-algebraic-effect-programs-cannot-invoke-unhandled-operations]] -- Leijen's Lemma 4.b: effect types cannot be discarded except by handlers; every operation invocation in a well-typed program statically has a corresponding handler; soundness proof via subject reduction + faulty-not-typeable
+- [[row-typed-effects-compose-freely-because-they-are-restricted-to-the-free-monad]] -- free monad restriction makes effect composition automatic and type-safe; relevant to modeling murail's resource effects (audio context, scheduling) as composable effects
+
 ### Propagator Model and Provenance
 - [[propagator-networks-provide-provenance-for-computed-conclusions]] -- Sussman's propagator model tracks the derivation chain of every computed value; potential basis for explainable audio computation in murail
 - [[propagator-cells-hold-partial-information-that-accumulates-monotonically]] -- cells hold information about values (not values), accumulating monotonically; enables redundant paths and graceful degradation in murail's graph model
