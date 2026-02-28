@@ -19,6 +19,9 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 
 ### Real-Time Thread Separation
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] -- anira's shared static ThreadPool removes inference engine code from the audio callback entirely; the static (not per-instance) design solves oversubscription when multiple neural effects run concurrently
+- [[hold-slots-prevent-fast-thread-blocking-on-slow-rate-values-without-locks]] -- the Murail substrate's mechanism for cross-rate reads: three lock-free protocols (atomic, sequence-counter, double-buffer) selected by data size; generalizes the hold semantics from ad-hoc practice to a formal substrate requirement
+- [[tick-boundary-precedence-is-a-substrate-requirement-not-an-implementation-suggestion]] -- hold-slot writes, data swaps, program swaps, TICK must execute in fixed order; this is the formal substrate requirement underlying the RT/NRT coordination contract
+- [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]] -- output continuity as an axiom: the substrate formally specifies which error conditions must degrade gracefully vs. block; the `flag` overflow policy is excluded because it violates this axiom
 
 ### Concurrency Models
 - [[erlang-actor-model-enables-safe-process-kill]] -- shared-nothing actors with supervisor trees allow killing any process without lock leaks; the RT-node replacement analog in murail
