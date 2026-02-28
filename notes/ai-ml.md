@@ -83,6 +83,9 @@ AI and machine learning integration research for murail. Covers neural audio syn
 - Can DDSP-style architectural discipline (harmonic oscillators, filtered noise) be layered onto a general modular synthesizer to restore gradient stability without losing flexibility?
 - If murail exposed synthesis graph parameters as a searchable space, what would a synthesis-from-description workflow API look like in practice?
 
+## Source References
+- [[anira-2024]] -- primary source for the ANIRA library: real-time neural audio inference architecture, ThreadPool design, RadSan violation data, and multi-engine latency benchmarks
+
 ---
 
 Agent Notes:
