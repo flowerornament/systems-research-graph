@@ -9,7 +9,7 @@ status: active
 
 # dependent types require a slice category generalization of the later modality
 
-In the topos of trees S, the "later" functor ◮ : S → S is defined on objects. Dependent types in context Γ ⊢ A are interpreted as objects of the slice category S/[[Γ]]. To use ◮ as a type constructor in dependent type theory, it must extend to a **fibred endofunctor** — a family of functors ◮I : S/I → S/I that commutes with reindexing (pullback).
+In the topos of trees S, the "later" functor ◮ : S → S is defined on objects. Dependent types in context Γ ⊢ A are interpreted as objects of the slice category S/Γ. To use ◮ as a type constructor in dependent type theory, it must extend to a **fibred endofunctor** — a family of functors ◮I : S/I → S/I that commutes with reindexing (pullback).
 
 Birkedal et al. (Section 4) give the concrete definition: if pX : X → I is an object of S/I, then (◮I X)(n,i) = {⋆} when n=1, and X(n-1, i|_{n-1}) when n>1. The key fact (Proposition 4.4) is that u* ∘ ◮I ≅ ◮J ∘ u* for any morphism u : J → I — making ◮ a fibred endofunctor on the codomain fibration. This is what allows `Γ ⊢ ◮A` to be interpreted consistently under substitution.
 
