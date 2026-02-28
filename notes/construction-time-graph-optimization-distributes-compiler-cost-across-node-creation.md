@@ -1,5 +1,5 @@
 ---
-description: Applying constant folding, CSE, rate inference, and 120+ algebraic rewrite rules at node creation time rather than in a post-construction pass distributes optimization cost and delivers a pre-simplified graph to the compiler
+description: Applying constant folding, CSE, rate inference, and 120+ rewrite rules at node creation rather than in a post-construction pass distributes optimization cost and delivers a pre-simplified graph to the compiler
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
