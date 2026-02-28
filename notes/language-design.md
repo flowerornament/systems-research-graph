@@ -43,6 +43,18 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[incremental-migration-between-languages-requires-binary-level-interoperability-not-just-semantic-compatibility]] -- Swift/ObjC, C/C++, Python/Mojo coexistence: whole-ecosystem transitions fail; class-by-class migration succeeds
 - [[source-incompatibility-as-explicit-commitment-converts-forced-migration-to-opt-in-experiment]] -- explicitly declaring instability removes executive trap-risk and makes early adoption voluntary; the "relief valve" principle
 
+### Notation as a Tool of Thought (Iverson 1980)
+- [[notation-shapes-thought-not-merely-expresses-it]] -- foundational claim from Boole/Whitehead/Babbage: language is an instrument of reason; available notation determines which problems are tractable
+- [[executable-notation-combines-universality-with-mathematical-suggestivity]] -- neither math notation nor programming languages have both properties; APL demonstrates they can be combined; grounds the interactive programming ideal
+- [[suggestive-notation-enables-discovery-through-structural-analogy]] -- notation that makes structural analogies visible enables discovery; the source of APL-style array programming's cognitive productivity
+- [[subordination-of-detail-via-arrays-names-and-operators-extends-reasoning-range]] -- three mechanisms (arrays, names, operators) each hide irrelevant detail, extending tractable problem range; basis for universal auto-mapping
+- [[economy-of-notation-requires-compositional-grammar-not-a-large-primitive-vocabulary]] -- economy from grammar rules generating many expressions from few primitives, not from providing a primitive for every concept
+- [[uniform-right-to-left-evaluation-eliminates-precedence-hierarchy-without-loss-of-expressiveness]] -- single argument rule for all functions eliminates operator precedence complexity; supports both left-to-right analysis and right-to-left execution
+- [[executable-notation-enables-proof-by-exhaustion-through-systematic-case-enumeration]] -- when notation is executable and supports arrays, exhaustive proof of properties over finite domains becomes a computation
+- [[notation-introduced-in-context-is-a-quality-criterion-not-a-pedagogical-shortcut]] -- notation requiring a prerequisite course is a design deficiency; good notation is learnable in context
+- [[clear-algorithms-are-the-necessary-foundation-for-efficient-ones]] -- clarity precedes efficiency; a clear algorithm is an executable specification from which efficient variants can be derived and tested
+- [[premature-efficiency-emphasis-creates-circular-language-hardware-codesign]] -- languages designed for current hardware and hardware designed for current languages create a lock-in ratchet preventing notation evolution
+
 ### Representation
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- visual cortex processes relational structure in parallel; text notation forces serial parsing; cyclic audio graphs are especially poorly served by linear text
 - [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- Sussman: expression trees have anonymous interior nodes; wiring diagrams name every wire, making each intermediate value addressable -- relevant to murail's audio graph DSL design
