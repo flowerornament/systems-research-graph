@@ -15,7 +15,7 @@ dimensions:
 # --- Features ---
 features:
   semantic-search: true        # requires qmd: bun install -g @tobilu/qmd
-  processing-pipeline: true    # /extract → /connect → /reweave cycle
+  processing-pipeline: true    # /arscontexta:extract → /arscontexta:connect → /arscontexta:reweave cycle
 
 # --- Processing ---
 processing:
