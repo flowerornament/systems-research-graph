@@ -153,6 +153,21 @@
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-qmayIRViJms/"
     },
     {
+      "id": "llvm-creator-interview-chris-lattner-extract",
+      "batch": "llvm-creator-interview-chris-lattner",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/transcripts/archive/llvm-creator-interview-chris-lattner.md",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 8,
+      "enrichments": 3,
+      "connections_added": 18,
+      "topic_maps_updated": 4,
+      "existing_claims_updated": 1,
+      "archive": "ops/queue/archive/2026-02-28-llvm-creator-interview-chris-lattner/"
+    },
+    {
       "id": "keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025-extract",
       "batch": "keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025",
       "type": "extract",
