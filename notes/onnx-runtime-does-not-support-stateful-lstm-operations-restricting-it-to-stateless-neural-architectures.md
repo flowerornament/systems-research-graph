@@ -36,6 +36,8 @@ Relevant Notes:
 - [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]] — for stateful models where ONNX is ruled out, this size-dependent LibTorch vs TFLite nuance applies
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — stateless operation (ONNX's domain) is what enables parallel ThreadPool inference; stateful models forced to LibTorch lose this architectural advantage
 - [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — ONNX exclusion forces LibTorch for stateful models, raising I_max and thereby L_total across all host buffer sizes
+- [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — ONNX's stateless architecture correlates with its lightest violation profile; the same design that restricts capability also reduces RT interference
+- [[all-murail-program-state-fits-in-a-single-pre-allocated-contiguous-region]] — stateful model hidden state lives inside the inference engine's opaque memory, outside the pre-allocated state region; reinforces the thread pool as isolation boundary
 
 Topics:
 - [[ai-ml]]
