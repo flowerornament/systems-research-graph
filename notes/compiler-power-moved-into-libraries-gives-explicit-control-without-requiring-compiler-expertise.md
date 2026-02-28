@@ -1,5 +1,5 @@
 ---
-description: When compiler optimizations are expressed as library functions the developer calls explicitly, the optimization becomes a predictable contract rather than a fragile heuristic, and programmers who are not compiler engineers can participate in high-performance code
+description: When compiler optimizations are library functions called explicitly, the optimization becomes a predictable contract rather than a fragile heuristic, letting non-compiler-engineers participate in high-performance code
 type: claim
 evidence: strong
 source: [[swift-to-mojo-chris-lattner]]
