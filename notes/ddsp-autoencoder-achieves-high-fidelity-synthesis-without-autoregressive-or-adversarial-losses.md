@@ -1,5 +1,5 @@
 ---
-description: DDSP's combination of harmonic oscillator, filtered noise, reverb module, and multi-scale spectral loss achieves high-fidelity audio reconstruction without teacher-forcing, discriminators, or sample-by-sample generation
+description: DDSP's harmonic oscillator, filtered noise, reverb module, and multi-scale spectral loss achieves high-fidelity reconstruction without teacher-forcing, discriminators, or sample-by-sample generation
 type: claim
 evidence: strong
 source: [[ddsp-2020]]
