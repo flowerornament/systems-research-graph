@@ -19,6 +19,7 @@ AI and machine learning integration research for murail. Covers neural audio syn
 
 ### Explainability and Provenance
 - [[propagator-networks-provide-provenance-for-computed-conclusions]] -- Sussman's propagator model tracks derivation chains; if murail tracks which UGen nodes contributed to an output, that provenance could attribute audio characteristics to generating nodes
+- [[truth-maintenance-systems-enable-locally-consistent-reasoning-in-an-inconsistent-knowledge-base]] -- TMSs manage multiple locally consistent worldviews; potential model for reasoning about conflicting neural audio model assumptions
 
 ## Open Questions
 (populated as gaps are identified)
