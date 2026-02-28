@@ -173,6 +173,21 @@
       "topic_maps_updated": 4,
       "existing_claims_updated": 1,
       "archive": "ops/queue/archive/2026-02-28-keynote-elixirs-ai-future-chris-mccord-elixirconf-us-2025/"
+    },
+    {
+      "id": "cherep-2024-text-to-audio-synthesizer-extract",
+      "batch": "cherep-2024-text-to-audio-synthesizer",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/cherep-2024-text-to-audio-synthesizer.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 9,
+      "enrichments": 2,
+      "connections_added": 18,
+      "topic_maps_updated": 1,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-cherep-2024-text-to-audio-synthesizer/"
     }
   ]
 }
