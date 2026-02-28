@@ -1,16 +1,18 @@
 {
   "schema_version": 3,
-  "queue": [
+  "queue": [],
+  "processing": [],
+  "completed": [
     {
       "id": "stop-writing-dead-programs-jack-rusher-2022-extract",
       "batch": "stop-writing-dead-programs-jack-rusher-2022",
       "type": "extract",
-      "status": "pending",
+      "status": "done",
       "source": "/Users/morgan/code/murail/.design/references/transcripts/stop-writing-dead-programs-jack-rusher-2022.md",
       "created": "2026-02-28",
-      "next_claim_start": 1
+      "completed": "2026-02-28",
+      "claims_created": 13,
+      "archive": "ops/queue/archive/2026-02-28-stop-writing-dead-programs-jack-rusher-2022/"
     }
-  ],
-  "processing": [],
-  "completed": []
+  ]
 }
