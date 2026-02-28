@@ -34,6 +34,8 @@ Relevant Notes:
 - [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — for stateful models where ONNX is excluded, this size-dependent ordering applies
 - [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — TFLite's warm-up effect appearing only at CNN-29k (not smaller models) manifests the same size-dependent mechanism this claim identifies: TFLite's cold-start costs are only significant when per-inference workload is large
 - [[dsp-inductive-biases-reduce-model-size-by-encoding-prior-knowledge-about-periodic-audio]] — grounds the small-model scenario in murail practice: DDSP-style architectures produce sub-1M parameter networks, placing them in TFLite's favorable range and making TFLite (or ONNX) the correct engine default for DDSP-backed neural UGens
+- [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — independent second performance axis from the same study: model parameter count (this claim) and input buffer size compose as orthogonal levers for per-sample inference cost
+- [[dsp-and-ml-are-structurally-identical-under-shape-driven-dispatch-in-the-murail-calculus]] — the substrate's shape-driven dispatch makes both model complexity and input size visible at compile time, connecting this engine selection finding to murail's formal model
 
 Topics:
 - [[ai-ml]]
