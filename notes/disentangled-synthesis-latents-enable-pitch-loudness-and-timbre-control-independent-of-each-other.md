@@ -1,5 +1,5 @@
 ---
-description: Decomposing the latent representation into f0, loudness, and a residual timbre vector -- rather than a single unstructured embedding -- lets each dimension vary without affecting the others, enabling extrapolation beyond training data
+description: Decomposing the latent into f0, loudness, and a residual timbre vector rather than a single embedding lets each dimension vary independently, enabling extrapolation beyond training data
 type: claim
 evidence: strong
 source: [[ddsp-2020]]
