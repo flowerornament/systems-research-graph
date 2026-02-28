@@ -81,7 +81,7 @@ Hooks:
 - **auto-commit.sh** -- PostToolUse (Write): git commit on changes
 - **session-capture.sh** -- Stop: capture session observations
 
-## Using /architect
+## Using /arscontexta:architect
 
 ### View Current Configuration
 
