@@ -1,5 +1,5 @@
 ---
-description: Dispatching on both the code generator type and the expression type lets all code generation for one backend live in one place, preventing the concern-spreading that the visitor pattern only partially solves
+description: Dispatching on both generator type and expression type keeps all code generation for one backend in one place, preventing the concern-spreading the visitor pattern only partially solves
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
