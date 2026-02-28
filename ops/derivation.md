@@ -83,7 +83,7 @@ engine_version: "0.8.0"
 - [x] semantic-search -- linking = explicit+implicit (conditional on qmd)
 - [ ] personality -- not enabled (no signals)
 - [ ] self-space -- disabled (research default)
-- [ ] multi-domain -- starting single domain (murail), add later via /add-domain
+- [ ] multi-domain -- starting single domain (murail), add later via /arscontexta:add-domain
 
 ## Extraction Categories
 | Category | What to Find | Output Type |
