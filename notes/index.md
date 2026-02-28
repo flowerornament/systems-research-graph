@@ -22,6 +22,10 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 ## Cross-Domain
 (topic maps that span multiple domains appear here — e.g., BEAM/Elixir patterns shared between murail language design and herald)
 
+## Source References (processed transcripts and papers)
+- [[stop-writing-dead-programs-jack-rusher-2022]] -- Jack Rusher, Strange Loop 2022: interactive programming, batch mode critique, language design survey
+- [[we-dont-know-how-to-compute-sussman-2011]] -- Gerald Sussman, Strange Loop 2011: propagator model, truth maintenance (preliminary stub)
+
 ## Orientation
 - ops/goals.md -- current active threads
 - ops/methodology/methodology.md -- how this system works and why
