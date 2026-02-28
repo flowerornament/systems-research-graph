@@ -17,6 +17,12 @@ Choosing an inference engine for a neural audio application is not a single deci
 
 The practical implication for murail's neural UGen design: stateless models (feedforward CNNs, TCNs without persistent state) should prefer ONNX Runtime; stateful effects (guitar amp emulation, compressors using LSTM) must use LibTorch or TFLite, with LibTorch preferred for larger models. Engine choice interacts with model architecture in ways that cannot be decided at library selection time — it requires knowing the target model's state requirements and approximate parameter count.
 
+The performance ranking reported here assumes stabilized runtimes. Because [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]], the ranking only reflects steady-state behavior after initial iterations; pre-warmup, LibTorch in particular shows significantly elevated runtimes that could invert relative comparisons. Engine selection for murail UGens should be validated on post-warmup data.
+
+Engine choice is also a lever in [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]]: selecting ONNX Runtime for a stateless model directly reduces I_max, which reduces the minimum achievable L_total across all host buffer sizes. This makes engine selection a first-class design decision in latency budget planning, not merely a throughput optimization.
+
+For stateless models where ONNX Runtime's speed advantage applies, [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] enables parallel inference: multiple ThreadPool threads can run the stateless model concurrently. Stateful models (forced to LibTorch) cannot share hidden state across threads and cannot benefit from this parallelism. The stateless/stateful split thus has architectural consequences beyond raw inference speed.
+
 ---
 
 Source: [[anira-2024]]
@@ -26,6 +32,9 @@ Relevant Notes:
 - [[tensorflow-lite-outperforms-libtorch-for-small-cnn-models-but-libtorch-becomes-faster-as-model-size-grows]] — model-size nuance to stateful results
 - [[larger-model-input-sizes-improve-per-sample-inference-performance-making-latency-tolerance-a-throughput-lever]] — buffer size is a second axis of performance variation
 - [[inference-engines-violate-real-time-principles-on-every-inference-not-just-initial-ones]] — the engine performance ranking correlates with RT violation severity: ONNX Runtime fastest and lightest violations, LibTorch slowest and most invasive
+- [[warm-up-inferences-before-the-audio-callback-stabilize-inference-engine-runtimes]] — the ranking assumes post-warmup runtimes; pre-warmup behavior, especially LibTorch's elevated initial RpS, could distort comparisons
+- [[anira-latency-formula-derives-minimum-required-buffering-from-worst-case-inference-time-and-buffer-size-mismatch]] — engine selection is a lever on I_max: ONNX Runtime's speed advantage directly reduces L_total for stateless models
+- [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] — stateless models (ONNX's domain) can exploit parallel inference across ThreadPool threads; stateful models (LibTorch) cannot share hidden state and lose this parallelism advantage
 
 Topics:
 - [[ai-ml]]
