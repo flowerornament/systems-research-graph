@@ -218,9 +218,9 @@ When friction occurs (search fails, content placed wrong, user corrects you, wor
 **Tensions** (ops/tensions/) -- contradictions between claims, or implementation vs methodology conflicts. Each tension names the conflicting claims and tracks resolution status (pending | resolved | dissolved).
 
 **Accumulation triggers:**
-- 10+ pending observations -> Run /rethink to triage and process
-- 5+ pending tensions -> Run /rethink to resolve conflicts
-- /rethink triages each: PROMOTE (to notes/), IMPLEMENT (update this file), ARCHIVE, or KEEP PENDING
+- 10+ pending observations -> Run /arscontexta:rethink to triage and process
+- 5+ pending tensions -> Run /arscontexta:rethink to resolve conflicts
+- /arscontexta:rethink triages each: PROMOTE (to notes/), IMPLEMENT (update this file), ARCHIVE, or KEEP PENDING
 
 ## Methodology as Canonical Specification
 
