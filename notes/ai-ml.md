@@ -75,5 +75,8 @@ AI and machine learning integration research for murail. Covers neural audio syn
 
 ---
 
+Agent Notes:
+- 2026-02-28: The ANIRA cluster (inference-engines-violate-*, static-thread-pool-*, warm-up-inferences-*, anira-latency-formula-*, larger-model-input-sizes-*, host-buffer-to-model-input-mismatch-*, onnx-runtime-is-fastest-*, onnx-runtime-does-not-support-*, tensorflow-lite-outperforms-*) forms a dense sub-graph. Entry point depends on question: RT safety architecture -> static-thread-pool; violation severity data -> inference-engines-violate; engine selection for murail UGens -> onnx-runtime-is-fastest. Violation severity and performance rank correlate: ONNX Runtime fastest and lightest violations, LibTorch slowest and most invasive.
+
 Topics:
 - [[index]]
