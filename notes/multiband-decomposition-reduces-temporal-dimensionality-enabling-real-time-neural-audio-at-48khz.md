@@ -1,5 +1,5 @@
 ---
-description: Decomposing a 48kHz signal into 16 sub-bands each at 3kHz using PQMF filter banks reduces temporal sequence length by 16x, enabling convolutional networks to reach viable receptive fields without proportional compute scaling
+description: PQMF 16-band decomposition reduces 48kHz sequences to 3kHz sub-bands (16x), enabling viable CNN receptive fields and delivering a 25x synthesis speedup to 985kHz CPU throughput in RAVE
 type: claim
 evidence: strong
 source: [[rave-2021]]
