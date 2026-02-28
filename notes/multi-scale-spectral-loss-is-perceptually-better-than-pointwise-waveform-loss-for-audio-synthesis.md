@@ -1,5 +1,5 @@
 ---
-description: Summing L1 spectrogram differences at multiple FFT scales (64 to 2048) aligns training signal with perceptual quality, avoiding the failure mode where perceptually identical waveforms have high pointwise loss
+description: Summing L1 spectrogram differences at multiple FFT scales (64 to 2048) aligns training with perception, avoiding the failure mode where perceptually identical waveforms have high pointwise loss
 type: property
 evidence: strong
 source: [[ddsp-2020]]
