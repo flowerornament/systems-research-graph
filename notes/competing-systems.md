@@ -27,6 +27,19 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[static-languages-prevent-runtime-introspection]] -- Faust's AOT compilation and SuperCollider's SynthDef compilation both produce static artifacts; neither supports runtime query of running graph state
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- SuperCollider has a graphical node editor alongside its text notation; murail's DSL will face the same cyclic-graph-in-linear-text tension
 
+### MetaSounds Architecture (Epic Games / Unreal Engine)
+- [[metasounds-instanced-graph-model-requires-compositional-thinking-rather-than-singleton-patch-design]] -- hundreds of MetaSound instances run simultaneously; graphs are reusable templates, not singleton patches, requiring a different design vocabulary than Max MSP
+- [[JIT-graph-compilation-enables-context-aware-channel-format-inference-at-playback-time]] -- MetaSounds compiles graphs on-the-fly at play time, enabling format resolution from actual runtime asset data rather than requiring static declarations
+- [[enforced-data-interfaces-enable-plug-and-play-interoperability-between-independently-authored-audio-subsystems]] -- typed interface contracts let gameplay systems specify audio requirements and accept any conforming MetaSound without coupling to its internals
+- [[audio-format-type-must-be-resolved-at-graph-compile-time-not-during-execution]] -- MetaSounds explicitly trades runtime format mutability for graph stability; format is fixed at compile time, contrasting with SuperCollider's RT graph mutation model
+
+### Channel Format Comparison (MetaSounds vs Max MSP)
+- [[mono-buffer-assumption-locks-audio-graph-topology-to-a-specific-channel-configuration]] -- MetaSounds' original mono-only design (and Max MSP's default) forces sound designers to maintain per-channel-config graph variants; the topology becomes the format
+- [[max-MSP-mc-signal-bundles-lack-format-metadata-making-them-unsuitable-for-plug-and-play-graph-interoperability]] -- Max 8 MC bundles group channels without semantic metadata; useful in single-author contexts but insufficient for cross-system interoperability
+- [[channel-format-metadata-encapsulation-enables-audio-graph-reuse-across-channel-configurations]] -- CAT types (MetaSounds) bundle audio with format metadata, enabling one graph to serve mono, 5.1, Atmos without structural changes
+- [[channel-agnostic-audio-types-require-three-polymorphic-subtypes-to-cover-all-known-and-future-formats]] -- MetaSounds CAT uses discrete/sound-field/composite families as a comprehensive taxonomy that also accommodates unknown future formats
+- [[compatible-audio-format-transcoding-happens-automatically-while-cross-family-conversion-requires-an-explicit-cast]] -- within-family downmix/upmix is automatic; cross-family conversion (discrete to ambisonics) requires an explicit cast node
+
 ## Open Questions
 (populated as gaps are identified)
 
