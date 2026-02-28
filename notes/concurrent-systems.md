@@ -26,6 +26,8 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 ### Immutability as Concurrency Architecture
 - [[pervasive-immutability-dissolves-concurrency-problems-rather-than-managing-them]] -- immutable-by-default with structural sharing eliminates GC write barriers, makes reference counting sufficient, and enables lock-free cross-thread sharing; McCartney's decade of SAPF experience as evidence
 - [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- preserving old versions costs only a pointer when data is immutable with structural sharing; lossless history and undo fall out for free
+- [[reference-counting-becomes-viable-when-immutability-prevents-object-cycles]] -- in a non-lazy non-mutable language new objects can only reference old ones so cycles are structurally impossible; RC is pause-free and exact, making it suitable for language runtimes adjacent to RT audio
+- [[thread-local-top-level-scope-with-copy-on-fork-achieves-actor-isolation-without-message-passing]] -- persistent-dictionary thread-local scope with pointer-copy fork achieves Erlang-style actor isolation without a message-passing runtime; no GIL required when all state is either immutable or thread-local
 
 ## Open Questions
 - Can murail's NRT side expose ps/kill semantics for graph nodes, analogous to Erlang's Observer, while keeping the RT side opaque for performance?
