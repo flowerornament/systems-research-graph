@@ -1,5 +1,5 @@
 ---
-description: Keeping the previous graph playing while a new graph compiles eliminates the silence gap that made whole-graph recompilation impractical in 1990s SuperCollider, restoring interactive workflow at full quality
+description: Keeping the old graph playing while a new graph compiles eliminates the silence gap that made whole-graph recompilation impractical in 1990s SuperCollider, restoring interactive workflow
 type: claim
 evidence: strong
 source: [[mccartney-ideas-2026-02-15]]
