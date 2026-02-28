@@ -17,4 +17,4 @@ Important caveat Rusher makes explicitly: for protocols and high-consequence sys
 
 Relevance to [[formal-methods]] for murail: the Lean 4 proof work targets formal model correctness (mathematical properties of the "Named Sparse Recurrence System"), not defect reduction in application code. Rusher's claim is about application-layer defects, not formal model verification. The two concerns are orthogonal -- proving correctness of the formal model does not conflict with pragmatic runtime guarantees at the application layer.
 
-Contrasted with [[debuggability-is-more-valuable-than-correctness-by-construction]], which draws the practical conclusion from this observation.
+Contrasted with [[debuggability-is-more-valuable-than-correctness-by-construction]], which draws the practical conclusion from this observation. Rusher's memory safety exception is formally vindicated by [[rust-provides-provably-memory-and-data-race-safe-programs-without-garbage-collection]], which establishes that Rust's type system does provide proved memory and data-race safety guarantees -- precisely the exception Rusher names.
