@@ -1,5 +1,5 @@
 ---
-description: FAUST's symbolic propagation phase discovers the mathematical equations of each output signal, then normalizes them so that different block-diagrams computing equivalent results produce identical compiled code
+description: FAUST's symbolic propagation discovers the mathematical equations of each output, then normalizes them so structurally different block-diagrams computing equivalent results produce identical compiled code
 type: property
 evidence: strong
 source: [[faust-2009-npcm]]
