@@ -36,6 +36,20 @@
   "processing": [],
   "completed": [
     {
+      "id": "rave-2021-extract",
+      "batch": "rave-2021",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/rave-2021.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 9,
+      "enrichments": 1,
+      "connections_added": 14,
+      "topic_maps_updated": 2,
+      "archive": "ops/queue/archive/2026-02-28-rave-2021/"
+    },
+    {
       "id": "stop-writing-dead-programs-jack-rusher-2022-extract",
       "batch": "stop-writing-dead-programs-jack-rusher-2022",
       "type": "extract",
