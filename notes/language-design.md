@@ -94,6 +94,19 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[well-typed-algebraic-effect-programs-cannot-invoke-unhandled-operations]] -- effect soundness: type system statically guarantees every operation invocation has a handler; eliminates runtime equivalent of unhandled exceptions
 - [[algebraic-effects-model-async-without-async-await-keywords-by-registering-the-continuation-as-a-callback]] -- handler registers resume continuation as OS callback; async-await as library code, not language syntax; multi-core OCaml uses this for concurrency
 
+- [[sufficiently-smart-compilers-produce-leaky-abstractions-not-reliable-performance]] -- auto-optimization heuristics fire until a refactor silently breaks them; Mojo's response is explicit library-expressed optimizations with predictable contracts
+- [[compiler-power-moved-into-libraries-gives-explicit-control-without-requiring-compiler-expertise]] -- expressing optimizations as callable library functions turns them from fragile heuristics into contracts, opening the talent pool beyond compiler engineers
+- [[unifying-program-and-metaprogram-eliminates-two-world-complexity-of-templates]] -- compile-time and runtime code in one language makes metaprogramming debuggable with the same tools; Mojo/Zig vs. C++ template sublanguage
+- [[ai-hardware-stack-fragmentation-mirrors-pre-gcc-compiler-era]] -- CUDA, ROCm, XLA, MLX are isolated vertical stacks; Modular/Mojo aims to be the neutral GCC-equivalent layer above AI hardware diversity
+- [[llm-friendly-language-design-reduces-to-readability-not-llm-specific-features]] -- LLM suitability is a consequence of readability and large open-source corpus, not special-purpose LLM syntax
+
+### Language Adoption and Institutional Strategy (Lattner / Swift / Mojo)
+- [[experts-resist-new-languages-because-their-prior-investment-is-invalidated]] -- expert practitioners protect accrued expertise; S-curve adoption follows because transition resets competitive advantage to zero
+- [[new-language-success-requires-designing-for-expansion-to-adjacent-domains]] -- languages that outlast their target domain were designed for generality; JavaScript running web servers and Swift enabling non-expert app developers are design consequences
+- [[language-quality-validation-requires-production-use-not-internal-development]] -- a team of 250 under NDA cannot produce the usage diversity needed to validate design decisions; production release is epistemologically necessary
+- [[early-breaking-changes-with-public-commitment-are-preferable-to-locking-in-mistakes]] -- announcing source breakage at 1.0 and delivering it avoids locked-in mistakes; Swift 1-3 broke three times before committing to stability
+- [[incremental-institutional-adoption-requires-non-zero-business-value-at-each-step]] -- LLVM's path through Apple: small win every six months, top-down champion plus bottom-up results; the pattern for any ambitious project inside an institution
+
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
