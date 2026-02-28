@@ -1,5 +1,5 @@
 ---
-description: Vault configuration structure, dimension positions, and /architect usage
+description: Vault configuration structure, dimension positions, and /arscontexta:architect usage
 type: manual
 generated_from: "arscontexta-0.8.0"
 ---
@@ -24,7 +24,7 @@ Claims express one proposition each. Titles are complete sentences. No composite
 
 This position was chosen because research domains involve discrete theorems, decisions, and invariants -- formal models have individually-numbered architectural decisions and named invariants. Atomic granularity lets each be tracked, connected, and revised independently.
 
-**Trade-off:** More files, more linking overhead. Compensated by strong tooling (/extract handles decomposition, /connect handles linking).
+**Trade-off:** More files, more linking overhead. Compensated by strong tooling (/arscontexta:extract handles decomposition, /arscontexta:connect handles linking).
 
 ### Organization: Flat
 
@@ -34,7 +34,7 @@ This position was chosen because the domain is cross-disciplinary. A claim about
 
 ### Linking: Explicit + Implicit
 
-Claims have both hand-written wiki links (explicit) and system-discovered connections (implicit, via `/connect`). The system also supports semantic search when available.
+Claims have both hand-written wiki links (explicit) and system-discovered connections (implicit, via `/arscontexta:connect`). The system also supports semantic search when available.
 
 This position reflects the high volume and cross-disciplinary nature of the vault. With 500+ projected claims across 6 sub-domains, manual linking alone cannot find all relevant connections.
 
@@ -57,8 +57,8 @@ Hub index links to topic maps. Topic maps link to claims. Three levels of naviga
 Maintenance triggers based on vault state metrics rather than calendar schedule. "Tight" means low thresholds -- orphan drift and staleness are caught early.
 
 Current thresholds:
-- Orphan count > 10% of total claims triggers `/reweave`
-- Claims older than 30 days without verification flagged for `/verify`
+- Orphan count > 10% of total claims triggers `/arscontexta:reweave`
+- Claims older than 30 days without verification flagged for `/arscontexta:verify`
 - Inbox depth > 20 triggers extraction priority
 - Connection density < 2 links/claim flags thin areas
 
@@ -111,7 +111,7 @@ Changes a dimension position. The system will warn about coherence implications 
 
 ## Extraction Categories
 
-The derivation defines what kinds of claims to look for during `/extract`:
+The derivation defines what kinds of claims to look for during `/arscontexta:extract`:
 
 | Category | What to Find | Output Type |
 |----------|-------------|-------------|
@@ -143,11 +143,11 @@ Active feature blocks determine which capabilities are available. Current state:
 | processing-pipeline | active | Extract/connect/verify/reweave |
 | schema | active | Frontmatter validation |
 | maintenance | active | Condition-based triggers |
-| self-evolution | active | /learn, /remember, /rethink |
+| self-evolution | active | /arscontexta:learn, /arscontexta:remember, /arscontexta:rethink |
 | methodology-knowledge | active | ops/methodology/ |
 | session-rhythm | active | Hook-driven session flow |
 | templates | active | claim-note, topic-map, source-capture |
-| graph-analysis | active | /graph visualization |
+| graph-analysis | active | /arscontexta:graph visualization |
 | atomic-notes | active | Granularity = atomic |
 | mocs | active | Navigation = 3-tier |
 | semantic-search | active | Conditional on qmd availability |
