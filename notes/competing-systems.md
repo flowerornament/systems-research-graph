@@ -27,6 +27,19 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[static-languages-prevent-runtime-introspection]] -- Faust's AOT compilation and SuperCollider's SynthDef compilation both produce static artifacts; neither supports runtime query of running graph state
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- SuperCollider has a graphical node editor alongside its text notation; murail's DSL will face the same cyclic-graph-in-linear-text tension
 
+### FAUST: Functional DSP Compiler Architecture (Orlarey, Fober & Letz 2009)
+- [[faust-programs-denote-mathematical-functions-enabling-semantics-driven-compilation]] -- a FAUST program is a mathematical function from signals to signals; the compiler compiles the function not the text, enabling optimizations impossible when compiling programs literally
+- [[faust-block-diagram-algebra-unifies-functional-programming-with-visual-patch-notation]] -- five composition operators (sequential, parallel, recursive, split, merge) define a closed algebra; block-diagram construction is literally function composition
+- [[purely-functional-dsp-semantics-enables-compiler-optimizations-impossible-in-C]] -- the absence of side effects and pointer aliasing removes the barriers that prevent C/C++ compilers from aggressive optimization; FAUST's functional model is the mechanism
+- [[faust-separates-dsp-specification-from-host-architecture-enabling-multi-target-retargeting]] -- architecture files decouple the generated DSP class from its host; the same .dsp source produces JACK apps, CoreAudio apps, LADSPA, VST, Max, PD, SuperCollider plugins
+- [[faust-recursive-composition-with-implicit-one-sample-delay-is-the-primitive-for-all-feedback]] -- the `~` operator mandates a one-sample delay in the feedback path, making all recursion well-founded and computationally deterministic
+- [[faust-signal-type-inference-classifies-computation-rate-to-enable-appropriate-caching]] -- compile-time rate classification (constant/init/UI/audio) enables automatic caching at the right granularity without programmer annotation
+- [[faust-vectorized-code-generation-splits-sample-loop-into-multiple-simpler-loops-to-expose-simd]] -- the -vec code generator splits the single sample loop into sections, producing SIMD-friendly code; 2.8x speedup on RMS benchmark with Intel icc
+- [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] -- SMP parallelism is bounded by shared memory bus; a sequential program already saturating bandwidth cannot benefit from more cores
+- [[faust-symbolic-propagation-normalizes-structurally-different-programs-that-compute-identical-functions]] -- symbolic propagation discovers mathematical equations of outputs, then normalizes them; different block-diagrams with equivalent meanings compile to identical code
+- [[dataflow-languages-lack-explicit-formal-semantics-making-program-behavior-engine-dependent]] -- Max/PD semantics are hidden in the engine; global patch behavior requires knowing the engine internals, and long-term preservation is threatened
+- [[faust-compiler-discovers-parallelism-automatically-but-expressing-it-efficiently-remains-hard]] -- detection of parallelism is trivial in a functional language; generating efficient OpenMP code is hard due to overhead and memory pressure
+
 ### MetaSounds Architecture (Epic Games / Unreal Engine)
 - [[metasounds-instanced-graph-model-requires-compositional-thinking-rather-than-singleton-patch-design]] -- hundreds of MetaSound instances run simultaneously; graphs are reusable templates, not singleton patches, requiring a different design vocabulary than Max MSP
 - [[JIT-graph-compilation-enables-context-aware-channel-format-inference-at-playback-time]] -- MetaSounds compiles graphs on-the-fly at play time, enabling format resolution from actual runtime asset data rather than requiring static declarations
