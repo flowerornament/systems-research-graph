@@ -28,6 +28,8 @@ Relevant Notes:
 - [[onnx-runtime-is-fastest-for-stateless-neural-models-while-libtorch-is-fastest-for-stateful-models]] — the engine ranking this claim extends; its baselines were measured under the exact controlled conditions these two gaps exclude
 - [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] — grounds why optimal thread count for parallel inference cannot be derived statically: SMP bandwidth constraints make the answer hardware-architecture-dependent
 - [[onnx-runtime-does-not-support-stateful-lstm-operations-restricting-it-to-stateless-neural-architectures]] — establishes the architectural precondition for Gap 2: parallel ThreadPool inference only applies to stateless models; the gap is scoped to ONNX's domain
+- [[block-size-is-the-primary-latency-throughput-tradeoff-in-murail-execution]] — Gap 1 compounds the substrate's primary latency parameter: H_adapt adds neural-UGen-specific latency on top of the host block size
+- [[faust-compiler-discovers-parallelism-automatically-but-expressing-it-efficiently-remains-hard]] — Gap 2 parallels the FAUST lesson: parallelism detection is trivial but efficient exploitation requires hardware-profiled benchmarking
 
 Topics:
 - [[ai-ml]]
