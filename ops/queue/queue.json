@@ -58,6 +58,16 @@
       "created": "2026-02-28T00:00:00Z",
       "next_claim_start": 120,
       "archive_folder": "ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/"
+    },
+    {
+      "id": "iverson-1980-notation-as-tool-of-thought-extract",
+      "batch": "iverson-1980-notation-as-tool-of-thought",
+      "type": "extract",
+      "status": "in-progress",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/iverson-1980-notation-as-tool-of-thought.pdf",
+      "created": "2026-02-28",
+      "next_claim_start": 150,
+      "archive_folder": "ops/queue/archive/2026-02-28-iverson-1980-notation-as-tool-of-thought/"
     }
   ],
   "processing": [],
