@@ -22,6 +22,12 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[debuggability-is-more-valuable-than-correctness-by-construction]] -- for evolving software the ability to debug and patch a live system outweighs proofs about code that will be discarded
 - [[evolvability-requires-trading-provability-for-extensibility]] -- Sussman's formal argument: tight specs enable proofs but produce brittle towers; generic extensibility buys evolvability at the cost of formal verifiability
 
+### Rust Formal Foundations (RustBelt)
+- [[rust-safety-with-unsafe-code-requires-semantic-rather-than-syntactic-proof-methods]] -- open-world extensibility requires logical relations (semantic) rather than progress-and-preservation (syntactic); the semantic approach is extensible to new unsafe libraries
+- [[unsafe-encapsulation-is-the-foundational-soundness-obligation-for-rust-library-authors]] -- library-specific verification conditions derived from semantic API interpretation; formal basis for trusting the unsafe internals of standard library types
+- [[rust-provides-provably-memory-and-data-race-safe-programs-without-garbage-collection]] -- adequacy theorem establishes no stuck states; memory safety and data-race freedom are proved properties, not conventions
+- [[iris-separation-logic-enables-deriving-a-lifetime-logic-from-primitive-mechanisms]] -- Iris's two primitive mechanisms (higher-order ghost state + impredicative invariants) are sufficient to derive the complete lifetime logic
+
 ### Propagator Model and Provenance
 - [[propagator-networks-provide-provenance-for-computed-conclusions]] -- Sussman's propagator model tracks the derivation chain of every computed value; potential basis for explainable audio computation in murail
 - [[propagator-cells-hold-partial-information-that-accumulates-monotonically]] -- cells hold information about values (not values), accumulating monotonically; enables redundant paths and graceful degradation in murail's graph model
