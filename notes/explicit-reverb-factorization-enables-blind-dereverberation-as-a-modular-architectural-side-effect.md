@@ -1,5 +1,5 @@
 ---
-description: Representing room acoustics as a separate learned impulse response post-synthesis module -- instead of folding reverb into the generative model -- lets you bypass the reverb module to get dereverberated audio for free
+description: Separating room acoustics as a learned impulse response module rather than folding reverb into the generative model lets you bypass that module to get dereverberated audio for free
 type: claim
 evidence: strong
 source: [[ddsp-2020]]
