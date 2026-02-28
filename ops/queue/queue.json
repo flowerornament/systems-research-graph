@@ -395,6 +395,21 @@
       "connections_added": 18,
       "topic_maps_updated": 2,
       "archive": "ops/queue/archive/2026-02-28-2026-02-06-4eJrp9byBRk/"
+    },
+    {
+      "id": "ddsp-2020-extract",
+      "batch": "ddsp-2020",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/ddsp-2020.pdf",
+      "created": "2026-02-28",
+      "completed": "2026-02-28",
+      "claims_created": 10,
+      "enrichments": 1,
+      "connections_added": 22,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 1,
+      "archive": "ops/queue/archive/2026-02-28-ddsp-2020/"
     }
   ]
 }
