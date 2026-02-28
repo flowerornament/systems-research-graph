@@ -17,4 +17,6 @@ For [[language-design]]: an audio graph engine whose graph can be mutated at run
 
 Contrasted with [[batch-processing-incurs-avoidable-cognitive-overhead]], which describes the inherited costs this approach eliminates. Related to [[static-languages-prevent-runtime-introspection]], which explains why most compiled languages cannot provide this.
 
+MetaSounds ([[channel-agnosticism-metasounds-aaron-mcleran-adc]]) presents an interesting partial case: [[JIT-graph-compilation-enables-context-aware-channel-format-inference-at-playback-time]] is a form of compilation inside a live system, but the "live" moment is playback start rather than edit time. MetaSounds explicitly rejects mid-execution graph mutation -- the interactive programming ideal applied to audio systems conflicts with the RT stability requirement, showing that interactive programming's benefits have domain-specific limits.
+
 Short feedback loops produced by interactive environments are also the mechanism behind productive data science tooling (R, Jupyter): Rusher notes the data science community rediscovered interactive programming because re-loading large datasets on every compile is obviously unacceptable.
