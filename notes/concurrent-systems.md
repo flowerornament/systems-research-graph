@@ -23,9 +23,14 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[long-running-servers-require-continuity-oriented-programming-models]] -- servers with thousands-of-days uptime and GUIs violate the batch-mode input-output transformer model that mainstream languages optimize for
 - [[monotonic-information-cells-eliminate-synchronization-problems-in-parallel-propagator-networks]] -- Sussman/Radul: monotonic cell accumulation makes concurrent writes order-independent without locking; theoretical grounding for certain lock-free NRT-to-RT parameter update patterns
 
+### Immutability as Concurrency Architecture
+- [[pervasive-immutability-dissolves-concurrency-problems-rather-than-managing-them]] -- immutable-by-default with structural sharing eliminates GC write barriers, makes reference counting sufficient, and enables lock-free cross-thread sharing; McCartney's decade of SAPF experience as evidence
+- [[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]] -- preserving old versions costs only a pointer when data is immutable with structural sharing; lossless history and undo fall out for free
+
 ## Open Questions
 - Can murail's NRT side expose ps/kill semantics for graph nodes, analogous to Erlang's Observer, while keeping the RT side opaque for performance?
 - What would node-level state threading look like during compile-and-swap -- carrying oscillator phase, filter memory, etc. into replacement nodes?
+- For Murail's composition language (Stage 9): Rust ownership vs. persistent immutable structures (McCartney/Clojure approach) as the data model? The two might combine: Rust engine, persistent structures for the language runtime.
 
 ---
 
