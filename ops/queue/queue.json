@@ -23,15 +23,6 @@
       "next_claim_start": 140
     },
     {
-      "id": "cherep-2024-text-to-audio-synthesizer-extract",
-      "batch": "cherep-2024-text-to-audio-synthesizer",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/murail/.design/references/papers/archive/cherep-2024-text-to-audio-synthesizer.pdf",
-      "created": "2026-02-28",
-      "archive_folder": "ops/queue/archive/2026-02-28-cherep-2024-text-to-audio-synthesizer/"
-    },
-    {
       "id": "leijen-algebraic-effects-extract",
       "batch": "leijen-algebraic-effects",
       "type": "extract",
