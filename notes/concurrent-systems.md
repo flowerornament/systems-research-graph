@@ -30,6 +30,13 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[thread-local-top-level-scope-with-copy-on-fork-achieves-actor-isolation-without-message-passing]] -- persistent-dictionary thread-local scope with pointer-copy fork achieves Erlang-style actor isolation without a message-passing runtime; no GIL required when all state is either immutable or thread-local
 - [[value-semantics-allow-in-place-mutation-when-ownership-is-clear-making-them-strictly-more-powerful-than-purely-functional-copies]] -- ownership-proven in-place mutation is the concurrency-safe version of functional programming; Rust's model in the RT thread is value semantics enforced statically
 
+### Rust Thread Safety -- Formal Foundations (RustBelt)
+- [[rust-ownership-enforces-that-aliasing-and-mutation-cannot-coexist-on-any-location]] -- core type invariant eliminates data races, use-after-free, and iterator invalidation; formally proved, not just conventional
+- [[send-and-sync-are-thread-independence-of-ownership-and-sharing-predicates]] -- T is Send if ownership predicate is thread-independent; T is Sync if sharing predicate is thread-independent; formal characterization of murail's NRT/RT safety requirements
+- [[interior-mutability-is-safe-mutation-through-shared-references-enforced-by-controlled-api-surfaces]] -- Mutex and Arc are verified to safely encapsulate unsafe cross-thread mutation; murail's lock-free queue and arc-swap patterns derive safety from this
+- [[mutexguard-lifetime-enforces-lock-release-before-deep-pointers-expire]] -- lock release tied to scope exit by lifetime system; no use-after-unlock possible without a compile error
+- [[rust-provides-provably-memory-and-data-race-safe-programs-without-garbage-collection]] -- RustBelt adequacy theorem: memory safety and data-race freedom are proved without GC; the formal foundation of murail's real-time safety claims
+
 ### Memory Layout and Performance
 - [[cache-hierarchical-hardware-makes-linked-lists-slower-than-arrays-for-most-practical-sizes]] -- contiguous memory layout keeps audio buffers hot in cache across the RT thread's tight render loop; pointer-chased structures scatter data across pages
 - [[purely-functional-languages-fail-on-modern-hardware-because-pointer-boxing-destroys-cache-locality]] -- per-sample cache misses from boxed functional language data models are architecturally incompatible with RT audio requirements
