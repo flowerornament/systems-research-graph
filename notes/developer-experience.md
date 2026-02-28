@@ -38,13 +38,7 @@ How the tools, models, and feedback loops of a programming environment shape wha
 
 ## Theory building and knowledge transfer
 
-- [[programming-is-theory-building-not-text-production]] -- Naur's central thesis: the programmer's mental theory is the primary product; text is an externalization that cannot fully encode it
-- [[a-programs-source-text-cannot-fully-specify-its-meaning]] -- source code underdetermines meaning; the theory includes design rationale and negative knowledge the text cannot carry
-- [[the-programmers-theory-includes-why-alternatives-were-rejected-not-just-what-was-chosen]] -- the most tacit component: knowing why the design is not otherwise, which is lost in documentation-only transfer
-- [[no-documentation-can-substitute-for-the-programmer-held-theory]] -- documentation is static text; theory is a dynamic capacity to respond to novel situations; the two are not interchangeable
-- [[program-revival-by-newcomers-systematically-produces-degraded-designs]] -- programs maintained without the original theorists acquire functional changes but lose design coherence
-- [[software-quality-degrades-in-proportion-to-distance-from-original-theorists]] -- the organizational generalization: coherence tracks theorist involvement continuously, not just at handoff
-- [[programming-education-should-develop-theory-building-capacity-not-text-writing-technique]] -- current curricula optimize text production and algorithmic correctness; theory-building capacity is the primary competence
+(Naur 1985 claims pending re-extraction from source PDF)
 
 ## LLM-era developer experience
 
