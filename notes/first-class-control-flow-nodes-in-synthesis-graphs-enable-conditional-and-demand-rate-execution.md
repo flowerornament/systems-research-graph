@@ -1,5 +1,5 @@
 ---
-description: Treating if/switch/for as primitive graph nodes equal to arithmetic and delay creates genuinely conditional multi-rate synthesis, enabling pause and demand-rate patterns no other audio language currently supports
+description: Treating if/switch/for as primitive graph nodes equal to arithmetic and delay creates genuinely conditional multi-rate synthesis with pause and demand-rate patterns no other audio language supports
 type: claim
 evidence: moderate
 source: [[mccartney-ideas-2026-02-15]]
