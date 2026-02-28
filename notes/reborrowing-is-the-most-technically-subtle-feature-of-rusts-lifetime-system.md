@@ -1,5 +1,5 @@
 ---
-description: Creating a sub-borrow at a shorter lifetime κ' from an existing borrow at κ requires an inheritance that restores the original borrow after κ' ends -- this accounts for most of the complexity in the lifetime logic
+description: A sub-borrow at shorter lifetime κ' must include an inheritance restoring the original borrow at κ after κ' ends -- source of most complexity in the RustBelt lifetime logic
 type: property
 evidence: strong
 source: [[rustbelt-2018]]
