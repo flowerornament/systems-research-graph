@@ -1,5 +1,5 @@
 ---
-description: Both guarded domain theory and Murail's causality invariant share one structural principle: every cycle must pass through a "later" guard -- an isomorphism connecting formal foundations to compiler enforcement
+description: Guarded domain theory and Murail's causality invariant share one principle: every cycle must pass through a "later" guard -- connecting formal foundations to compiler enforcement
 type: claim
 evidence: moderate
 source: [[birkedal-2012-guarded-domain-theory]]
