@@ -25,6 +25,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 ## Source References (processed transcripts and papers)
 - [[stop-writing-dead-programs-jack-rusher-2022]] -- Jack Rusher, Strange Loop 2022: interactive programming, batch mode critique, language design survey
 - [[we-dont-know-how-to-compute-sussman-2011]] -- Gerald Sussman, Strange Loop 2011: propagator model, truth maintenance, evolvability vs correctness, generic operations
+- [[channel-agnosticism-metasounds-aaron-mcleran-adc]] -- Aaron McLeran (Epic Games), ADC: MetaSounds channel-agnostic types, polymorphic audio format abstraction, JIT graph compilation, instanced graph model
 
 ## Orientation
 - ops/goals.md -- current active threads
