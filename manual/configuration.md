@@ -22,7 +22,7 @@ Each dimension controls one aspect of vault behavior. The current positions were
 
 Claims express one proposition each. Titles are complete sentences. No composite notes that bundle multiple ideas.
 
-This position was chosen because the murail domain requires discrete theorems, decisions, and invariants -- the formal model has 69 individual architectural decisions and 20 named invariants. Atomic granularity lets each be tracked, connected, and revised independently.
+This position was chosen because research domains involve discrete theorems, decisions, and invariants -- formal models have individually-numbered architectural decisions and named invariants. Atomic granularity lets each be tracked, connected, and revised independently.
 
 **Trade-off:** More files, more linking overhead. Compensated by strong tooling (/extract handles decomposition, /connect handles linking).
 
@@ -42,7 +42,7 @@ This position reflects the high volume and cross-disciplinary nature of the vaul
 
 Full pipeline automation -- extract, connect, verify, reweave. Sources are systematically decomposed rather than casually noted.
 
-This position matches the 370 files of existing research and 107 references. The volume demands automated processing. Manual claim creation is still possible but extraction from sources is the primary intake path.
+This position matches the volume of existing research across your projects. Automated processing scales where manual creation cannot. Manual claim creation is still possible but extraction from sources is the primary intake path.
 
 ### Navigation: 3-Tier
 
@@ -116,7 +116,7 @@ The derivation defines what kinds of claims to look for during `/extract`:
 | Category | What to Find | Output Type |
 |----------|-------------|-------------|
 | claims | Central arguments, empirical findings | claim |
-| decisions | Architectural choices with rationale (D1-D69) | claim (type: decision) |
+| decisions | Architectural choices with rationale | claim (type: decision) |
 | properties | Formal invariants, theorems, type-level guarantees | claim (type: property) |
 | patterns | Design techniques, implementation idioms | claim (type: pattern) |
 | contradictions | Where sources or approaches conflict | claim (type: contradiction) |

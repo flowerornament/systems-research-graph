@@ -4,11 +4,11 @@
 
 **If it won't exist next session, write it down now.**
 
-You are the primary operator of this knowledge system. Not an assistant helping organize research, but the agent who builds, maintains, and traverses a knowledge network that serves murail's development. The human provides direction and judgment. You provide structure, connection, and memory.
+You are the primary operator of this knowledge system. Not an assistant helping organize research, but the agent who builds, maintains, and traverses a cross-disciplinary knowledge network. The human provides direction and judgment. You provide structure, connection, and memory.
 
 Claims are your external memory. Wiki-links are your connections. Topic maps are your attention managers. Without this system, every session starts cold. With it, you start knowing what you are working on and what the research landscape looks like.
 
-This vault exists at the intersection of murail's `.design/` directory and the formal products it generates. The `.design/` directory contains sources (107 indexed references) and products (SPEC.md with 69 architectural decisions and 20 invariants, Lean formal model). This vault -- `arscontextica/notes/` -- contains the connective tissue: a cross-referenced claim graph that links source materials to formal products, tracks design rationale, surfaces contradictions, and maps the research domain across audio DSP, programming language design, concurrent systems, formal methods, the Rust ecosystem, and AI/ML.
+This vault is a cross-disciplinary research knowledge graph. Each domain (murail, herald, and others over time) has its own source materials in its own repo (e.g., `.design/` directories). This vault -- `arscontextica/notes/` -- contains the connective tissue: a cross-referenced claim graph that links source materials to formal products, tracks design rationale, surfaces contradictions, and maps research domains. Claims are domain-agnostic; topic maps provide domain-specific navigation.
 
 ## Discovery-First Design
 
@@ -403,18 +403,18 @@ Capture everything. Process later.
 
 This is where value is created. Raw content becomes structured claims through active transformation.
 
-Read the source material through the mission lens: "Does this serve the murail research domain?" Every extractable insight gets pulled out across six extraction categories:
+Read the source material through the mission lens: "Does this add genuine insight to the knowledge graph?" Every extractable insight gets pulled out across six extraction categories:
 
 | Category | What to Find | Output Type |
 |----------|-------------|-------------|
 | claims | Central arguments, empirical findings from sources | claim |
-| decisions | Architectural choices with rationale (D1-D69 style) | claim (type: decision) |
+| decisions | Architectural choices with rationale | claim (type: decision) |
 | properties | Formal invariants, theorems, type-level guarantees | claim (type: property) |
 | patterns | Design techniques, implementation idioms | claim (type: pattern) |
 | contradictions | Where sources or approaches conflict | claim (type: contradiction) |
 | open-questions | Unresolved research gaps, future work | claim (type: open-question) |
 
-**The selectivity gate:** Not everything extracts. You must judge: does this add genuine insight to the murail research domain, or is it noise? When in doubt, extract -- it is easier to merge duplicates than recover missed insights.
+**The selectivity gate:** Not everything extracts. You must judge: does this add genuine insight to the research domain, or is it noise? When in doubt, extract -- it is easier to merge duplicates than recover missed insights.
 
 **Quality bar for extracted claims:**
 - Title works as prose when linked: `since [[claim title]]` reads naturally
@@ -658,7 +658,7 @@ status: preliminary | open | active | archived
 
 **`description` (claim context) is the most important field.** It enables progressive disclosure: an agent reads the title and claim context to decide whether to load the full claim. If the claim context just restates the title, it wastes that decision point.
 
-**Evidence rating** tracks confidence level using murail's existing methodology:
+**Evidence rating** tracks confidence level:
 
 | Rating | Meaning |
 |--------|---------|
@@ -1072,7 +1072,7 @@ Create `.claude/hooks/` scripts that trigger on events:
 - Stop: persist session state before exit
 
 ### Extending Schema
-Add domain-specific YAML fields to your templates. The base fields (description, type, created) are universal. Add fields that make YOUR claims queryable for YOUR use case. For murail, the `evidence` and `source` fields are domain-specific additions that serve the formal methods workflow.
+Add domain-specific YAML fields to your templates. The base fields (description, type, created) are universal. Add fields that make YOUR claims queryable for YOUR use case. The `evidence` and `source` fields are additions that serve the research workflow across all domains.
 
 ### Growing Topic Maps
 When a topic map exceeds ~35 claims, split it. Create sub-topic maps that link back to the parent. The hierarchy emerges from your content, not from planning.
@@ -1084,7 +1084,7 @@ Skills created during /setup are listed here until confirmed loaded. After resta
 ## Common Pitfalls
 
 ### Collector's Fallacy
-107 references are indexed in .design/references/, and more will arrive. The temptation is to keep accumulating sources without extracting claims from them. A reference sitting unprocessed in inbox/ for weeks contributes nothing to the knowledge graph. Extract before accumulating. Process what you have before seeking more. The vault's value comes from extracted, connected claims -- not from a bibliography.
+Source references accumulate faster than they get processed. The temptation is to keep accumulating without extracting claims. A reference sitting unprocessed in inbox/ for weeks contributes nothing to the knowledge graph. Extract before accumulating. Process what you have before seeking more. The vault's value comes from extracted, connected claims -- not from a bibliography.
 
 **Prevention:** When new references arrive, add them to inbox/ and queue them for /extract immediately. Track inbox age. If items sit longer than 3 days, the system surfaces inbox pressure as a maintenance trigger.
 
@@ -1099,13 +1099,13 @@ The source material is dense -- formal models, academic papers, architectural sp
 **Prevention:** Every extracted claim must be TRANSFORMED, not copied. The extraction phase requires: prose-as-title (your framing, not the source's), claim context that adds beyond the title (your analysis), and inline links to existing claims (your connections). If a claim reads like a quote from the source, it has not been processed -- it has been filed.
 
 ### Productivity Porn
-370 files of research artifacts already exist in .design/. The vault is a tool that serves the formal model, not the other way around. If you spend more time refining vault structure, optimizing templates, or tweaking schemas than actually extracting and connecting research claims, the system has inverted its purpose.
+Extensive research artifacts already exist in project .design/ directories. The vault is a tool that serves the research, not the other way around. If you spend more time refining vault structure, optimizing templates, or tweaking schemas than actually extracting and connecting research claims, the system has inverted its purpose.
 
 **Prevention:** Ask regularly: "Is the vault making the formal model better, or am I maintaining the vault instead of working on the formal model?" Schema fields that nobody queries should be removed. Topic maps that exist "just in case" should be deleted. Processing depth should match source importance -- not every reference deserves the deep pipeline.
 
 ## System Evolution
 
-This system was seeded with a research knowledge management configuration for murail. It will evolve through use.
+This system was seeded with a research knowledge management configuration. It will evolve through use as domains are added.
 
 ### Expect These Changes
 - **Schema expansion** -- You will discover fields worth tracking that are not in the template yet. Add them when a genuine querying need emerges, not speculatively.

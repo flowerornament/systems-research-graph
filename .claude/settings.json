@@ -2,27 +2,49 @@
   "hooks": {
     "SessionStart": [
       {
-        "type": "command",
-        "command": "bash .claude/hooks/session-orient.sh"
+        "matcher": {},
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-orient.sh"
+          }
+        ]
       }
     ],
     "PostToolUse": [
       {
-        "type": "command",
-        "command": "bash .claude/hooks/validate-note.sh",
-        "matcher": "Write|Edit"
+        "matcher": {
+          "tools": ["Write", "Edit"]
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-note.sh"
+          }
+        ]
       },
       {
-        "type": "command",
-        "command": "bash .claude/hooks/auto-commit.sh",
-        "matcher": "Write|Edit",
-        "async": true
+        "matcher": {
+          "tools": ["Write", "Edit"]
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/auto-commit.sh",
+            "timeout": 10000
+          }
+        ]
       }
     ],
     "Stop": [
       {
-        "type": "command",
-        "command": "bash .claude/hooks/session-capture.sh"
+        "matcher": {},
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-capture.sh"
+          }
+        ]
       }
     ]
   }

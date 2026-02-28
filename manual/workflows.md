@@ -31,7 +31,7 @@ status: raw
 
 Tag with `status: raw`. Do not try to organize or summarize at this stage -- just capture.
 
-**Failure mode to watch:** Collector's Fallacy. With 107 references already indexed, it is easy to keep accumulating sources without extracting. Extract before you capture more. Check inbox depth with `/stats`.
+**Failure mode to watch:** Collector's Fallacy. It is easy to keep accumulating sources without extracting. Extract before you capture more. Check inbox depth with `/stats`.
 
 ### Stage 2: Extract
 

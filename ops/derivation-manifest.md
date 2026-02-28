@@ -85,7 +85,7 @@ extraction_categories:
     description: "Central arguments, empirical findings from sources"
     output_type: claim
   - category: decisions
-    description: "Architectural choices with rationale (D1-D69 style)"
+    description: "Architectural choices with rationale"
     output_type: "claim (type: decision)"
   - category: properties
     description: "Formal invariants, theorems, type-level guarantees"
@@ -128,9 +128,7 @@ domain:
     - competing-systems
     - formal-methods
   existing_research:
-    references: 107
-    formal_model: "Lean proofs"
-    spec: "4300 lines, 69 decisions, 20 invariants"
+    note: "See each project's .design/ directory for current counts"
   future_domains:
     - herald
     - tau5

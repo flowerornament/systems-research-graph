@@ -131,7 +131,7 @@ Rethink may update the claim in place, archive it and create a replacement, or f
 
 **Symptom:** inbox/ accumulates raw sources faster than they are extracted. `/stats` shows inbox depth > 20. The vault has a growing body of unprocessed material that creates cognitive overhead and the illusion of progress.
 
-This is the Collector's Fallacy -- the derivation flags it as HIGH risk for this vault given 107 existing references.
+This is the Collector's Fallacy -- the derivation flags it as HIGH risk for research-heavy vaults.
 
 **Why it happens:**
 - Research naturally produces more sources than can be immediately processed

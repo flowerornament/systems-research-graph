@@ -28,4 +28,4 @@ Reference documentation for the arscontextica knowledge vault -- an atomic claim
 
 **Topic maps, not folders.** Organization is flat. A topic map in notes/ (e.g., `audio-graph-topology-map.md`) gathers related claims by wiki link. One claim can appear in multiple topic maps. The hub index links to all topic maps.
 
-**The graph serves the formal model.** The vault exists to inform murail's evolving specification -- 69 architectural decisions, 20 invariants, cross-cutting concerns across 107 references. Claims are the connective tissue between sources and products.
+**The graph serves the work.** The vault exists to inform your evolving projects -- architectural decisions, invariants, cross-cutting concerns across references. Claims are the connective tissue between sources and products.
