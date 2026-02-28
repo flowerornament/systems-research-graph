@@ -16,10 +16,14 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - Spec derivation from formal model (v8 → v9 pipeline)
 
 ## Claims
-(populated by /extract)
+
+### Verification Philosophy
+- [[type-systems-have-not-empirically-reduced-defect-rates]] -- empirical studies find no reliable defect-rate advantage from static types; formal verification justified only for high-stakes stable specs
+- [[debuggability-is-more-valuable-than-correctness-by-construction]] -- for evolving software the ability to debug and patch a live system outweighs proofs about code that will be discarded
+- [[propagator-networks-provide-provenance-for-computed-conclusions]] -- Sussman's propagator model tracks the derivation chain of every computed value; potential basis for explainable audio computation in murail
 
 ## Open Questions
-(populated as gaps are identified)
+- Where exactly is the tier boundary between Lean-appropriate formal verification (stable core formalism) and runtime-verification-appropriate testing (application layer) in murail's architecture?
 
 ---
 
