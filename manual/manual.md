@@ -17,7 +17,7 @@ Reference documentation for the arscontextica knowledge vault -- an atomic claim
 ## Reference
 
 - [[skills]] -- Complete command reference grouped by category
-- [[configuration]] -- ops/config.yaml structure, /architect, dimension positions
+- [[configuration]] -- ops/config.yaml structure, /arscontexta:architect, dimension positions
 - [[troubleshooting]] -- Diagnosing orphan claims, dangling links, stale content, inbox overflow
 
 ## Core Concepts
