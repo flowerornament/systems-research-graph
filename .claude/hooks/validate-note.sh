@@ -40,7 +40,7 @@ if ! head -1 "$FILE_PATH" | grep -q '^---$'; then
 fi
 
 # Extract frontmatter
-FRONTMATTER=$(sed -n '1,/^---$/p' "$FILE_PATH" | tail -n +2 | head -n -1)
+FRONTMATTER=$(sed -n '2,/^---$/{ /^---$/d; p; }' "$FILE_PATH")
 
 # Check required fields: description, type, topics
 if ! echo "$FRONTMATTER" | grep -q '^description:'; then
