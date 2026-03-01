@@ -3,6 +3,7 @@ description: OS calls from the RT thread — including memory allocation — can
 type: claim
 evidence: strong
 source: "[[dannenberg-bencina-2005-design-patterns-real-time-computer-music]]"
+also: "[[bencina-2011-real-time-audio-programming-101]]"
 created: 2026-03-01
 status: active
 ---
