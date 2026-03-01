@@ -102,6 +102,7 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[bazaar-development-succeeds-because-the-plan-can-change-in-real-time-to-meet-user-needs]] -- the bazaar model's decisive advantage is adaptability (plan changes in real time) and user buy-in, not just distributed labor; requires a curator who can make and ship decisions quickly
 
 ## Source References
+- [[mccartney-1996-supercollider-icmc]] -- McCartney's original 1996 ICMC paper introducing SuperCollider 1; primary source for signal-buffer amortization, closure-UGens, RT GC, and the scripting/synthesis integration argument
 - [[plotkin-pretnar-2009-handlers-of-algebraic-effects]] -- original foundational paper (ESOP 2009): handlers as free-model homomorphisms, operations/handlers duality, two-language separation, continuations as the non-algebraic exception, parallel composition as the framework boundary
 - [[leijen-algebraic-effects]] -- primary source for the algebraic effects cluster: Koka language, row-typed effect system, selective CPS translation, and effect handler compilation strategies
 - [[leijen-2016-algebraic-effects-tr]] -- 2016 technical report version with full proofs, open/close type rules, trampoline runtime detail, domain-specific effect examples (parser combinators), and deep vs shallow handler semantics
