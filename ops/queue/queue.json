@@ -4,6 +4,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "bencina-real-time-audio-programming-101-extract",
+      "batch": "bencina-real-time-audio-programming-101",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/bencina-real-time-audio-programming-101/bencina-real-time-audio-programming-101.md",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "claims_created": 5,
+      "enrichments": 2,
+      "connections_added": 22,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-03-01-bencina-real-time-audio-programming-101/"
+    },
+    {
       "id": "dannenberg-bencina-2005-design-patterns-real-time-computer-music-extract",
       "batch": "dannenberg-bencina-2005-design-patterns-real-time-computer-music",
       "type": "extract",
