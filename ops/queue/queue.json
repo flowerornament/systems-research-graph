@@ -4,6 +4,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "birkedal-2016-guarded-cubical-type-theory-extract",
+      "batch": "birkedal-2016-guarded-cubical-type-theory",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/birkedal-2016-guarded-cubical-type-theory/birkedal-2016-guarded-cubical-type-theory.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "claims_created": 8,
+      "enrichments": 3,
+      "connections_added": 25,
+      "topic_maps_updated": 1,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-03-01-birkedal-2016-guarded-cubical-type-theory/"
+    },
+    {
       "id": "leijen-2016-algebraic-effects-tr-extract",
       "batch": "leijen-2016-algebraic-effects-tr",
       "type": "extract",
