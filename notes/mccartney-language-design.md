@@ -30,6 +30,13 @@ James McCartney's language design work from 2021 onward, spanning the SAPF Codef
 - [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]] -- SC2 was Smalltalk-with-Ruby-syntax, scripting in RT thread; SC3 introduced the client-server split that defined SuperCollider's architecture
 - [[pyrite-introduced-closures-into-max-patching-enabling-separation-of-ui-and-logic]] -- Pyrite's Scheme-style closures let Max patches contain only UI while all logic lived in a Pyrite script; demonstrated the text-script / visual-patch complementarity SC formalized
 
+### SC1 Architecture (from the 1996 ICMC Paper)
+- [[signal-buffers-as-a-type-amortize-interpreter-overhead-making-high-level-languages-viable-for-real-time-dsp]] -- the mechanism that made SC1 viable: dispatch interpreter once per buffer not per sample; the same block-period model murail formalizes as the substrate tick
+- [[closures-encapsulate-unit-generator-state-making-ugen-creation-a-function-call-not-a-class-definition]] -- SC1 UGens as closures; environment = UGen state; creation = function call; the 1996 original of what tau5 refines into primitive nodes with explicit state regions
+- [[real-time-incremental-garbage-collection-eliminates-static-voice-count-limits-in-synthesis-engines]] -- SC1's RT GC enabled dynamic polyphony; SC3 solved the same problem differently by moving GC to the client process; murail solves it by resolving all cardinalities at compile time
+- [[scripting-and-synthesis-in-the-same-language-eliminates-the-boundary-between-composition-and-sound-design]] -- SC1's integration argument, especially for granular synthesis; the design goal McCartney revives in tau5 after SC3's client-server split reintroduced the boundary
+- [[synthesis-function-specialization-by-input-rate-multiplies-performance-without-multiplying-algorithm-complexity]] -- SC1's 12-variant Aoscilia; the manual specialization pattern that murail's rate lattice and construction-time optimization automate
+
 ### SAPF Language Design (2021 Codefest)
 - [[concatenative-postfix-readability-breaks-when-argument-role-is-ambiguous]] -- without knowing a word's arity, reader cannot distinguish primary operand from auxiliary argument; McCartney's fix: pipeline the main subject, parenthesize options
 - [[sapf-append-only-execution-log-provides-ten-year-session-provenance]] -- every executed expression logged for 10 years enables cross-session provenance at decade scale; complements within-session undo/redo
