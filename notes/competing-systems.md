@@ -99,6 +99,7 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[hadron-supercollider-symposium-2025-keynote]] -- Lucille's Hadron keynote at SC Symposium 2025; primary source for Hadron compatibility and governance claims: Hiram's Law, deferred initialization, constant folding semantics, edition model, and compiler-explorer analog
 - [[mccartney-supercollider-symposium-2025-keynote]] -- McCartney's keynote at SC Symposium 2025; primary source for McCartney new language claims from that event and broader SC ecosystem history
 - [[mccartney-ideas-2026-02-15]] -- Morgan's synthesis of McCartney's post-SC language design ideas as of February 2026; primary source for claims about immutability architecture, reference counting viability, thread-local scope, and creative workflow friction as design driver
+- [[wang-cook-2003-chuck]] -- Wang & Cook 2003 ICMC paper introducing ChucK; primary source for ChucK operator, suspended-animation timing model, shreds, dynamic control rate, and on-the-fly programming claims
 
 ---
 
