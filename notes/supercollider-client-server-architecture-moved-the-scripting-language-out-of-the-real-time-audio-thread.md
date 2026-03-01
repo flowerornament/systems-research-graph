@@ -19,4 +19,6 @@ This history is relevant to Murail's design: Murail's scripting language (if any
 
 SC2 was an intermediate version using a Smalltalk-inspired language with Ruby-like syntax, still without client-server separation. See [[supercollider-version-2-used-a-smalltalk-inspired-language-without-client-server-separation]].
 
+The client-server split also solved the GC problem: SC1's RT incremental GC (which [[real-time-incremental-garbage-collection-eliminates-static-voice-count-limits-in-synthesis-engines]] describes as enabling dynamic voice instantiation) moved to the client process; scsynth uses fixed allocation. The split trades dynamic flexibility for deterministic RT behavior.
+
 Directly enriches the historical context of [[compile-and-swap-preserves-audio-continuity-during-recompilation]], which documents the C-emit pipeline McCartney tried before the client-server model but does not explain why the client-server model itself was introduced.
