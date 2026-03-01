@@ -10,6 +10,9 @@ How notation shapes mathematical and computational reasoning. Draws primarily fr
 
 ## Claims
 
+### Composition Language Design Criteria
+- [[kolmogorov-complexity-provides-a-measurable-criterion-for-composition-language-design-quality]] -- Kolmogorov complexity of a musical idea in Murail should be <= its complexity in SuperCollider or Tidal Cycles; a measurable, not just subjective, criterion for when the composition language has failed at a pattern; applies with a legibility constraint (idiomatic readable code, not golf)
+
 ### Notation as a Tool of Thought (Iverson 1980)
 - [[notation-shapes-thought-not-merely-expresses-it]] -- foundational claim from Boole/Whitehead/Babbage: language is an instrument of reason; available notation determines which problems are tractable
 - [[executable-notation-combines-universality-with-mathematical-suggestivity]] -- neither math notation nor programming languages have both properties; APL demonstrates they can be combined; grounds the interactive programming ideal
