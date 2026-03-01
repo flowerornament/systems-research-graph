@@ -108,6 +108,7 @@ Competitive analysis for murail. Detailed architecture comparison with existing 
 - [[mccartney-supercollider-symposium-2025-keynote]] -- McCartney's keynote at SC Symposium 2025; primary source for McCartney new language claims from that event and broader SC ecosystem history
 - [[mccartney-ideas-2026-02-15]] -- Morgan's synthesis of McCartney's post-SC language design ideas as of February 2026; primary source for claims about immutability architecture, reference counting viability, thread-local scope, and creative workflow friction as design driver
 - [[wang-cook-2003-chuck]] -- Wang & Cook 2003 ICMC paper introducing ChucK; primary source for ChucK operator, suspended-animation timing model, shreds, dynamic control rate, and on-the-fly programming claims
+- [[mclean-2014-making-programming-languages-to-dance-to]] -- Alex McLean, FARM 2014: Tidal 0.4 design paper; pattern-as-function representation, rational time, Applicative combinators, live coding feedback loop taxonomy, user study on EDSL accessibility
 
 ---
 
