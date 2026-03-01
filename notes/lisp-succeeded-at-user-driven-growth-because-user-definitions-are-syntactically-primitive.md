@@ -1,5 +1,5 @@
 ---
-description: Lisp's key structural advantage was that user-defined and built-in operations share identical surface syntax, enabling a designer to grow the language by curating user contributions rather than writing them
+description: Lisp's bidirectional syntax indistinguishability -- user-defined looks like built-in and vice versa -- let designers grow the language by curating users, not writing
 type: claim
 evidence: strong
 source: [[steele-1998-growing-a-language]]
