@@ -53,6 +53,12 @@ How the tools, models, and feedback loops of a programming environment shape wha
 - [[software-quality-degrades-in-proportion-to-distance-from-original-theorists]] -- the temporal and organizational extension: quality erosion is a function of how far the codebase has traveled from its original theorists
 - [[programming-education-should-develop-theory-building-capacity-not-text-writing-technique]] -- education focused on syntax and algorithms develops the wrong skill; the core skill is holding and building theories of programs
 
+## Program language and code comprehension (Baniassad & Myers 2009)
+
+- [[reading-an-unfamiliar-codebase-is-language-learning-not-mere-symbol-lookup]] -- comprehending a new program requires learning its unique program language from scratch; explains the irreducible cognitive cost of onboarding and the failure mode of revival
+- [[program-languages-communicate-naurs-theories-through-identifier-choice-idioms-and-abstraction-organization]] -- naming, idiomatic patterns, and code organization are the textual mechanisms through which theories partially surface; connects theory-building to the observable structure of code
+- [[code-migration-between-programs-is-translation-between-distinct-natural-languages]] -- inter-program code reuse requires semantic translation; false cognates (same identifier, different meaning) cause silent correctness failures; explains why copy-paste within a program is safe but between programs is hazardous
+
 ## LLM-era developer experience
 
 - [[agentsmd-is-gap-filling-for-llms-not-documentation-for-humans]] -- the same dev-first philosophy that makes Elixir coherent (unified toolchain, co-located docs) also makes it LLM-friendly; gap-fill files extend this to targeted failure-mode correction
