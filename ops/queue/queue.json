@@ -4,6 +4,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "leijen-2016-algebraic-effects-tr-extract",
+      "batch": "leijen-2016-algebraic-effects-tr",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/leijen-2016-algebraic-effects-tr/leijen-2016-algebraic-effects-tr.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "claims_created": 6,
+      "enrichments": 5,
+      "connections_added": 12,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 5,
+      "archive": "ops/queue/archive/2026-03-01-leijen-2016-algebraic-effects-tr/"
+    },
+    {
       "id": "birkedal-2012-guarded-domain-theory-extract",
       "batch": "birkedal-2012-guarded-domain-theory",
       "type": "extract",
