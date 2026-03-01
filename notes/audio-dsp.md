@@ -97,6 +97,7 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 
 ## Source References
 - [[dannenberg-bencina-2005-design-patterns-real-time-computer-music]] -- six applied RT patterns for computer music; Synchronous Dataflow Graph pattern provides the formal rationale for cached evaluation order and its relationship to compile-and-swap; Accurate Timing and Event Buffers patterns are the temporal accuracy stack
+- [[bencina-2011-real-time-audio-programming-101]] -- companion article to Dannenberg-Bencina 2005; RT callback rules with mechanism-level explanations; "if you don't know how long it will take, don't do it" as the cardinal rule; worst-case complexity and scheduler paranoia claims
 - [[pl-research-landscape-2026-02-27]] -- survey of PL research (OOPSLA/SPLASH/Strange Loop 2015-2025) covering equality saturation, partial evaluation for DSP, incremental compilation, dataflow confluency, live programming, and symbolic-numeric compilation; primary source for graph-IR and compilation claims in this map
 
 ---
