@@ -579,6 +579,22 @@
       "topic_maps_updated": 3,
       "existing_claims_updated": 1,
       "archive": "ops/queue/archive/2026-02-28-ddsp-2020/"
+    },
+    {
+      "id": "wang-cook-2003-chuck-extract",
+      "batch": "wang-cook-2003-chuck",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 344,
+      "claims_created": 6,
+      "enrichments": 2,
+      "connections_added": 14,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-03-01-wang-cook-2003-chuck/"
     }
   ],
   "tasks": [
