@@ -1,5 +1,5 @@
 ---
-description: Cross-program idioms and design patterns belong to "programmer language" (shared across programs), not "program language" (unique to each program); conflating them obscures what makes each program unique
+description: Cross-program idioms belong to "programmer language" (shared conventions); "program language" is unique to each program; DSLs create programmer language but their users still develop unique program languages
 type: claim
 evidence: moderate
 source: [[baniassad-myers-2009-program-as-language]]
