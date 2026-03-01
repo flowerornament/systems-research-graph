@@ -62,6 +62,7 @@ Programming language design research for murail. Covers rate type systems, typed
 
 ## Source References
 - [[leijen-algebraic-effects]] -- primary source for the algebraic effects cluster: Koka language, row-typed effect system, selective CPS translation, and effect handler compilation strategies
+- [[leijen-2016-algebraic-effects-tr]] -- 2016 technical report version with full proofs, open/close type rules, trampoline runtime detail, domain-specific effect examples (parser combinators), and deep vs shallow handler semantics
 - [[llvm-creator-interview-chris-lattner]] -- Chris Lattner interview covering LLVM origins, Swift's development history (source incompatibility decisions, progressive disclosure collapse), and Mojo's design philosophy; primary source for Lattner-attributed claims
 
 ---
