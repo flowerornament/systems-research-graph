@@ -11,6 +11,12 @@ How the tools, models, and feedback loops of a programming environment shape wha
 
 - [[creative-workflow-friction-should-determine-audio-engine-architecture]] -- each of McCartney's innovations traces to a specific felt friction in creative practice; the design method: test every architectural decision against "does this create friction in the creative loop?"
 
+## Live coding and always-running programs
+
+- [[typed-holes-allow-incomplete-audio-programs-to-remain-running-by-substituting-silence-rather-than-failing-compilation]] -- Hazel's typed-hole semantics applied to audio: unfinished signal paths produce silence rather than compilation errors; fill-and-resume triggers incremental recompilation, turning the edit-compile-swap cycle into a continuous always-running experience
+- [[quantizing-live-code-swaps-to-musical-temporal-boundaries-makes-changes-deterministic-and-musically-predictable]] -- Sonic Pi's temporal quantization: code changes take effect at the next beat/bar boundary, making live hot-swap musically intentional; the composition language should expose this as a first-class mechanism
+- [[kolmogorov-complexity-provides-a-measurable-criterion-for-composition-language-design-quality]] -- a measurable, not just subjective, criterion for composition language quality: common musical patterns should be expressible in fewer or equal characters than SuperCollider or Tidal Cycles
+
 ## Feedback loops and programming models
 
 - [[batch-processing-incurs-avoidable-cognitive-overhead]] -- the compile-run cycle forces developers to emulate the machine in their heads; murail's compile-and-swap partially breaks this pattern
