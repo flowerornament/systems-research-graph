@@ -34,3 +34,5 @@ The state region is the structural foundation that makes the entire real-time gu
 - The no-allocation constraint is the operational content of [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]]
 - Live editing works by maintaining two copies of this region (see [[atomic-swap-enables-program-updates-at-tick-granularity-without-output-gaps]])
 - [[cache-hierarchical-hardware-makes-linked-lists-slower-than-arrays-for-most-practical-sizes]] explains why contiguous layout matters for cache performance
+- [[audio-system-os-calls-violate-real-time-constraints-through-unpredictable-lock-acquisition-and-page-faults]] provides the foundational rationale for why pre-allocation is necessary: OS allocator calls have unbounded latency due to lock acquisition, priority inversion, and page faults
+- [[real-time-safe-memory-strategies-form-a-spectrum-from-up-front-fixed-allocation-to-incremental-gc]] places murail's strategy in a design space: the single contiguous region is up-front fixed allocation taken to the whole-program level
