@@ -41,6 +41,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[swift-to-mojo-chris-lattner]] -- Chris Lattner, Pragmatic Engineer podcast: LLVM origins, Swift development history, Mojo design philosophy, AI hardware stack fragmentation, sufficiently smart compiler critique, adoption dynamics
 - [[iverson-1980-notation-as-tool-of-thought]] -- Kenneth Iverson, 1979 Turing Award lecture: notation as a tool of thought, APL, executability combined with mathematical suggestivity, economy of notation, subordination of detail
 - [[naur-1985-programming-as-theory-building]] -- Peter Naur, 1985: programming as theory-building activity, not text production; tacit knowledge transfer, revival degradation, documentation limits
+- [[baniassad-myers-2009-program-as-language]] -- Baniassad & Myers (OOPSLA 2009): program as language thesis; each program defines a unique program-specific language; programming is language creation; program understanding is language learning; extends Naur 1985 with a linguistic framework
 
 ## Orientation
 - ops/goals.md -- current active threads
