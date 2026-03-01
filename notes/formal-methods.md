@@ -39,6 +39,13 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[propagator-cells-hold-partial-information-that-accumulates-monotonically]] -- cells hold information about values (not values), accumulating monotonically; enables redundant paths and graceful degradation in murail's graph model
 - [[truth-maintenance-systems-enable-locally-consistent-reasoning-in-an-inconsistent-knowledge-base]] -- TMSs maintain multiple locally consistent worldviews; relevant to tracking which physical model assumptions underlie a computed audio result
 - [[dependency-directed-backtracking-prunes-search-using-provenance-rather-than-recency]] -- provenance-driven backtracking is more efficient than chronological; relevant if murail's compiler performs constraint-based scheduling
+- [[murails-rate-inference-is-a-monotone-propagator-network-and-therefore-converges-to-a-unique-fixpoint]] -- Radul's convergence theorem applies directly: the rate lattice is a join-semilattice, rate-combining is monotone, so rate inference terminates uniquely regardless of node traversal order; extends to all monotone computations over the rate lattice
+- [[lattice-monotone-graph-operators-are-provably-confluent-enabling-safe-graph-transformation-without-global-locking]] -- Hydroflow proves: if operators are monotone on join-semilattices, any transformation preserving monotonicity is semantically valid regardless of evaluation order; validates the lattice-theoretic foundation for provably correct graph optimization
+
+### Verification and Type Systems for RT Code
+- [[linear-types-can-make-audio-buffer-management-errors-type-errors-rather-than-runtime-bugs]] -- audio buffers are use-exactly-once resources; linear types guarantee write-before-read and no-double-write as compile-time checks rather than runtime assertions; Li et al. 2022 demonstrate this at real system scale in Rust
+- [[effects-as-capabilities-can-encode-rt-safety-requirements-in-the-composition-language-type-system]] -- RT functions lacking I/O and allocation capability tokens are statically guaranteed RT-safe; a lighter-weight approach than full algebraic effects for the RT-safety use case specifically
+- [[denotational-semantics-define-the-correctness-criterion-for-graph-optimization-two-programs-are-equivalent-iff-they-denote-the-same-mathematical-function]] -- two programs are equivalent iff they denote the same function on signal sequences; the correctness criterion for graph rewrite rules that semantic verification must satisfy
 
 ### Guarded Domain Theory (Birkedal et al. 2012) -- [[birkedal-2012-guarded-domain-theory]]
 
