@@ -4,6 +4,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "baniassad-myers-2009-program-as-language-extract",
+      "batch": "baniassad-myers-2009-program-as-language",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/references/papers/archive/baniassad-myers-2009-program-as-language/baniassad-myers-2009-program-as-language.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 245,
+      "claims_created": 8,
+      "enrichments": 2,
+      "connections_added": 22,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-03-01-baniassad-myers-2009-program-as-language/"
+    },
+    {
       "id": "pl-research-landscape-2026-02-27-extract",
       "batch": "pl-research-landscape-2026-02-27",
       "type": "extract",
