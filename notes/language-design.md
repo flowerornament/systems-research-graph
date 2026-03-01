@@ -23,6 +23,9 @@ Programming language design research for murail. Covers rate type systems, typed
 
 ## Claims
 
+### SuperCollider 1: Language-Synthesis Integration (McCartney 1996 ICMC)
+- [[scripting-and-synthesis-in-the-same-language-eliminates-the-boundary-between-composition-and-sound-design]] -- unifying the scripting and synthesis languages lets compositional algorithms directly parameterize synthesis, enabling granular synthesis at full expressive power; the design argument McCartney carries forward into tau5 and that SC3's client-server split (partially) reverts
+
 ### Interactive Programming and Batch Mode
 - [[batch-processing-incurs-avoidable-cognitive-overhead]] -- punch-card era compile-run separation imposes cognitive costs unrelated to the actual problem; murail's compile-and-swap partially addresses this
 - [[interactive-programming-eliminates-the-compile-run-cycle]] -- combining editor and running system produces preserved state, runtime introspection, and failure recovery; the ideal murail targets
