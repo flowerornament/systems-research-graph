@@ -23,3 +23,5 @@ The practical result: in Koka's standard library, type simplification (closing o
 Implication for [[language-design]] in murail: this is the compilation model required to make algebraic effects practical in a performance-sensitive context. An audio graph language's inner loops (buffer fills, sample arithmetic) must remain zero-overhead; effects (event scheduling, parameter updates, error handling) can absorb CPS cost at the boundary. The 80% reduction figure is encouraging for practical use.
 
 Connects to [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] -- the selectivity principle is similar: identify the boundary between effectful and total code structurally (via types), then apply expensive transformations only to the effectful part.
+
+The open/close type rules are what make the 80% reduction achievable: [[open-and-close-type-rules-preserve-completeness-while-simplifying-effect-polymorphic-types]] explains how closing open polymorphic effect types converts many higher-order functions to closed (total) types, which H(θ, ⟨⟩) = false then excludes from CPS translation entirely.
