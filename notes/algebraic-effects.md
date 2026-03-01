@@ -10,6 +10,9 @@ Algebraic effects as a language mechanism, drawn from Leijen's 2017 work and the
 
 ## Claims
 
+### Algebraic Effects for Murail
+- [[effects-as-capabilities-can-encode-rt-safety-requirements-in-the-composition-language-type-system]] -- value-level capability tokens for I/O and allocation; RT functions lacking these tokens are statically RT-safe; lighter-weight than full effect type systems for the RT-safety use case specifically
+
 ### Algebraic Effects (Leijen 2017, Koka)
 - [[algebraic-effects-unify-exceptions-state-iterators-and-async-under-a-single-abstraction]] -- one mechanism (effect handlers) subsumes exceptions, mutable state, iterators, async-await, and non-determinism; eliminates specialized language constructs and their interaction surface
 - [[effect-handlers-are-resumable-exceptions-that-capture-delimited-continuations]] -- operational semantics: three-way classification (no resume, tail resume, non-tail/multiple resume) determines compilation strategy and overhead
