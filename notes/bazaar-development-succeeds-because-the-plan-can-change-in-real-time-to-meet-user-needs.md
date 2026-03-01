@@ -1,5 +1,5 @@
 ---
-description: The bazaar development model's decisive advantage is not distributed labor or distributed design review but adaptability -- the plan changes in real time to match user needs, producing lasting user investment and buy-in
+description: The bazaar's decisive advantage over the cathedral is real-time plan adaptability to user needs, producing buy-in; requires a curator role, not just distributed contribution
 type: claim
 evidence: strong
 source: [[steele-1998-growing-a-language]]
