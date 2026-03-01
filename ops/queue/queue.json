@@ -4,6 +4,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "pl-research-landscape-2026-02-27-extract",
+      "batch": "pl-research-landscape-2026-02-27",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/murail/.design/synthesis/pl-research-landscape-2026-02-27.md",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 230,
+      "claims_created": 15,
+      "enrichments": 0,
+      "connections_added": 42,
+      "topic_maps_updated": 5,
+      "existing_claims_updated": 0,
+      "archive": "ops/queue/archive/2026-03-01-pl-research-landscape-2026-02-27/"
+    },
+    {
       "id": "birkedal-2016-guarded-cubical-type-theory-extract",
       "batch": "birkedal-2016-guarded-cubical-type-theory",
       "type": "extract",
