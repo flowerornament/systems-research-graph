@@ -13,6 +13,15 @@ Algebraic effects as a language mechanism, drawn from Leijen's 2017 work and the
 ### Algebraic Effects for Murail
 - [[effects-as-capabilities-can-encode-rt-safety-requirements-in-the-composition-language-type-system]] -- value-level capability tokens for I/O and allocation; RT functions lacking these tokens are statically RT-safe; lighter-weight than full effect type systems for the RT-safety use case specifically
 
+### Algebraic Effects -- Foundations (Plotkin & Pretnar 2009)
+- [[handling-a-computation-is-composing-it-with-the-unique-free-model-homomorphism]] -- the central semantic insight: handling = composing with the unique homomorphism from the free model to a programmer-defined model; explains why all handlers are instances of the same algebraic fold
+- [[algebraic-operations-and-effect-handlers-are-categorically-dual-as-constructors-and-deconstructors]] -- operations are effect constructors (intro rules building up the free model); handlers are effect deconstructors (elim rules folding down via homomorphism); the intro/elim duality of type theory
+- [[continuations-are-the-only-standard-computational-effect-that-cannot-be-represented-algebraically]] -- all standard effects (exceptions, state, I/O, concurrency, nondeterminism, time) have free-model representations except continuations, which cannot be algebraically characterized
+- [[separating-handler-description-from-computation-prevents-correctness-wellformedness-circularity]] -- two-language design: handler correctness (satisfying algebraic equations) is checked once at the meta-level; computation language trusts named handlers without re-verifying equations at each use
+- [[parallel-composition-cannot-be-expressed-as-an-effect-handler-because-it-requires-folding-two-structures-simultaneously]] -- CCS parallel and Unix pipe require coordinating two simultaneous computations; the unary fold of handlers can only process one structure at a time
+- [[parameter-passing-handlers-simulate-stateful-handling-by-threading-state-through-operation-continuations]] -- handlers on function types σ → χ thread state parameters through operation continuations without requiring a separate state effect; timeout, input redirection, and rollback are concrete instances
+- [[rollback-is-encodable-as-an-effect-handler-that-threads-a-revert-function-through-state-operations]] -- transactional rollback accumulates a composed revert function through each state operation; exception fires the accumulated undo log; pure functional encoding of two-phase commit
+
 ### Algebraic Effects (Leijen 2017, Koka)
 - [[algebraic-effects-unify-exceptions-state-iterators-and-async-under-a-single-abstraction]] -- one mechanism (effect handlers) subsumes exceptions, mutable state, iterators, async-await, and non-determinism; eliminates specialized language constructs and their interaction surface
 - [[effect-handlers-are-resumable-exceptions-that-capture-delimited-continuations]] -- operational semantics: three-way classification (no resume, tail resume, non-tail/multiple resume) determines compilation strategy and overhead
