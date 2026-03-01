@@ -109,6 +109,7 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 
 ## Source References
 - [[mccartney-1996-supercollider-icmc]] -- McCartney's 1996 ICMC paper: SC1 architecture, signal-buffer type, closures-as-UGens, RT GC, and synthesis-function specialization by input rate; the primary published source for SC1 design decisions
+- [[wang-cook-2003-chuck]] -- Wang & Cook 2003 ICMC paper introducing ChucK; primary source for suspended-animation timing, shreds, dynamic control rate, and on-the-fly assimilation claims
 
 
 - [[dannenberg-bencina-2005-design-patterns-real-time-computer-music]] -- six applied RT patterns for computer music; Synchronous Dataflow Graph pattern provides the formal rationale for cached evaluation order and its relationship to compile-and-swap; Accurate Timing and Event Buffers patterns are the temporal accuracy stack
