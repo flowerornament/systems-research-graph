@@ -42,6 +42,9 @@ Algebraic effects as a language mechanism, drawn from Leijen's 2017 work and the
 - [[a-trampoline-runtime-implements-tail-resumption-as-a-loop-eliminating-stack-growth-for-effect-handlers]] -- handler stack as trampolining loop enables proper tail calls without native stack manipulation on any target platform
 - [[effect-type-absence-is-a-proof-of-non-interference]] -- a function typed with an empty effect row is statically proved to not invoke any user-defined effect; non-throwing guarantee is machine-checked, not convention
 
+## Source References
+- [[plotkin-pretnar-2009-handlers-of-algebraic-effects]] -- original 2009 paper introducing handlers for algebraic effects as free-model homomorphisms; establishes the two-language design, identifies continuations as the one non-algebraic effect, and demonstrates rollback, CCS renaming, timeout, and I/O redirection as handler instances
+
 ---
 
 Topics:
