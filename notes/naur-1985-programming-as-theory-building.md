@@ -32,3 +32,7 @@ Programs are not text artifacts; they are expressions of programmer-held theorie
 ## Context in the knowledge graph
 
 Naur 1985 is foundational for the developer experience thread. It is cited by or connects to claims about vibe coding, interactive programming, documentation practices, and audio education. It provides the theoretical grounding for why the knowledge graph's rationale-first design matters.
+
+## Extension: Baniassad & Myers 2009
+
+[[baniassad-myers-2009-program-as-language]] explicitly extends Naur by providing a linguistic framework. They argue that program languages are the medium through which theories are (partially) communicated: [[program-languages-communicate-naurs-theories-through-identifier-choice-idioms-and-abstraction-organization]]. Where Naur shows theories cannot be fully communicated, Baniassad & Myers characterize what *is* communicated and how.
