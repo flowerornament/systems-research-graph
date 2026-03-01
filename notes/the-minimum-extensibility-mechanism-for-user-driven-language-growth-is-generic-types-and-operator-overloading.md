@@ -1,5 +1,5 @@
 ---
-description: Steele argues that adding generic types, user-defined operator overloading, and lightweight value types to Java would unlock all user-defined numeric and collection types without requiring language-level additions for each
+description: Generic types, operator overloading, and value types are the minimal mechanism set that lets user-defined numeric and collection types be syntactically indistinguishable from Java built-ins
 type: claim
 evidence: strong
 source: [[steele-1998-growing-a-language]]
