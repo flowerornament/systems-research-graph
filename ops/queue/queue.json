@@ -4,6 +4,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "mccartney-1996-supercollider-icmc-extract",
+      "batch": "mccartney-1996-supercollider-icmc",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/mccartney-1996-supercollider-icmc/mccartney-1996-supercollider-icmc.md",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "claims_created": 5,
+      "enrichments": 5,
+      "connections_added": 22,
+      "topic_maps_updated": 3,
+      "existing_claims_updated": 5,
+      "archive": "ops/queue/archive/2026-03-01-mccartney-1996-supercollider-icmc/"
+    },
+    {
       "id": "bencina-real-time-audio-programming-101-extract",
       "batch": "bencina-real-time-audio-programming-101",
       "type": "extract",
