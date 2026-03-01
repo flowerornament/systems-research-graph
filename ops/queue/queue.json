@@ -4,6 +4,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "steele-1998-growing-a-language-extract",
+      "batch": "steele-1998-growing-a-language",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/steele-1998-growing-a-language/steele-1998-growing-a-language.md",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 253,
+      "claims_created": 9,
+      "enrichments": 2,
+      "connections_added": 18,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 1,
+      "archive": "ops/queue/archive/2026-03-01-steele-1998-growing-a-language/"
+    },
+    {
       "id": "wadler-1998-expression-problem-extract",
       "batch": "wadler-1998-expression-problem",
       "type": "extract",
