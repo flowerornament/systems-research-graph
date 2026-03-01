@@ -60,6 +60,16 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- visual cortex processes relational structure in parallel; text notation forces serial parsing; cyclic audio graphs are especially poorly served by linear text
 - [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- Sussman: expression trees have anonymous interior nodes; wiring diagrams name every wire, making each intermediate value addressable -- relevant to murail's audio graph DSL design
 
+### Program Language (Baniassad & Myers 2009)
+- [[each-program-defines-a-unique-program-specific-language-with-its-own-symbols-and-grammar]] -- every program is both definition and sole use of a language whose symbols are its abstractions and whose grammar is implicit combination rules; makes every codebase a language acquisition task
+- [[program-languages-bridge-the-gap-between-program-semantics-and-code-semantics]] -- the gap between what code means to humans (program semantics) and what it means to the machine (code semantics) is what program languages communicate; formalizing this gap into the programming language is the central DSL design task
+- [[higher-level-programming-languages-reduce-program-language-complexity-by-formalizing-more-constraints]] -- inverse relationship: more expressive programming languages leave less for informal program language; every type constraint added to the composition language is a rule that no longer degrades across programmers
+- [[reading-an-unfamiliar-codebase-is-language-learning-not-mere-symbol-lookup]] -- comprehending a new codebase requires learning its unique program language; explains the cognitive cost of onboarding and the failure mode of "revival by newcomers"
+- [[code-migration-between-programs-is-translation-between-distinct-natural-languages]] -- inter-program code copying requires semantic translation; false cognates (same identifier, different program-semantic content) cause silent corruption of meaning
+- [[program-languages-communicate-naurs-theories-through-identifier-choice-idioms-and-abstraction-organization]] -- extends Naur: naming, idiomatic patterns, and code organization are the specific textual mechanisms through which theories surface in text; connects theory-building to program-language structure
+- [[programmer-language-differs-from-program-language-cross-program-idioms-are-not-program-specific]] -- cross-program idioms and design patterns are "programmer language" (shared across programs); "program language" is unique to each program; DSLs create programmer language for a domain but programs written in them still develop unique program languages
+- [[programs-are-works-of-art-not-craft-because-they-define-their-own-interpretive-language]] -- artifacts that define their own interpretive language are art; those working within a pre-existing language are craft; programs are art, which explains why they resist full quantification and specification
+
 ## Open Questions
 - Can murail's graph compiler expose a query interface for inspecting running node states, approximating interactive programming without full image-based development?
 - Is there a structure editor approach for audio graph DSL authoring that handles cyclic topology better than linear text notation?
