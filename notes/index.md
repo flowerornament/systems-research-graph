@@ -42,6 +42,7 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 - [[iverson-1980-notation-as-tool-of-thought]] -- Kenneth Iverson, 1979 Turing Award lecture: notation as a tool of thought, APL, executability combined with mathematical suggestivity, economy of notation, subordination of detail
 - [[naur-1985-programming-as-theory-building]] -- Peter Naur, 1985: programming as theory-building activity, not text production; tacit knowledge transfer, revival degradation, documentation limits
 - [[baniassad-myers-2009-program-as-language]] -- Baniassad & Myers (OOPSLA 2009): program as language thesis; each program defines a unique program-specific language; programming is language creation; program understanding is language learning; extends Naur 1985 with a linguistic framework
+- [[wadler-1998-expression-problem]] -- Philip Wadler (1998): coined "The Expression Problem"; rows/columns duality between functional and OO paradigms; static-typing + independent-compilation constraint set; GJ solution via virtual type indexing and F-bounded polymorphism
 
 ## Orientation
 - ops/goals.md -- current active threads
