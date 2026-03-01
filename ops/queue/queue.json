@@ -595,6 +595,22 @@
       "topic_maps_updated": 3,
       "existing_claims_updated": 2,
       "archive": "ops/queue/archive/2026-03-01-wang-cook-2003-chuck/"
+    },
+    {
+      "id": "mclean-2014-making-programming-languages-to-dance-to-extract",
+      "batch": "mclean-2014-making-programming-languages-to-dance-to",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 350,
+      "claims_created": 9,
+      "enrichments": 2,
+      "connections_added": 31,
+      "topic_maps_updated": 4,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-03-01-mclean-2014-making-programming-languages-to-dance-to/"
     }
   ],
   "tasks": [
