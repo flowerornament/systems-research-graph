@@ -1,5 +1,5 @@
 ---
-description: Comprehending a new program requires learning its unique program language from scratch, not just knowing the underlying programming language; this explains why code comprehension is so cognitively demanding
+description: Comprehending a new program requires learning its unique program language from scratch; knowing the underlying programming language is necessary but not sufficient
 type: claim
 evidence: moderate
 source: [[baniassad-myers-2009-program-as-language]]
