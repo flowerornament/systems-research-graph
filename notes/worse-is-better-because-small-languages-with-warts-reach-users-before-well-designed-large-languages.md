@@ -1,5 +1,5 @@
 ---
-description: Gabriel's thesis endorsed by Steele: in a deployment race, a small deployable language with warts beats the technically superior large language that arrives late, because users will not wait and switching costs freeze early adopters in place
+description: Gabriel's thesis endorsed by Steele: the deployable small language with warts wins the race against the right-but-late large language; escape requires growable design, not perfect design
 type: claim
 evidence: strong
 source: [[steele-1998-growing-a-language]]
