@@ -26,6 +26,11 @@ Programming language design research for murail. Covers rate type systems, typed
 ### SuperCollider 1: Language-Synthesis Integration (McCartney 1996 ICMC)
 - [[scripting-and-synthesis-in-the-same-language-eliminates-the-boundary-between-composition-and-sound-design]] -- unifying the scripting and synthesis languages lets compositional algorithms directly parameterize synthesis, enabling granular synthesis at full expressive power; the design argument McCartney carries forward into tau5 and that SC3's client-server split (partially) reverts
 
+### ChucK: Operator Design and Live Coding (Wang & Cook 2003)
+- [[a-single-overloaded-operator-can-unify-assignment-signal-routing-and-synchronization-in-an-audio-language]] -- ChucK's `=>` operator unifies five distinct operations under one left-to-right construct; positive design constraint for murail's DSL (signal-routing legibility) with caveats about informal type-dispatch semantics
+- [[vm-based-audio-runtimes-trade-raw-performance-for-determinism-and-language-level-flexibility]] -- ChucK's VM positions itself opposite FAUST on the performance-expressiveness tradeoff; establishes the two endpoints of the design spectrum that murail's hybrid architecture attempts to bridge
+- [[live-assimilation-of-shreds-into-a-running-vm-enables-coding-composing-and-performing-as-a-single-activity]] -- ChucK collapses coding, composing, and performing into one activity via additive live coding; complements murail's substitutive compile-and-swap and typed holes approaches
+
 ### Interactive Programming and Batch Mode
 - [[batch-processing-incurs-avoidable-cognitive-overhead]] -- punch-card era compile-run separation imposes cognitive costs unrelated to the actual problem; murail's compile-and-swap partially addresses this
 - [[interactive-programming-eliminates-the-compile-run-cycle]] -- combining editor and running system produces preserved state, runtime introspection, and failure recovery; the ideal murail targets
