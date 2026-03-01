@@ -52,6 +52,9 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - [[memory-bandwidth-is-the-binding-constraint-for-audio-dsp-parallelism-on-smp-machines]] -- SMP parallelism bounded by memory bus; audio DSP often better served by SIMD than multi-threading; benchmarked across 3 machines with 7 DSP programs
 - [[faust-symbolic-propagation-normalizes-structurally-different-programs-that-compute-identical-functions]] -- symbolic propagation extracts mathematical equations from block-diagrams and normalizes them; structurally different programs with equivalent semantics produce identical compiled code
 
+### Synthesis Graph Architecture (Dannenberg & Bencina 2005)
+- [[caching-ugen-graph-evaluation-order-decouples-topology-modification-from-concurrent-execution]] -- caching the topological evaluation order in a flat list separates NRT topology modification from RT execution; the structural foundation that makes compile-and-swap possible; with graph coloring for buffer minimization
+
 ### Live Editing and Composition
 - [[typed-holes-allow-incomplete-audio-programs-to-remain-running-by-substituting-silence-rather-than-failing-compilation]] -- unfinished signal paths produce silence (or pass-through or freeze) rather than compilation errors, keeping the audio system alive during composition; fill-and-resume triggers incremental recompilation of only the affected subgraph
 - [[quantizing-live-code-swaps-to-musical-temporal-boundaries-makes-changes-deterministic-and-musically-predictable]] -- Sonic Pi's approach: code changes take effect at the next beat/bar/phrase boundary rather than immediately, making live hot-swap musically intentional rather than technically incidental
