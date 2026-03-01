@@ -18,3 +18,5 @@ The practical significance Leijen draws: "if a function does not have an `exc` e
 This contrasts with [[type-systems-have-not-empirically-reduced-defect-rates]] which argues empirically that type systems don't reduce ordinary programming defects. Algebraic effects address a different category: *coordination defects* (forgetting to handle a case) rather than ordinary logic bugs. The type-level guarantee is about interface completeness, not business logic correctness.
 
 For [[formal-methods]] in murail: this property is relevant if murail's composition language ever uses algebraic effects for resource management (audio device access, allocation budgets, timing guarantees). A well-typed composition would statically guarantee that every resource operation has a handler -- no unhandled resource access can slip through.
+
+The positive corollary is [[effect-type-absence-is-a-proof-of-non-interference]]: if an effect type is absent from a function's type, that function is proved to not invoke any operation from that effect. Together, the two lemmas make the effect type system a bidirectional resource accounting system.
