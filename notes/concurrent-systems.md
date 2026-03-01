@@ -18,6 +18,7 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 ## Claims
 
 ### Real-Time Thread Separation
+- [[thread-count-minimization-reduces-coordination-cost-but-requires-latency-partitioning-to-assign-tasks-to-threads]] -- Dannenberg & Bencina's Static Priority Scheduling pattern: minimize to 2-3 threads, assign tasks by latency requirement, verify feasibility analytically; the formal rationale for murail's binary fast/NRT split
 - [[static-thread-pool-decouples-neural-inference-from-the-audio-callback-to-ensure-real-time-safety]] -- anira's shared static ThreadPool removes inference engine code from the audio callback entirely; the static (not per-instance) design solves oversubscription when multiple neural effects run concurrently
 - [[hold-slots-prevent-fast-thread-blocking-on-slow-rate-values-without-locks]] -- the Murail substrate's mechanism for cross-rate reads: three lock-free protocols (atomic, sequence-counter, double-buffer) selected by data size; generalizes the hold semantics from ad-hoc practice to a formal substrate requirement
 - [[tick-boundary-precedence-is-a-substrate-requirement-not-an-implementation-suggestion]] -- hold-slot writes, data swaps, program swaps, TICK must execute in fixed order; this is the formal substrate requirement underlying the RT/NRT coordination contract
