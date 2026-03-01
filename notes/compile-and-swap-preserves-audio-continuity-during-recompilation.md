@@ -33,6 +33,8 @@ The Murail substrate formalizes this mechanism precisely in [[atomic-swap-enable
 
 ---
 
+The structural pattern — cache the evaluation order in a flat list, then swap atomically — is named explicitly in [[caching-ugen-graph-evaluation-order-decouples-topology-modification-from-concurrent-execution]] (Dannenberg & Bencina 2005): compile-and-swap is the full realization of the cached-evaluation-order variant of the Synchronous Dataflow Graph pattern.
+
 Topics:
 - [[audio-dsp]]
 - [[competing-systems]]
