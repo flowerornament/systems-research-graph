@@ -23,6 +23,6 @@ The paper identifies the specific mechanisms:
 
 The connection to Naur is direct: these mechanisms are what allows the theory to partially survive documentation and turnover. A programmer learning the program language is inductively reconstructing the theory from its textual traces. This process succeeds partially when the program language is coherent (the theory was held well) and fails more when the program language is incoherent (multiple theories, accumulated without reconciliation).
 
-For this knowledge graph: the wiki-link structure, claim naming, and topic map organization constitute this vault's program language. The theory of the murail research is communicated through the choice of which claims to extract, how they are titled, and how they link. [[CLAUDE.md]] is the explicit grammar; the notes/ directory is the language itself.
+For this knowledge graph: the wiki-link structure, claim naming, and topic map organization constitute this vault's program language. The theory of the murail research is communicated through the choice of which claims to extract, how they are titled, and how they link. `CLAUDE.md` is the explicit grammar; the notes/ directory is the language itself.
 
 Connects forward to [[reading-an-unfamiliar-codebase-is-language-learning-not-mere-symbol-lookup]]: language learning works precisely because these mechanisms are systematic. Also connects to [[no-documentation-can-substitute-for-the-programmer-held-theory]]: these mechanisms communicate the theory's surface, not the theory itself.
