@@ -1,5 +1,5 @@
 ---
-description: ChucK shreds are user-space cooperative threads that yield only via the timing mechanism, making their execution order globally deterministic and synchronization possible through shared time rather than OS primitives
+description: ChucK shreds are non-preemptive user-space processes that yield only via the timing mechanism, making execution globally deterministic and synchronization implicit through shared time
 type: decision
 evidence: strong
 source: [[wang-cook-2003-chuck]]
