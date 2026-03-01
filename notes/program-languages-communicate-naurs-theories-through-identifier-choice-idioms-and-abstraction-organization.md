@@ -1,5 +1,5 @@
 ---
-description: Baniassad extends Naur by identifying the specific textual mechanisms through which programmer theories are communicated: abstraction naming, idiomatic patterns, and code organization constitute the program language
+description: Abstraction naming, idiomatic patterns, and code organization are the specific textual mechanisms through which programmer theories surface; extends Naur with a linguistic account
 type: claim
 evidence: moderate
 source: [[baniassad-myers-2009-program-as-language]]
