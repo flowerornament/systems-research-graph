@@ -23,6 +23,12 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[tick-boundary-precedence-is-a-substrate-requirement-not-an-implementation-suggestion]] -- hold-slot writes, data swaps, program swaps, TICK must execute in fixed order; this is the formal substrate requirement underlying the RT/NRT coordination contract
 - [[the-murail-fast-thread-never-halts-errors-degrade-quality-but-do-not-stop-evaluation]] -- output continuity as an axiom: the substrate formally specifies which error conditions must degrade gracefully vs. block; the `flag` overflow policy is excluded because it violates this axiom
 
+### RT Safety and Glitch Freedom
+- [[glitch-free-parameter-propagation-requires-topological-ordering-combined-with-per-node-version-counters-not-global-locks]] -- REScala's proof: topological propagation plus per-node version counters achieves glitch-freedom without global locks; the propagation ordering is the same topological ordering the audio scheduler already computes (D11)
+- [[lattice-monotone-graph-operators-are-provably-confluent-enabling-safe-graph-transformation-without-global-locking]] -- Hydroflow: if operators are monotone on join-semilattices, the result is independent of evaluation order; concurrent RT and NRT operations on lattice-valued computations cannot produce conflicting results regardless of scheduling
+- [[linear-types-can-make-audio-buffer-management-errors-type-errors-rather-than-runtime-bugs]] -- linear typing of audio buffers enforces write-before-read and no-aliasing statically; closes the gap between Rust's memory safety and full functional correctness of the buffer management protocol (D50)
+- [[stable-node-identities-enable-adapton-style-incremental-recompilation-where-only-affected-subgraphs-are-recompiled]] -- slotmap NodeIds (D51) are the first-class names Nominal Adapton requires; incremental recompilation triggered by edit transactions (Definition 14.1) reduces Deep service level latency from graph-size-bound to edit-size-bound
+
 ### Concurrency Models
 - [[erlang-actor-model-enables-safe-process-kill]] -- shared-nothing actors with supervisor trees allow killing any process without lock leaks; the RT-node replacement analog in murail
 - [[clojure-csp-channels-sacrifice-introspectability]] -- CSP channels compiled as macros lose channel depth and goroutine state from the runtime; inspectable NRT vs opaque RT as design principle
