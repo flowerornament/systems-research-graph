@@ -96,6 +96,7 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - Can incremental recompilation (Adapton-style, via stable slotmap IDs) bring the Deep service level from graph-size-bound to edit-size-bound? What would the memoization table look like -- per-compilation-phase or per-subgraph?
 
 ## Source References
+- [[dannenberg-bencina-2005-design-patterns-real-time-computer-music]] -- six applied RT patterns for computer music; Synchronous Dataflow Graph pattern provides the formal rationale for cached evaluation order and its relationship to compile-and-swap; Accurate Timing and Event Buffers patterns are the temporal accuracy stack
 - [[pl-research-landscape-2026-02-27]] -- survey of PL research (OOPSLA/SPLASH/Strange Loop 2015-2025) covering equality saturation, partial evaluation for DSP, incremental compilation, dataflow confluency, live programming, and symbolic-numeric compilation; primary source for graph-IR and compilation claims in this map
 
 ---
