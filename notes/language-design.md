@@ -56,6 +56,15 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[incremental-migration-between-languages-requires-binary-level-interoperability-not-just-semantic-compatibility]] -- Swift/ObjC, C/C++, Python/Mojo coexistence: whole-ecosystem transitions fail; class-by-class migration succeeds
 - [[source-incompatibility-as-explicit-commitment-converts-forced-migration-to-opt-in-experiment]] -- explicitly declaring instability removes executive trap-risk and makes early adoption voluntary; the "relief valve" principle
 
+### The Expression Problem (Wadler 1998)
+- [[the-expression-problem-names-the-tension-between-adding-new-cases-and-new-operations-without-recompiling]] -- Wadler 1998: the canonical formulation; extending a datatype with new cases and new operations without recompiling and without casts is the central tension in language-level extensibility
+- [[functional-languages-fix-rows-oo-languages-fix-columns-in-the-expression-problem-table]] -- cases are rows, operations are columns; each paradigm makes one dimension easy and the other hard; murail needs both dimensions to grow independently
+- [[the-expression-problem-requires-static-type-safety-and-independent-compilation-simultaneously]] -- these two constraints together exclude all prior solutions; Wadler's GJ approach is the first satisfying both via general-purpose mechanisms
+- [[virtual-type-indexing-solves-the-expression-problem-by-allowing-subclasses-to-refer-to-sibling-types-in-their-bound]] -- the GJ mechanism that lets `This.Exp` and `This.Visitor` refer to sibling types in the type bound; the key insight enabling co-evolution of mutually recursive type families
+- [[the-thistype-trick-provides-accurate-static-typing-in-the-presence-of-subtypes-by-bounding-the-type-parameter-on-itself]] -- F-bounded polymorphism (`LangF<This extends LangF<This>>`) provides covariant return types; Rust's `Self` is the native spelling
+- [[fixpoint-classes-tie-the-knot-after-open-recursive-parameterized-families-to-produce-closed-usable-types]] -- `final class Lang extends LangF<Lang>` closes the open recursion; fixpoint classes are the Y combinator of class hierarchies
+- [[the-visitor-pattern-solves-the-operations-dimension-of-the-expression-problem-but-not-the-cases-dimension]] -- Extended Visitor adds new operations without modification but requires dynamic casts or recompilation to add new cases; statically typed solutions require the full GJ mechanism
+
 ### Representation
 - [[visual-representation-exposes-structure-text-notation-obscures]] -- visual cortex processes relational structure in parallel; text notation forces serial parsing; cyclic audio graphs are especially poorly served by linear text
 - [[wiring-diagram-notation-names-every-intermediate-value-enabling-inspection-and-reuse]] -- Sussman: expression trees have anonymous interior nodes; wiring diagrams name every wire, making each intermediate value addressable -- relevant to murail's audio graph DSL design
