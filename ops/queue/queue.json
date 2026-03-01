@@ -1,16 +1,6 @@
 {
   "schema_version": 3,
-  "queue": [
-    {
-      "id": "wadler-1998-expression-problem-extract",
-      "batch": "wadler-1998-expression-problem",
-      "type": "extract",
-      "status": "pending",
-      "source": "/Users/morgan/code/arscontextica/inbox/archive/wadler-1998-expression-problem/wadler-1998-expression-problem.md",
-      "created": "2026-03-01",
-      "next_claim_start": 253
-    }
-  ],
+  "queue": [],
   "processing": [],
   "completed": [
     {
