@@ -85,6 +85,18 @@ Programming language design research for murail. Covers rate type systems, typed
 - Universal auto-mapping (every function, McCartney) vs. explicit set-lifting (`f {a,b,c}`, current Murail language design context) -- which scope is right for Murail's audience?
 - If the composition language (Stage 9) adopts persistent immutable data structures, how does McCartney's flexible class model (classes as type tags, not structure constraints) interact with Rust's strict struct layout requirements?
 - What compatibility classes should murail define for its graph compiler? Which behaviors are guaranteed, version-gated, and explicitly unspecified? (See [[observable-semantics-lock-in-implementation-details-and-block-optimization]])
+- What is the minimum mechanism set that allows murail's composition language to grow via user contribution? Does it satisfy [[user-defined-extensions-must-be-syntactically-indistinguishable-from-built-in-primitives]]?
+
+### Growing a Language (Steele 1998)
+- [[a-language-must-be-designed-to-grow-not-to-be-complete]] -- Steele's OOPSLA 1998 central thesis: neither small nor large is right; design for growth as a first-class requirement, since no language can be designed complete up front for modern user needs
+- [[user-defined-extensions-must-be-syntactically-indistinguishable-from-built-in-primitives]] -- the "no seams" criterion for user-driven language growth: if user-defined operations look different from built-ins, users cannot grow the language and distributed innovation stalls
+- [[apl-failed-to-grow-because-user-defined-and-built-in-operations-have-different-surface-syntax]] -- the negative case: APL's glyph/identifier asymmetry locked evolution to source-code holders; the seam between user and built-in syntax is what killed distributed contribution
+- [[lisp-succeeded-at-user-driven-growth-because-user-definitions-are-syntactically-primitive]] -- the positive case: Lisp's bidirectional indistinguishability (user-defined looks like built-in and vice versa) enabled the designer to grow the language by curating user contributions rather than writing everything
+- [[the-minimum-extensibility-mechanism-for-user-driven-language-growth-is-generic-types-and-operator-overloading]] -- Steele's concrete proposal: add generic types + user-defined operator overloading + value types to Java; these three mechanisms unlock all user-defined numeric and collection types without requiring language-level additions per type
+- [[language-design-is-now-designing-a-pattern-for-language-designs-not-a-language]] -- the meta-claim: language design must go one level up; design a pattern for language designs (a meta-pattern with slots for user choices) rather than a complete language object
+- [[a-good-programmer-builds-a-working-vocabulary-not-just-programs]] -- programming at scale is inseparable from language design; a million-line program is necessarily a new language built on the base, and good programmers recognize and act on this
+- [[worse-is-better-because-small-languages-with-warts-reach-users-before-well-designed-large-languages]] -- Gabriel's thesis endorsed by Steele: the deployable small language wins the race against the well-designed late one; the escape is not perfect design but growable design
+- [[bazaar-development-succeeds-because-the-plan-can-change-in-real-time-to-meet-user-needs]] -- the bazaar model's decisive advantage is adaptability (plan changes in real time) and user buy-in, not just distributed labor; requires a curator who can make and ship decisions quickly
 
 ## Source References
 - [[leijen-algebraic-effects]] -- primary source for the algebraic effects cluster: Koka language, row-typed effect system, selective CPS translation, and effect handler compilation strategies
