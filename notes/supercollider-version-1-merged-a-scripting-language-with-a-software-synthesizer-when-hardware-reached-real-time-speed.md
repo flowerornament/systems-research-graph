@@ -18,3 +18,5 @@ This origin narrative establishes that SuperCollider was not designed top-down f
 McCartney had also tried two earlier scripting language experiments before Pyrite: "Xcode" (a C-like scripting language he found insufficiently flexible) and "Script" (a cryptic score language he used with a Nintendo Power Glove for algorithmic live performance with semi-random score trees). Pyrite was the third attempt -- motivated by wanting closures and first-class list operations that neither Xcode nor Script provided.
 
 Contrast with [[eliminating-unit-generators-exposes-synthesis-graphs-to-cross-boundary-compiler-optimization]] -- SC1 assembled a scripting language over pre-written synth code; McCartney's new system eliminates that assembly boundary entirely, making UGens library functions over four primitive node types.
+
+The published record of SC1's architecture is [[mccartney-1996-supercollider-icmc]], which documents the signal-buffer amortization mechanism, closure-based UGens, RT GC, and the composition/synthesis integration argument from the primary source.
