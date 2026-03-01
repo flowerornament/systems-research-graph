@@ -24,3 +24,5 @@ The claim directly challenges the "if it's documented it's maintainable" assumpt
 Extends [[debuggability-is-more-valuable-than-correctness-by-construction]] by explaining *why* specs are always wrong: they are attempts to articulate theory that is inherently tacit. Relates to [[evolvability-requires-trading-provability-for-extensibility]] by adding a social dimension: evolvability requires that the *theory* be transferable, not just that the specification be extensible.
 
 See also [[interactive-programming-eliminates-the-compile-run-cycle]]: interactive systems preserve more state and more runtime context than batch systems, reducing the theory-text gap.
+
+Baniassad & Myers (OOPSLA 2009) extend this claim linguistically: [[program-languages-communicate-naurs-theories-through-identifier-choice-idioms-and-abstraction-organization]]. Their contribution is identifying the specific textual mechanisms (naming, idioms, abstraction organization) through which theories partially surface in text -- not contradicting Naur's tacitness claim, but characterizing what the precipitate looks like. See [[baniassad-myers-2009-program-as-language]].
