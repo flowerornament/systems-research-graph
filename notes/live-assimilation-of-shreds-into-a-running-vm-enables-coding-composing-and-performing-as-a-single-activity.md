@@ -1,5 +1,5 @@
 ---
-description: ChucK's on-the-fly programming model lets performers add, modify, or remove code while audio is running by assimilating new shreds into the live VM, collapsing the distinction between coding, composing, and performing
+description: ChucK assimilates new shreds into a running VM without stopping audio, collapsing coding, composing, and performing into one activity via additive rather than substitutive live modification
 type: claim
 evidence: strong
 source: [[wang-cook-2003-chuck]]
