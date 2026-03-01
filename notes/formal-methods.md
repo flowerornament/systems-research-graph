@@ -30,6 +30,8 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 
 ### Effect Type Soundness
 - [[well-typed-algebraic-effect-programs-cannot-invoke-unhandled-operations]] -- Leijen's Lemma 4.b: effect types cannot be discarded except by handlers; every operation invocation in a well-typed program statically has a corresponding handler; soundness proof via subject reduction + faulty-not-typeable
+- [[effect-type-absence-is-a-proof-of-non-interference]] -- the positive corollary of Lemma 4.b: absent effect label proves the function cannot invoke any operation from that effect; machine-checked non-throwing, non-allocating, non-blocking guarantees
+- [[open-and-close-type-rules-preserve-completeness-while-simplifying-effect-polymorphic-types]] -- open/close rules are type-level coercions that simplify inferred types without restricting the set of typeable programs; completeness proof ensures no typeable programs are excluded
 - [[row-typed-effects-compose-freely-because-they-are-restricted-to-the-free-monad]] -- free monad restriction makes effect composition automatic and type-safe; relevant to modeling murail's resource effects (audio context, scheduling) as composable effects
 
 ### Propagator Model and Provenance
