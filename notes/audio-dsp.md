@@ -89,6 +89,11 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - What compile latency is realistic for primitive-level (non-UGen) graph IR? Cranelift < 1ms but poor optimization; LLVM 10-500ms with excellent optimization; McCartney's C-emit pipeline adds process overhead.
 - Conditional subgraphs: design them in at scheduler level now, or defer and risk redesign later? McCartney's multi-year struggle with event codegen suggests this is harder than it looks.
 - How should the audio graph handle the frame-rate to sample-rate boundary for neural network control signals? DDSP uses bilinear interpolation for f0, overlapping Hamming window envelopes for amplitudes -- are these the right primitives for murail's rate system?
+- Should the graph optimizer be built as an equality saturation engine over the formal model's algebraic spaces (Definition 7.1), or is construction-time optimization (current approach) sufficient? The e-graph approach eliminates the need to maintain termination proofs for 120+ rewrite rules.
+- Can incremental recompilation (Adapton-style, via stable slotmap IDs) bring the Deep service level from graph-size-bound to edit-size-bound? What would the memoization table look like -- per-compilation-phase or per-subgraph?
+
+## Source References
+- [[pl-research-landscape-2026-02-27]] -- survey of PL research (OOPSLA/SPLASH/Strange Loop 2015-2025) covering equality saturation, partial evaluation for DSP, incremental compilation, dataflow confluency, live programming, and symbolic-numeric compilation; primary source for graph-IR and compilation claims in this map
 
 ---
 
