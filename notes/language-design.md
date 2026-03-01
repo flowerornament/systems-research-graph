@@ -36,6 +36,13 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[dataflow-languages-lack-explicit-formal-semantics-making-program-behavior-engine-dependent]] -- Max/PD semantics hidden in the engine; formal semantics is the prerequisite for portable, preservable, embeddable programs
 - [[faust-compiler-discovers-parallelism-automatically-but-expressing-it-efficiently-remains-hard]] -- functional languages make parallelism detection trivial; generating efficient parallel code is hard and hardware-dependent
 
+### Composition Language Design
+- [[kolmogorov-complexity-provides-a-measurable-criterion-for-composition-language-design-quality]] -- Kolmogorov complexity of a musical idea expressed in Murail should be <= its complexity in SuperCollider or Tidal Cycles; if a common pattern requires more code, the language has a measurable design failure fixable with better abstractions
+- [[typed-holes-allow-incomplete-audio-programs-to-remain-running-by-substituting-silence-rather-than-failing-compilation]] -- Hazel's typed-hole semantics applied to audio: unfinished signal paths produce silence rather than compilation errors; turns the edit-compile-swap cycle into a continuous always-running experience
+- [[world-age-semantics-makes-live-operator-extension-safe-by-bounding-new-definitions-to-compilation-boundaries]] -- Julia's world-age: new operator definitions take effect at the next compilation boundary, not retroactively; gives well-defined semantics for live-coding environments where musicians define and redefine operators mid-session
+- [[quantizing-live-code-swaps-to-musical-temporal-boundaries-makes-changes-deterministic-and-musically-predictable]] -- musical time (beat, bar, phrase) not wall-clock time is the semantically meaningful swap boundary for audio code changes; Sonic Pi demonstrates that quantized hot-swap is both predictable and compositionally useful
+- [[effects-as-capabilities-can-encode-rt-safety-requirements-in-the-composition-language-type-system]] -- RT functions receive only the "pure computation" capability token; I/O and allocation capabilities are absent, making RT-safety a type guarantee rather than a code-review convention
+
 ### Language Design Tradeoffs
 - [[type-systems-have-not-empirically-reduced-defect-rates]] -- empirical studies find no reliable advantage of static types over fault-tolerant runtime designs for defect reduction
 - [[debuggability-is-more-valuable-than-correctness-by-construction]] -- because specs are always wrong and software is continuous change, live debugging outweighs static verification for most engineering work
