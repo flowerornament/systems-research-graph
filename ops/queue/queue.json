@@ -4,6 +4,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "wadler-1998-expression-problem-extract",
+      "batch": "wadler-1998-expression-problem",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/wadler-1998-expression-problem/wadler-1998-expression-problem.md",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 253,
+      "claims_created": 7,
+      "enrichments": 3,
+      "connections_added": 12,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-03-01-wadler-1998-expression-problem/"
+    },
+    {
       "id": "baniassad-myers-2009-program-as-language-extract",
       "batch": "baniassad-myers-2009-program-as-language",
       "type": "extract",
