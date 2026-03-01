@@ -36,6 +36,13 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[long-running-servers-require-continuity-oriented-programming-models]] -- servers with thousands-of-days uptime and GUIs violate the batch-mode input-output transformer model that mainstream languages optimize for
 - [[monotonic-information-cells-eliminate-synchronization-problems-in-parallel-propagator-networks]] -- Sussman/Radul: monotonic cell accumulation makes concurrent writes order-independent without locking; theoretical grounding for certain lock-free NRT-to-RT parameter update patterns
 
+### RT Principles and Failure Modes (Bencina 2011)
+- [[unbounded-execution-time-is-the-single-root-cause-of-all-audio-glitches-not-just-slowness]] -- Bencina's cardinal rule: glitches are caused by unpredictable execution time, not merely slow code; "if you don't know how long it will take, don't do it" is the unifying principle behind all specific RT prohibitions
+- [[priority-inversion-blocks-the-rt-thread-behind-a-lower-priority-task-on-general-purpose-oses]] -- the full three-step mechanism showing why mutexes are fatal in audio callbacks on general-purpose OSes, even with high-priority callback scheduling
+- [[real-time-audio-code-must-be-designed-for-worst-case-not-amortized-average-case-execution-time]] -- algorithms with O(1) amortized but O(n) worst-case complexity (e.g., std::vector::push_back on capacity exhaustion) are RT-unsafe despite appearing fast in testing
+- [[general-purpose-os-scheduler-interactions-from-the-rt-thread-have-hidden-priority-and-blocking-risks]] -- beyond mutexes, any OS synchronization call (condition variables, semaphores) may internally acquire locks with non-documented scheduler interactions
+- [[trylocks-cannot-guarantee-per-callback-resource-access-making-them-unsuitable-for-required-rt-operations]] -- trylocks avoid blocking but introduce guaranteed access failure under contention; only suitable for optional operations, not required per-callback state
+
 ### RT Memory and Communication Primitives (Dannenberg & Bencina 2005)
 - [[audio-system-os-calls-violate-real-time-constraints-through-unpredictable-lock-acquisition-and-page-faults]] -- OS allocator calls from the RT thread can acquire kernel locks, cause priority inversion, or trigger page faults; explains why the resource invariant (no allocation, no locks) is necessary rather than conventional
 - [[real-time-safe-memory-strategies-form-a-spectrum-from-up-front-fixed-allocation-to-incremental-gc]] -- five RT-safe memory strategies from preallocated free lists to incremental GC; murail uses up-front fixed allocation at the whole-program level via the state region Σ
