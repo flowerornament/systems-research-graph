@@ -37,6 +37,8 @@ The Murail substrate formalizes this mechanism precisely in [[atomic-swap-enable
 
 The structural pattern — cache the evaluation order in a flat list, then swap atomically — is named explicitly in [[caching-ugen-graph-evaluation-order-decouples-topology-modification-from-concurrent-execution]] (Dannenberg & Bencina 2005): compile-and-swap is the full realization of the cached-evaluation-order variant of the Synchronous Dataflow Graph pattern.
 
+McLean's [[live-coding-performance-requires-three-distinct-feedback-loops-that-together-define-being-in-time]] provides the user-facing explanation for why compile-and-swap's silence-elimination is not merely a convenience but a correctness requirement: the performance feedback loop (programmer <-> sound) must not be interrupted. Audio silence during recompilation is not just an annoyance -- it breaks the feedback loop that connects the programmer to the live moment and the audience. Compile-and-swap is the architectural mechanism that preserves this loop.
+
 Topics:
 - [[audio-dsp]]
 - [[competing-systems]]
