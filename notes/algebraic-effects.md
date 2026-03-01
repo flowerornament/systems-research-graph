@@ -22,6 +22,14 @@ Algebraic effects as a language mechanism, drawn from Leijen's 2017 work and the
 - [[well-typed-algebraic-effect-programs-cannot-invoke-unhandled-operations]] -- effect soundness: type system statically guarantees every operation invocation has a handler; eliminates runtime equivalent of unhandled exceptions
 - [[algebraic-effects-model-async-without-async-await-keywords-by-registering-the-continuation-as-a-callback]] -- handler registers resume continuation as OS callback; async-await as library code, not language syntax; multi-core OCaml uses this for concurrency
 
+### Algebraic Effects -- Type System and Compilation (Leijen 2016 TR)
+- [[open-and-close-type-rules-preserve-completeness-while-simplifying-effect-polymorphic-types]] -- open/close rules reduce 80% of stdlib functions to closed types without restricting typeable programs; completeness preserved by open re-introducing polymorphism at each use site
+- [[deep-handlers-differ-from-shallow-handlers-because-continuation-is-resumed-under-the-same-handler]] -- deep handlers fold over the full effect algebra by re-entering the same handler on each resume; shallow handlers do one fold level and the continuation escapes
+- [[algebraic-effects-implement-domain-specific-dsls-by-separating-the-operation-interface-from-evaluation-strategy]] -- the same effect program runs under different handlers giving different evaluation strategies; parser combinators as concrete example
+- [[multi-effect-composition-order-determines-state-scope-in-algebraic-effects]] -- outer-state/inner-amb gives shared state; inner-state/outer-amb gives per-branch state; both valid, both type-checked, semantics determined by nesting
+- [[a-trampoline-runtime-implements-tail-resumption-as-a-loop-eliminating-stack-growth-for-effect-handlers]] -- handler stack as trampolining loop enables proper tail calls without native stack manipulation on any target platform
+- [[effect-type-absence-is-a-proof-of-non-interference]] -- a function typed with an empty effect row is statically proved to not invoke any user-defined effect; non-throwing guarantee is machine-checked, not convention
+
 ---
 
 Topics:
