@@ -53,6 +53,19 @@ Formal methods research for murail. Covers the mathematical foundations of the f
 - [[a-model-of-higher-order-store-and-recursive-types-can-be-constructed-entirely-inside-the-internal-logic-of-the-topos-of-trees]] -- the Fµ,ref fundamental theorem is proved inside S's internal logic with only two explicit ✄ uses
 - [[the-guardedness-condition-on-recursive-definitions-is-the-proof-theoretic-analog-of-the-causality-condition-on-dependency-graphs]] -- ◮ guard (topos) and `@d` delay guard (Murail) are the same categorical principle at different scales; suggests a formal connection between Murail's compiler and guarded type theory
 
+### Guarded Cubical Type Theory (Birkedal et al. 2016) -- [[birkedal-2016-guarded-cubical-type-theory]]
+
+GCTT extends GDTT with path equality from cubical type theory, giving computational extensionality for guarded recursive types while preserving potential for decidable type-checking.
+
+- [[equality-reflection-in-gdtt-makes-type-checking-undecidable-while-path-equality-in-gctt-preserves-the-potential-for-decidability]] -- GDTT's equality reflection is the source of undecidability; GCTT replaces it with CTT path types, making type-checking potentially decidable without losing extensional reasoning
+- [[delayed-fixed-points-separate-path-equality-from-judgmental-equality-preventing-infinite-unfolding]] -- `dfix` produces a later term; fixed points are path-equal but not judgmentally equal to their unfoldings; canonical unfold lemma (Lemma 2) bridges the gap during proofs
+- [[path-extensionality-for-later-types-is-derivable-in-gctt-not-merely-axiomatized]] -- `λp.⟨i⟩ next [p'←p]. p' i` is the computational witness for extensionality of later types; structurally parallel to `funext` for function extensionality
+- [[gctt-semantics-requires-presheaves-over-the-product-of-the-cube-category-and-the-natural-numbers-poset]] -- C × ω combines cubical structure (path equality) with the topos of trees (later modality); neither factor alone suffices
+- [[the-later-type-former-must-preserve-composition-structures-for-gctt-to-be-semantically-sound]] -- Lemma 9 is the central technical challenge: ▷ξ.A inherits a composition structure from A via isomorphisms that commute ▷ with Π over ω-constant types
+- [[path-types-in-gctt-enable-proving-properties-of-guarded-recursive-programs-not-just-defining-them]] -- zipWith commutativity (Prop. 4) is the flagship example: Löb induction + path types + canonical unfold lemma together prove an extensional property of a guarded recursive stream function
+- [[guarded-recursive-types-with-negative-variance-are-well-founded-because-the-later-modality-breaks-the-polarity-cycle]] -- RecA = fix x.(▷x' → A) is well-founded; the guarded Y combinator is provably a fixed-point combinator (Prop. 5), not merely definable
+- [[gctt-excludes-clock-quantification-from-gdtt-making-coinductive-types-unrepresentable-as-first-class-types]] -- clock quantification (∀κ) is deferred to future work due to decidability and coherence problems; first-class coinductive types require clocks
+
 ### Murail Substrate: Calculus Properties (source -- [[murail-substrate-v3]])
 - [[guarded-self-reference-is-the-sole-mechanism-for-temporal-evolution-in-the-murail-calculus]] -- the `self@d` form is the only way a Murail equation can depend on its own past; all recurrence, memory, and feedback derive from this single primitive
 - [[the-causality-condition-requires-every-dependency-cycle-to-contain-a-delay-edge]] -- every cycle in G(P) must include at least one @d edge; this structural invariant makes the instantaneous-dependency subgraph a DAG and determines evaluation order by topological sort
