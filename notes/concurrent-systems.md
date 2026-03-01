@@ -36,6 +36,13 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 - [[long-running-servers-require-continuity-oriented-programming-models]] -- servers with thousands-of-days uptime and GUIs violate the batch-mode input-output transformer model that mainstream languages optimize for
 - [[monotonic-information-cells-eliminate-synchronization-problems-in-parallel-propagator-networks]] -- Sussman/Radul: monotonic cell accumulation makes concurrent writes order-independent without locking; theoretical grounding for certain lock-free NRT-to-RT parameter update patterns
 
+### RT Memory and Communication Primitives (Dannenberg & Bencina 2005)
+- [[audio-system-os-calls-violate-real-time-constraints-through-unpredictable-lock-acquisition-and-page-faults]] -- OS allocator calls from the RT thread can acquire kernel locks, cause priority inversion, or trigger page faults; explains why the resource invariant (no allocation, no locks) is necessary rather than conventional
+- [[real-time-safe-memory-strategies-form-a-spectrum-from-up-front-fixed-allocation-to-incremental-gc]] -- five RT-safe memory strategies from preallocated free lists to incremental GC; murail uses up-front fixed allocation at the whole-program level via the state region Σ
+- [[lock-free-queues-are-the-canonical-communication-primitive-between-real-time-and-non-real-time-threads]] -- the standard solution the computer music community converged on by 2005; five production systems (SC3, AudioMulch, JSyn, Aura, PortMIDI) as evidence; provides applied motivation for the lock-free theory in Fraser 2004
+- [[ideal-time-scheduling-anchors-event-sequences-to-desired-times-rather-than-actual-execution-times]] -- schedulers that track ideal wake-up times prevent error accumulation across event sequences even under CPU overload; the foundation of all computer music event scheduling
+- [[pre-computed-event-buffers-with-constant-time-offset-trade-added-latency-for-reduced-jitter]] -- computing events ahead of their delivery time and forwarding via a higher-priority channel reduces timing variance; block rendering is this pattern at sample granularity
+
 ### Lock-Free Systems (Fraser 2004)
 - [[existing-hardware-cas-primitives-suffice-for-practical-lock-free-data-structures]] -- CAS alone is sufficient for practical lock-free skip lists, BSTs, and red-black trees; refutes the assumption that DCAS or strong LL/SC is required
 - [[lock-freedom-guarantees-system-wide-progress-but-not-per-operation-progress]] -- lock-freedom ensures some operation always completes, not that any particular operation completes; the hierarchy: wait-freedom > lock-freedom > obstruction-freedom
