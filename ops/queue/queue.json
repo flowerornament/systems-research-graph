@@ -4,6 +4,21 @@
   "processing": [],
   "completed": [
     {
+      "id": "dannenberg-bencina-2005-design-patterns-real-time-computer-music-extract",
+      "batch": "dannenberg-bencina-2005-design-patterns-real-time-computer-music",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/dannenberg-bencina-2005-design-patterns-real-time-computer-music/dannenberg-bencina-2005-design-patterns-real-time-computer-music.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "claims_created": 7,
+      "enrichments": 3,
+      "connections_added": 26,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 3,
+      "archive": "ops/queue/archive/2026-03-01-dannenberg-bencina-2005-design-patterns-real-time-computer-music/"
+    },
+    {
       "id": "plotkin-pretnar-2009-handlers-of-algebraic-effects-extract",
       "batch": "plotkin-pretnar-2009-handlers-of-algebraic-effects",
       "type": "extract",
