@@ -116,6 +116,7 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[baniassad-myers-2009-program-as-language]] -- Baniassad & Myers (OOPSLA 2009): program as language thesis; program languages as informal grammars bridging program semantics and code semantics; uniqueness of program languages; programming as language creation; extends Naur 1985
 - [[wadler-1998-expression-problem]] -- Philip Wadler, 1998 email to java-genericity list: coined "The Expression Problem," defined the rows/columns duality, stated the static-typing + independent-compilation constraint set, and presented the first general-purpose GJ solution via virtual type indexing and F-bounded polymorphism
 - [[steele-1998-growing-a-language]] -- Guy Steele, OOPSLA 1998: language design as pattern for growth; no-seams extensibility criterion; APL vs Lisp case studies; "Worse is Better"; bazaar model; minimum extensibility mechanism set (generic types + operator overloading)
+- [[wang-cook-2003-chuck]] -- Wang & Cook 2003 ICMC: ChucK as audio language design case study; `=>` operator unification, suspended-animation timing model, shreds, and on-the-fly assimilation; primary source for ChucK design claims
 
 ---
 
