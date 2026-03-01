@@ -92,6 +92,7 @@ Programming language design research for murail. Covers rate type systems, typed
 - [[llvm-creator-interview-chris-lattner]] -- Chris Lattner interview covering LLVM origins, Swift's development history (source incompatibility decisions, progressive disclosure collapse), and Mojo's design philosophy; primary source for Lattner-attributed claims
 - [[pl-research-landscape-2026-02-27]] -- survey of OOPSLA/SPLASH/Strange Loop/ICFP/LambdaJam 2015-2025 research with direct relevance to Murail: equality saturation, staged compilation, incremental computation, algebraic effects, live programming, Julia dispatch, Kolmogorov complexity, denotational semantics
 - [[baniassad-myers-2009-program-as-language]] -- Baniassad & Myers (OOPSLA 2009): program as language thesis; program languages as informal grammars bridging program semantics and code semantics; uniqueness of program languages; programming as language creation; extends Naur 1985
+- [[wadler-1998-expression-problem]] -- Philip Wadler, 1998 email to java-genericity list: coined "The Expression Problem," defined the rows/columns duality, stated the static-typing + independent-compilation constraint set, and presented the first general-purpose GJ solution via virtual type indexing and F-bounded polymorphism
 
 ---
 
