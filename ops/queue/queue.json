@@ -4,6 +4,22 @@
   "processing": [],
   "completed": [
     {
+      "id": "plotkin-pretnar-2009-handlers-of-algebraic-effects-extract",
+      "batch": "plotkin-pretnar-2009-handlers-of-algebraic-effects",
+      "type": "extract",
+      "status": "done",
+      "source": "/Users/morgan/code/arscontextica/inbox/archive/plotkin-pretnar-2009-handlers-of-algebraic-effects/plotkin-pretnar-2009-handlers-of-algebraic-effects.pdf",
+      "created": "2026-03-01",
+      "completed": "2026-03-01",
+      "next_claim_start": 316,
+      "claims_created": 7,
+      "enrichments": 2,
+      "connections_added": 22,
+      "topic_maps_updated": 2,
+      "existing_claims_updated": 2,
+      "archive": "ops/queue/archive/2026-03-01-plotkin-pretnar-2009-handlers-of-algebraic-effects/"
+    },
+    {
       "id": "steele-1998-growing-a-language-extract",
       "batch": "steele-1998-growing-a-language",
       "type": "extract",
