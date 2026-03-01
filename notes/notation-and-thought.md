@@ -25,6 +25,10 @@ How notation shapes mathematical and computational reasoning. Draws primarily fr
 - [[clear-algorithms-are-the-necessary-foundation-for-efficient-ones]] -- clarity precedes efficiency; a clear algorithm is an executable specification from which efficient variants can be derived and tested
 - [[premature-efficiency-emphasis-creates-circular-language-hardware-codesign]] -- languages designed for current hardware and hardware designed for current languages create a lock-in ratchet preventing notation evolution
 
+### Language Ecosystem Growth (Steele 1998)
+- [[apl-failed-to-grow-because-user-defined-and-built-in-operations-have-different-surface-syntax]] -- Steele's post-mortem: APL's glyph/identifier asymmetry (notation-level seam) prevented user-driven growth; Iverson's notation economy argument and Steele's growth criterion are in direct tension
+- [[user-defined-extensions-must-be-syntactically-indistinguishable-from-built-in-primitives]] -- the no-seams criterion that Lisp satisfies and APL violates; notation matters for ecosystem growth, not just cognitive ergonomics
+
 ---
 
 Topics:
