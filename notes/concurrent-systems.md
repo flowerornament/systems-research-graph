@@ -93,6 +93,7 @@ Concurrency and real-time systems research for murail. Covers the NRT/RT thread 
 ## Source References
 - [[fraser-2004-practical-lock-freedom]] -- primary source for the lock-free data structures cluster: CAS-only construction, epoch-based reclamation, MCAS/STM performance, and linearisability as correctness criterion
 - [[dannenberg-bencina-2005-design-patterns-real-time-computer-music]] -- six applied RT patterns for computer music systems; provides the practitioner-level rationale for why OS calls, mutexes, and dynamic allocation are banned from the RT thread, and the canonical solution vocabulary
+- [[bencina-2011-real-time-audio-programming-101]] -- standalone web article synthesizing the RT audio rules with emphasis on the mechanisms: priority inversion mechanics, worst-case vs. average-case complexity, and scheduler paranoia; source of the "if you don't know how long it will take, don't do it" formulation
 
 ---
 
