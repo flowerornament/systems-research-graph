@@ -25,6 +25,8 @@ The comparison with [[faust-programs-denote-mathematical-functions-enabling-sema
 
 The VM performance penalty is bounded by the same insight that McCartney used in SC1: [[signal-buffers-as-a-type-amortize-interpreter-overhead-making-high-level-languages-viable-for-real-time-dsp]]. By processing audio in blocks rather than sample-by-sample, ChucK's VM pays its dispatch overhead once per block, not once per sample. Both SC1 and ChucK independently arrived at the buffer-as-dispatch-unit insight as the mechanism that makes high-level language semantics compatible with real-time audio performance.
 
+The determinism benefit is the flip side of the RT safety constraint that [[unbounded-execution-time-is-the-single-root-cause-of-all-audio-glitches-not-just-slowness]] states as a prohibition: by running computation inside a cooperative shred scheduler ([[user-space-cooperative-shreds-achieve-sample-accurate-deterministic-concurrency-without-os-scheduling]]) rather than relying on OS preemption, the VM can control exactly when its execution time budget is consumed, providing the bounded execution that Bencina's rule requires.
+
 ---
 
 Topics:
