@@ -24,6 +24,8 @@ The connection to [[quantizing-live-code-swaps-to-musical-temporal-boundaries-ma
 
 For murail's composition layer: the on-the-fly assimilation model is a specific design option for how the composition environment exposes live coding. The assimilation/dissimilation vocabulary (add a voice, remove a voice, modify a voice while others continue) maps naturally to the musical concept of polyphonic voice management. Murail's typed holes ([[typed-holes-allow-incomplete-audio-programs-to-remain-running-by-substituting-silence-rather-than-failing-compilation]]) address the partial-state problem (what happens during editing), while ChucK addresses the multi-voice problem (what happens when the program is a set of concurrent processes). These are complementary.
 
+The historical parallel with [[real-time-incremental-garbage-collection-eliminates-static-voice-count-limits-in-synthesis-engines]] is instructive: SC1's RT GC solved the same dynamic-voice problem at the *memory* level (voices can be instantiated and collected without preallocating a fixed pool), while ChucK's shred assimilation solves it at the *scheduling* level (shreds can be added and removed without stopping the VM). Both eliminate the static ceiling on concurrent voices, but through complementary mechanisms: SC1 removes the allocation constraint; ChucK removes the scheduling constraint.
+
 ---
 
 Topics:
