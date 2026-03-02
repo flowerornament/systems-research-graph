@@ -1,5 +1,5 @@
 ---
-description: Hub page for the arscontextica knowledge vault manual
+description: Hub page for the systems-research-graph knowledge vault manual
 type: manual
 generated_from: "arscontexta-0.8.0"
 ---
