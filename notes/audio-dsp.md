@@ -84,6 +84,9 @@ Core audio DSP research for murail's graph engine. Covers synthesis algorithms, 
 - [[sapf-was-factored-into-an-embeddable-c-library-by-replacing-the-parser-with-c-functions]] -- eliminating the parser and wrapping all SAPF functions as C functions converted a language into a linkable library without changing the execution model; existence proof for murail's embeddability goal
 - [[supercollider-3d5-applied-signal-graphs-to-pixel-synthesis-demonstrating-graph-generality-beyond-audio]] -- SC3D5's pixel-producing UGens demonstrate that a signal graph execution model is domain-agnostic; the same IR can drive audio, visual, or other signal-processing domains
 
+### Synthesis-by-Optimization Quality Benchmarks
+- [[a-78-parameter-modular-synthesizer-matches-neural-models-for-sound-identifiability-while-exceeding-them-for-perceived-artistic-quality]] -- user study shows 78-parameter modular synth matches AudioGen accuracy (56% vs 59.5%) while significantly exceeding artistic quality (3.54/5 vs 2.32/5); validates DSP-parameter synthesis as a distinct creative tool, not a second-rate neural substitute
+
 ### Differentiable Synthesis Components (source -- [[ddsp-2020]])
 - [[harmonic-plus-noise-model-covers-most-natural-instrument-timbres-with-a-deterministic-plus-stochastic-decomposition]] -- additive harmonic + filtered noise (HPN/SMS) is expressive enough for MPEG-4 parametric coding; the natural high-level synthesis abstraction for pitched acoustic instruments in murail
 - [[harmonic-oscillator-amplitude-factorization-separates-loudness-control-from-spectral-shape]] -- factorizing per-harmonic amplitudes into global loudness * normalized spectral distribution aligns the synthesis parameter space with perceptual dimensions; natural UGen interface design
