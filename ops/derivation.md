@@ -110,7 +110,7 @@ engine_version: "0.8.0"
 - Primary project: murail (embeddable audio graph engine, Rust)
 - Domain intersection: audio DSP, programming language design, concurrent systems, formal methods, Rust ecosystem, AI/ML
 - Existing research: .design/references/ (107 indexed), .design/formal-model/ (Lean proofs), .design/SPEC.md (4,300 lines, 69 decisions, 20 invariants)
-- Relationship to vault: .design/ contains sources and products; arscontextica/notes/ contains the connective tissue (cross-referenced claim graph)
+- Relationship to vault: .design/ contains sources and products; systems-research-graph/notes/ contains the connective tissue (cross-referenced claim graph)
 - Future domains: herald (personal OS, Elixir/Ash), potentially tau5 (bridging PL concerns)
 
 ## Generation Parameters
