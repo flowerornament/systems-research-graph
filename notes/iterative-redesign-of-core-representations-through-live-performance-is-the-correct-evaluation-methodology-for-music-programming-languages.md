@@ -31,6 +31,8 @@ This methodology has a name in HCI research: Research-through-Practice or PBR (P
 
 Connects to [[creative-workflow-friction-should-determine-audio-engine-architecture]]: McCartney's methodology for SC architecture is the same -- each design decision traced to felt friction in creative practice. McLean applies the same methodology to representation design. Both suggest that performance and studio use are not post-design validation phases but the design process itself.
 
+This is the domain-specific instance of the general claim [[language-quality-validation-requires-production-use-not-internal-development]]: McLean's performance-evaluation loop is exactly the kind of production use that Lattner argues is the only valid validation gate. The music programming context sharpens the principle: "production use" in this domain means high-stakes live performance with audience pressure, which reveals failure modes that no internal test or benchmark can surface.
+
 The developmental history also illustrates the value of the unified representation: complexity in "supporting code" is a signal of a representation mismatch. When two kinds of patterns required two kinds of operations with explicit type-case handling, that was friction the representation was imposing on every downstream combinator. Eliminating the mismatch simplified all downstream code simultaneously -- a structural benefit, not just an aesthetic one.
 
 ---
