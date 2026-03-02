@@ -10,7 +10,7 @@ Philip Wadler, email to java-genericity list, 12 November 1998. URL: https://hom
 
 Original source of the term "The Expression Problem." Wadler names an old problem, states it precisely, defines the constraint set (static type safety, independent compilation), shows the OO/functional duality in rows/columns terms, and presents a solution in GJ (Generic Java) using the virtual type indexing mechanism from his earlier note "Do parametric types beat virtual types?" The solution requires the ThisType trick to preserve static typing in the presence of subtypes, and uses fixpoint classes to tie the knot.
 
-**Archive location:** `/Users/morgan/code/arscontextica/inbox/archive/wadler-1998-expression-problem/`
+**Archive location:** `/Users/morgan/code/systems-research-graph/inbox/archive/wadler-1998-expression-problem/`
 
 Claims extracted from this source:
 - [[the-expression-problem-names-the-tension-between-adding-new-cases-and-new-operations-without-recompiling]]

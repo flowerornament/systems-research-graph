@@ -3,8 +3,8 @@ id: mclean-2014-making-programming-languages-to-dance-to-extract
 batch: mclean-2014-making-programming-languages-to-dance-to
 type: extract
 status: pending
-source: /Users/morgan/code/arscontextica/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf
-original_path: /Users/morgan/code/arscontextica/inbox/mclean-2014-making-programming-languages-to-dance-to.pdf
+source: /Users/morgan/code/systems-research-graph/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf
+original_path: /Users/morgan/code/systems-research-graph/inbox/mclean-2014-making-programming-languages-to-dance-to.pdf
 archive_folder: ops/queue/archive/2026-03-01-mclean-2014-making-programming-languages-to-dance-to
 created: 2026-03-01
 next_claim_start: 350
@@ -13,8 +13,8 @@ next_claim_start: 350
 # Extract claims from mclean-2014-making-programming-languages-to-dance-to
 
 ## Source
-Original: /Users/morgan/code/arscontextica/inbox/mclean-2014-making-programming-languages-to-dance-to.pdf
-Archived: /Users/morgan/code/arscontextica/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf
+Original: /Users/morgan/code/systems-research-graph/inbox/mclean-2014-making-programming-languages-to-dance-to.pdf
+Archived: /Users/morgan/code/systems-research-graph/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf
 Size: 8 pages (PDF, ACM FARM 2014)
 Content type: Academic conference paper
 

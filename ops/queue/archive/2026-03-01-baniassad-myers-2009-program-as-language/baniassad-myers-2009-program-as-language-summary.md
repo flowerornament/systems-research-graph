@@ -2,7 +2,7 @@
 batch: baniassad-myers-2009-program-as-language
 date: 2026-03-01
 source: /Users/morgan/code/murail/.design/references/papers/archive/baniassad-myers-2009-program-as-language/baniassad-myers-2009-program-as-language.pdf
-archived: /Users/morgan/code/arscontextica/ops/queue/archive/2026-03-01-baniassad-myers-2009-program-as-language/
+archived: /Users/morgan/code/systems-research-graph/ops/queue/archive/2026-03-01-baniassad-myers-2009-program-as-language/
 ---
 
 # Batch Summary: baniassad-myers-2009-program-as-language

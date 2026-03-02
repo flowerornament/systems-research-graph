@@ -10,7 +10,7 @@ status: active
 
 Source reference for "SuperCollider: A New Real Time Synthesis Language," James McCartney, International Computer Music Conference (ICMC), 1996.
 
-Primary source: `/Users/morgan/code/arscontextica/inbox/archive/mccartney-1996-supercollider-icmc/mccartney-1996-supercollider-icmc.md`
+Primary source: `/Users/morgan/code/systems-research-graph/inbox/archive/mccartney-1996-supercollider-icmc/mccartney-1996-supercollider-icmc.md`
 
 ## Key Topics
 

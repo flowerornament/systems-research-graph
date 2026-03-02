@@ -10,7 +10,7 @@ created: 2026-03-01
 **Authors:** Alex McLean
 **Venue:** FARM 2014 (Workshop on Functional Art, Music, Modelling and Design), Gothenburg, Sweden
 **DOI:** 10.1145/2633638.2633647
-**Location:** /Users/morgan/code/arscontextica/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/
+**Location:** /Users/morgan/code/systems-research-graph/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/
 
 ## Abstract (paraphrased)
 Live coding of music has grown into a vibrant international community. This paper describes the live coding domain, focuses on its programming language design challenges, and shows how a functional approach can meet them. Introduces Tidal 0.4: a Domain Specific Language embedded in Haskell that represents musical pattern as functions from time to events, inspired by Functional Reactive Programming.

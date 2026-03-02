@@ -3,8 +3,8 @@ id: fraser-2004-practical-lock-freedom-extract
 batch: fraser-2004-practical-lock-freedom
 type: extract
 status: pending
-source: /Users/morgan/code/arscontextica/inbox/archive/fraser-2004-practical-lock-freedom/fraser-2004-practical-lock-freedom.txt
-archive_folder: /Users/morgan/code/arscontextica/inbox/archive/fraser-2004-practical-lock-freedom/
+source: /Users/morgan/code/systems-research-graph/inbox/archive/fraser-2004-practical-lock-freedom/fraser-2004-practical-lock-freedom.txt
+archive_folder: /Users/morgan/code/systems-research-graph/inbox/archive/fraser-2004-practical-lock-freedom/
 created: 2026-02-28
 next_claim_start: 1
 ---

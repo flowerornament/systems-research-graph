@@ -1,7 +1,7 @@
 ---
 description: Wang & Cook 2003 ICMC paper introducing ChucK: concurrent on-the-fly audio programming language with operator-unified syntax, deterministic timing, and live code modification
 type: claim
-source: /Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
+source: /Users/morgan/code/systems-research-graph/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
 created: 2026-03-01
 status: active
 ---
@@ -10,7 +10,7 @@ status: active
 
 Source reference for "ChucK: A Concurrent, On-the-fly, Audio Programming Language," Ge Wang and Perry R. Cook, Princeton University. In Proceedings of the 2003 International Computer Music Conference (ICMC).
 
-Primary source: `/Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf`
+Primary source: `/Users/morgan/code/systems-research-graph/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf`
 
 ## Key Topics
 

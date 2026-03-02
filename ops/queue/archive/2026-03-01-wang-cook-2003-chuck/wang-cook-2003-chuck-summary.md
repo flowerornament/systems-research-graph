@@ -1,7 +1,7 @@
 ---
 batch: wang-cook-2003-chuck
 date: 2026-03-01
-source: /Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
+source: /Users/morgan/code/systems-research-graph/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
 claims_created: 6
 enrichments: 2
 connections_added: 14

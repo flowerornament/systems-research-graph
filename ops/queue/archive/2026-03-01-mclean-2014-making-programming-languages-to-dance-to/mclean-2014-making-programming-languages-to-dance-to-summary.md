@@ -11,7 +11,7 @@ existing_claims_updated: 2
 
 # Batch Summary: mclean-2014-making-programming-languages-to-dance-to
 
-**Source:** `/Users/morgan/code/arscontextica/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf`
+**Source:** `/Users/morgan/code/systems-research-graph/inbox/archive/mclean-2014-making-programming-languages-to-dance-to/mclean-2014-making-programming-languages-to-dance-to.pdf`
 **Paper:** Alex McLean, "Making Programming Languages to Dance to: Live Coding with Tidal," FARM 2014
 **Processed:** 2026-03-01
 

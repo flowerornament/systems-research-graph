@@ -5,7 +5,7 @@ type: extract
 status: done
 source: /Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf
 original_path: /Users/morgan/code/murail/.design/references/papers/naur-1985-programming-as-theory-building.pdf
-archive_folder: /Users/morgan/code/arscontextica/ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/
+archive_folder: /Users/morgan/code/systems-research-graph/ops/queue/archive/2026-02-28-naur-1985-programming-as-theory-building/
 created: 2026-02-28T00:00:00Z
 next_claim_start: 120
 ---

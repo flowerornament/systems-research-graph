@@ -3,8 +3,8 @@ id: wang-cook-2003-chuck-extract
 batch: wang-cook-2003-chuck
 type: extract
 status: done
-source: /Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
-original_path: /Users/morgan/code/arscontextica/inbox/wang-cook-2003-chuck.pdf
+source: /Users/morgan/code/systems-research-graph/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
+original_path: /Users/morgan/code/systems-research-graph/inbox/wang-cook-2003-chuck.pdf
 archive_folder: ops/queue/archive/2026-03-01-wang-cook-2003-chuck
 created: 2026-03-01
 completed: 2026-03-01
@@ -19,8 +19,8 @@ existing_claims_updated: 2
 # Extract claims from wang-cook-2003-chuck
 
 ## Source
-Original: /Users/morgan/code/arscontextica/inbox/wang-cook-2003-chuck.pdf
-Archived: /Users/morgan/code/arscontextica/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
+Original: /Users/morgan/code/systems-research-graph/inbox/wang-cook-2003-chuck.pdf
+Archived: /Users/morgan/code/systems-research-graph/inbox/archive/wang-cook-2003-chuck/wang-cook-2003-chuck.pdf
 Size: 8 pages (PDF, 636 KB)
 Content type: Academic conference paper (ICMC 2003)
 
