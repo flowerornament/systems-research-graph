@@ -6,7 +6,7 @@ generated_from: "arscontexta-0.8.0"
 
 # Manual
 
-Reference documentation for the arscontextica knowledge vault -- an atomic claim graph for murail research spanning audio DSP, programming language design, concurrent systems, and formal methods.
+Reference documentation for the systems-research-graph knowledge vault -- an atomic claim graph for murail research spanning audio DSP, programming language design, concurrent systems, and formal methods.
 
 ## Guides
 
