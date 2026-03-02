@@ -19,7 +19,7 @@ The CTAG user study (10 participants, 60 sounds each, 600 observations per metri
 
 CTAG is statistically indistinguishable from AudioGen for accuracy (odds ratio = 0.85, p = 1) while significantly exceeding both AudioGen (contrast = 1.22, p < .0001) and AudioLDM (contrast = 0.65, p < .0001) on artistic interpretiveness.
 
-The confidence result is important: despite similar accuracy, listeners are less confident about CTAG sounds. This reflects the abstract character of CTAG's outputs -- they convey the concept while departing from acoustic expectation, creating genuine uncertainty about the source even after correct identification.
+The confidence result is important: despite similar accuracy, listeners are less confident about CTAG sounds. This reflects the abstract character of CTAG's outputs -- they convey the concept while departing from acoustic expectation, creating genuine uncertainty about the source even after correct identification. This uncertainty-with-accuracy pattern directly supports [[procedural-sound-design-transcends-acoustic-plausibility-by-constructing-concepts-rather-than-recording-events]] -- the sounds are not acoustically literal, yet listeners correctly identify them.
 
 The implication is that synthesis-by-optimization with a small modular synthesizer is not a second-rate substitute for neural synthesis -- it occupies a distinct position in the creative space. For contexts where artistic abstraction is valuable (game audio, experimental music, advertising), CTAG-style synthesis is a superior tool. For contexts requiring maximum acoustic realism (foley replacement, dataset augmentation), neural synthesis remains preferable.
 
