@@ -23,6 +23,8 @@ This is the same tradeoff McCartney made when abandoning the C-emit pipeline (45
 
 The comparison with [[faust-programs-denote-mathematical-functions-enabling-semantics-driven-compilation]] is instructive: FAUST achieves maximum performance through formal semantics that enable aggressive AOT optimization. ChucK achieves maximum expressiveness through a VM that enables runtime program modification. These are endpoints of a design spectrum. Murail's architecture -- a compiled graph engine with a composition language layer -- attempts a middle position: compile-time optimization for the graph (approaching FAUST's end) while maintaining interactive recompilation for the composition layer (approaching ChucK's end), via the compile-and-swap mechanism.
 
+The VM performance penalty is bounded by the same insight that McCartney used in SC1: [[signal-buffers-as-a-type-amortize-interpreter-overhead-making-high-level-languages-viable-for-real-time-dsp]]. By processing audio in blocks rather than sample-by-sample, ChucK's VM pays its dispatch overhead once per block, not once per sample. Both SC1 and ChucK independently arrived at the buffer-as-dispatch-unit insight as the mechanism that makes high-level language semantics compatible with real-time audio performance.
+
 ---
 
 Topics:
