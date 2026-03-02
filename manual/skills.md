@@ -6,7 +6,7 @@ generated_from: "arscontexta-0.8.0"
 
 # Skills
 
-Every command available in the arscontextica vault, grouped by function. Commands use domain vocabulary -- "claims" not "notes", "extract" not "reduce", "connect" not "reflect", "topic maps" not "MOCs".
+Every command available in the systems-research-graph vault, grouped by function. Commands use domain vocabulary -- "claims" not "notes", "extract" not "reduce", "connect" not "reflect", "topic maps" not "MOCs".
 
 ## Processing
 
