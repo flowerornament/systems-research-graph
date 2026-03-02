@@ -23,4 +23,6 @@ This enriches [[experts-resist-new-languages-because-their-prior-investment-is-i
 
 Connects to [[language-quality-validation-requires-production-use-not-internal-development]]: production use is the validation gate, but "Worse is Better" suggests that production use does not automatically select the best design. It selects the fastest-to-deploy design that can hold a niche.
 
+The "Worse is Better" dynamic is precisely what [[the-expression-problem-names-the-tension-between-adding-new-cases-and-new-operations-without-recompiling]] cannot prevent: Wadler's correct formulation of the problem and the GJ solution satisfying all constraints were published in 1998, but Java's OO model (which solves only one dimension) had already captured the niche. Knowing the right answer did not displace the deployed answer. The expression problem's theoretical resolution (virtual types, multimethods, algebraic effects) remains niche precisely because the wart-laden OO approach arrived first and grew into an ecosystem.
+
 For murail: the design implication is that shipping a smaller, deployable murail with known gaps is better than waiting for a complete design. The caveat is that the gaps must not include the growth mechanism itself -- a murail with no user extensibility cannot evolve past its initial design.
