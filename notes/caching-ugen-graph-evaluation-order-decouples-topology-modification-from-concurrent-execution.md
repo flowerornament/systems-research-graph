@@ -23,6 +23,8 @@ This is precisely the two-phase approach that [[compile-and-swap-preserves-audio
 
 **Murail's refinement:** Murail goes beyond simple topological ordering to a full compiler pipeline that includes loop formation, vectorization, and delay merging. The "cached evaluation order" in murail is a compiled binary schedule that has been optimized through multiple passes. The NRT/RT boundary is the same; the complexity is in what happens on the NRT side.
 
+The contrast with ChucK's approach is instructive: [[user-space-cooperative-shreds-achieve-sample-accurate-deterministic-concurrency-without-os-scheduling]] avoids the concurrent-modification problem entirely by making modification a language-level operation -- shreds yield only at explicit time-advance points, so the shreduler can modify the shred list between time steps without concurrent access issues. Cached evaluation order is the *compiled* solution to concurrent modification; cooperative shreds are the *runtime* solution. Both achieve the same safety property -- the executing code never races with the graph-modification code -- but through different mechanisms that carry different performance and expressiveness tradeoffs.
+
 ## Connections
 
 - [[compile-and-swap-preserves-audio-continuity-during-recompilation]] -- the compile-and-swap mechanism is the implementation of cached evaluation order: the compiled schedule is the cached execution list, and compilation is the one-time traversal
