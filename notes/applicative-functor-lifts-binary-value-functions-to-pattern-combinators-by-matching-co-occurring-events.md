@@ -41,6 +41,8 @@ For murail: if the composition language exposes a parametric pattern type, makin
 
 Extends [[representing-musical-pattern-as-a-function-from-time-to-events-unifies-discrete-and-continuous-patterns]] -- the Applicative instance only works cleanly because both patterns share the `Arc -> [Event a]` representation; mixing discrete and continuous patterns in the application is handled uniformly.
 
+The Applicative instance is also a practical dissolution of [[the-expression-problem-names-the-tension-between-adding-new-cases-and-new-operations-without-recompiling]] in the pattern domain: any new value-level operation (new case) automatically becomes a pattern combinator (new operation) via `<$>` and `<*>`, without rewriting the Pattern type or any existing combinator. The type class mechanism gives both dimensions free extensibility -- though at the cost of requiring Haskell's type class dispatch machinery as the underlying mechanism.
+
 ---
 
 Topics:
