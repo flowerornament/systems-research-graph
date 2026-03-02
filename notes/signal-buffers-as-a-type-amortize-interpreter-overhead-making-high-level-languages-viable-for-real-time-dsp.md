@@ -23,6 +23,8 @@ The amortization argument also explains why purely sample-level graph execution 
 
 Contrast with [[faust-signal-type-inference-classifies-computation-rate-to-enable-appropriate-caching]] -- FAUST achieves the same result through AOT compilation that eliminates the interpreter entirely; SC1 achieved real-time performance while keeping the interpreter by choosing the buffer as the dispatch unit.
 
+ChucK's [[vm-based-audio-runtimes-trade-raw-performance-for-determinism-and-language-level-flexibility]] relies on the same amortization principle: by processing audio in blocks, the VM dispatch cost is paid once per block rather than once per sample. SC1 (1996) established the precedent that made ChucK (2003) architecturally credible -- both demonstrate that a high-level language interpreter can cross the real-time audio threshold when the dispatch unit is the buffer, not the sample.
+
 ---
 
 Topics:
