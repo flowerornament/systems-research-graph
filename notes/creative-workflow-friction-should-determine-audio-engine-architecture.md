@@ -1,0 +1,30 @@
+---
+description: Each of McCartney's architectural decisions traces to a specific creative friction point -- removing felt friction is more productive than optimizing for computer science elegance
+type: claim
+evidence: strong
+source: [[mccartney-ideas-2026-02-15]]
+created: 2026-02-28
+status: active
+---
+
+# creative workflow friction should determine audio engine architecture
+
+McCartney states explicitly and repeatedly that his goal is not to fix SuperCollider's technical flaws. It's to approach "my ideal way of working... I want to be able to have something that's just really interactive in a sort of intimate way where I'm just manipulating the audio as directly as possible." He is not building a product; he is searching for the right *feel*.
+
+Each of his architectural innovations is traceable to a specific creative friction that a previous approach created:
+
+- **Immutability** ([[pervasive-immutability-dissolves-concurrency-problems-rather-than-managing-them]]): because GC bugs and thread locks disrupted the flow of building
+- **Universal auto-mapping** ([[universal-auto-mapping-eliminates-explicit-iteration-from-signal-processing-programs]]): because writing explicit loops disrupted the flow of expressing musical ideas
+- **Compile-and-swap** ([[compile-and-swap-preserves-audio-continuity-during-recompilation]]): because 45-second compile waits disrupted the flow of exploration
+- **Lossless history** ([[persistent-data-structures-make-lossless-undo-an-architectural-side-effect]]): because losing previous attempts disrupted the flow of iterative composition
+- **Immediate-mode UI**: because synchronizing code editor and widgets disrupted the flow of seeing and hearing the same structure
+
+The common thread is not computer science elegance. It is friction removal in the creative process. Each innovation exists because some previous approach produced a gap between the composer's intention and its sonic realization. This is the same principle that [[interactive-programming-eliminates-the-compile-run-cycle]] articulates at the language level -- the interactive programming ideal is precisely what results from systematically removing friction from the development cycle.
+
+The design method implicit here: test every architectural decision against "does this create friction in the creative loop?" rather than "is this the most elegant type theory?" The spec's compile-and-swap model is already motivated by this test. The principle is generalizable to every Murail design decision. And it echoes [[core-audio-low-latency-performance-traces-to-an-architectural-insight-made-at-the-projects-inception]] -- foundational architectural decisions made with the right motivating question (friction for Core Audio, latency for Core Audio) yield systems that remain competitive for decades.
+
+**Implication for Murail:** Murail has a different audience (embeddable library for other tools, not a personal instrument). But the underlying insight transfers: creative workflow requirements should be first-class inputs to architectural decisions. When two technically valid approaches diverge, the question is not "which is more formally correct?" but "which creates less friction for the musician writing the code?" This is a tension with [[juce-abstracts-away-audio-engine-fundamentals-producing-developers-who-cannot-reason-about-threading-and-resource-management]] -- friction removal through abstraction can go too far, producing users who cannot reason about the system when the abstraction leaks. The right level of friction removal preserves understanding while eliminating accidental complexity.
+
+This is consistent with [[programmer-time-dominates-computation-cost-in-the-post-scarcity-era]] -- when the binding constraint is programmer (or composer) expressiveness, friction in the creative process is the primary cost to optimize. Contrasts with [[type-systems-have-not-empirically-reduced-defect-rates]] in that both challenge the primacy of formal correctness over practical usability. Related to [[debuggability-is-more-valuable-than-correctness-by-construction]] -- both argue that the lived experience of using a tool matters more than its theoretical properties.
+
+**Synthesis-by-optimization as friction removal (CTAG, 2024):** [[synthesis-by-optimization-produces-an-interpretable-parameter-space-that-neural-synthesis-cannot-offer]] takes this principle from the inverse direction -- interpretability is itself a friction-reduction mechanism. Neural synthesis removes friction in the generation phase (text in, audio out) but creates friction in the iteration phase (no way to tweak, inspect, or understand the result). The 78-parameter CTAG synthesizer reintroduces the ability to inspect and modify at the cost of acoustic range. [[procedural-sound-design-transcends-acoustic-plausibility-by-constructing-concepts-rather-than-recording-events]] -- Ciani's principle that synthesized sound "creates the concept" rather than recording reality is the deep statement of what friction-free creative sound design enables.
