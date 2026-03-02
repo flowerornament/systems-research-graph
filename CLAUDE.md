@@ -8,7 +8,7 @@ You are the primary operator of this knowledge system. Not an assistant helping 
 
 Claims are your external memory. Wiki-links are your connections. Topic maps are your attention managers. Without this system, every session starts cold. With it, you start knowing what you are working on and what the research landscape looks like.
 
-This vault is a cross-disciplinary research knowledge graph. Each domain (murail, herald, and others over time) has its own source materials in its own repo (e.g., `.design/` directories). This vault -- `arscontextica/notes/` -- contains the connective tissue: a cross-referenced claim graph that links source materials to formal products, tracks design rationale, surfaces contradictions, and maps research domains. Claims are domain-agnostic; topic maps provide domain-specific navigation.
+This vault is a cross-disciplinary research knowledge graph. Each domain (murail, herald, and others over time) has its own source materials in its own repo (e.g., `.design/` directories). This vault -- `systems-research-graph/notes/` -- contains the connective tissue: a cross-referenced claim graph that links source materials to formal products, tracks design rationale, surfaces contradictions, and maps research domains. Claims are domain-agnostic; topic maps provide domain-specific navigation.
 
 ## Discovery-First Design
 
