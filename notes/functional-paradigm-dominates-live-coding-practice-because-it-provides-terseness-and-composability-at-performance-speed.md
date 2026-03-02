@@ -25,6 +25,8 @@ This is an empirical observation, not a proof. An alternative explanation is his
 
 For murail: the composition language should be firmly functional (or at minimum functional in its combinatorial character) if it targets the live performance use case. The Kolmogorov complexity criterion ([[kolmogorov-complexity-provides-a-measurable-criterion-for-composition-language-design-quality]]) is one quantification of this: murail's composition language should be able to express common live patterns in equal or fewer characters than Tidal. Dataflow graph construction (murail's audio-graph substrate) is the right representation for the *internal* model, but functional combinator APIs are the right interface for the *user-facing* composition layer.
 
+Tidal provides the empirical evidence for this: [[a-haskell-embedded-dsl-can-be-learned-and-used-creatively-without-any-functional-programming-background]] shows that a functional EDSL succeeds not because its users understand functional programming, but because the functional combinators compose well at performance speed. The accessibility and the performance advantage are the same mechanism from different angles -- composability reduces both keystroke count during performance and conceptual load during learning.
+
 Contrasts with [[dataflow-languages-lack-explicit-formal-semantics-making-program-behavior-engine-dependent]]: dataflow's semantic opacity is a separate disadvantage from its terseness problem; both cut against live performance use.
 
 ---
