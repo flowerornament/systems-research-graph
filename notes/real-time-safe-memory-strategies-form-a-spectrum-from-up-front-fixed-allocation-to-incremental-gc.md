@@ -19,7 +19,7 @@ Dannenberg and Bencina enumerate five strategies for RT-safe memory management, 
 
 4. **Allocate in a non-RT context**: No allocation in the RT thread at all. Objects are allocated in an NRT thread and sent to the RT thread via a lock-free queue. The RT thread only receives pointers. The NRT thread owns the allocation lifetime.
 
-5. **Incremental garbage collection**: A garbage collector designed for RT contexts that bounds its pause time by interrupting collection work if its time budget is exceeded. SuperCollider Language and Serpent use this approach.
+5. **Incremental garbage collection**: A garbage collector designed for RT contexts that bounds its pause time by interrupting collection work if its time budget is exceeded. SuperCollider Language and Serpent use this approach. McCartney's 1996 SC1 ([[real-time-incremental-garbage-collection-eliminates-static-voice-count-limits-in-synthesis-engines]]) is the founding applied example: RT GC enabled dynamic voice instantiation, removing the need to declare polyphony at startup -- an architectural capability no static allocation strategy provides.
 
 **Which strategy is appropriate** depends on how well allocation behavior is understood, whether a generalized allocator is needed, and how objects are shared across threads. Real systems combine multiple strategies: fixed allocation for voice counts, per-thread pools for intermediate buffers, NRT allocation for large objects, free lists for short-lived small objects.
 
