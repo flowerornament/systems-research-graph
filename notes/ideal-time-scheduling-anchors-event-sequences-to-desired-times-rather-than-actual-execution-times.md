@@ -27,6 +27,8 @@ This guarantees that *long-term* timing is accurate even though individual event
 
 The claim that this pattern "is closely tied to discrete event simulation" is significant: the entire computer music event scheduling tradition (Music IV, Csound, SC3) descends from the same discrete-event simulation literature.
 
+ChucK's `now` mechanism is this pattern elevated to a language primitive: [[suspending-time-until-explicitly-advanced-gives-deterministic-reproducible-timing-across-machines]] encodes ideal-time scheduling directly in the language semantics by making the programmer's explicitly stated time value the ideal time, with the shreduler computing actual execution around it. Where Dannenberg & Bencina describe ideal-time scheduling as an implementation pattern, ChucK makes it the user-facing programming model itself.
+
 ## Connections
 
 - [[sample-accurate-triggering-in-block-based-audio-requires-splitting-render-blocks-into-sub-block-execution-lambdas]] -- within-block timing precision; ideal-time scheduling is the cross-block equivalent
