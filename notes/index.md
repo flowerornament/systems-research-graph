@@ -26,6 +26,9 @@ A cross-disciplinary research knowledge graph. Claims are atomic, flat, and wiki
 ### herald (real-time application platform)
 - [[herald]] -- agent architecture, LLM integration, OTP fitness for agentic workloads, implementation techniques
 
+### agentic design (AI agent systems)
+- [[agentic-design]] -- agent architecture, memory systems, tool design, orchestration, context management, evaluation, business patterns
+
 ## Cross-Domain
 - [[developer-experience]] -- feedback loops, introspection, notation, and how programming environments shape what developers can build
 
