@@ -9,7 +9,7 @@ created: 2026-02-28
 Research area for herald: a real-time application platform built on Elixir/OTP. Covers agent architecture design, LLM integration patterns, OTP fitness for agentic workloads, and implementation techniques.
 
 ## Key Sub-Areas
-- Agent architecture (what agents actually are, OTP as agent infrastructure)
+- Agent architecture (what agents actually are, OTP as agent infrastructure) -- see also [[agentic-design]] for domain-agnostic agent claims
 - LLM capability trajectory (what assumptions are safe to build on)
 - Gap-fill strategies (AgentsMD, usage-rules, dependency-level gap-filling)
 - Agent reliability techniques (chat history manipulation, rescue models, self-modifying code)
